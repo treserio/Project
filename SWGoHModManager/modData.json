@@ -1,0 +1,973 @@
+{ "data": [
+    {
+        "Equipped": "Chirrut",
+        "Slot": "Circle",
+        "Set": "Crit Chnc",
+        "Primary": "Health",
+        "Spd": 14,
+        "Crit_%": 2.25,
+        "Prot": 525,
+        "Prot_%": 2.19
+    },
+    {
+        "Equipped": "Hera",
+        "Slot": "Circle",
+        "Set": "Defense",
+        "Primary": "Protection",
+        "Spd": 13,
+        "Off_%": 0.53,
+        "Pot_%": 1.22,
+        "Ten_%": 2.24
+    },
+    {
+        "Equipped": "C. Luke",
+        "Slot": "Circle",
+        "Set": "Health",
+        "Primary": "Protection",
+        "Spd": 11,
+        "Off": 73,
+        "Prot": 1052,
+        "Def_%": 2.23
+    },
+    {
+        "Equipped": "R2D2",
+        "Slot": "Circle",
+        "Set": "Offense",
+        "Primary": "Health",
+        "Spd": 10,
+        "Crit_%": 5.52,
+        "Prot": 444,
+        "Prot_%": 1.5
+    },
+    {
+        "Equipped": "Lobot",
+        "Slot": "Circle",
+        "Set": "Crit Chnc",
+        "Primary": "Protection",
+        "Spd": 9,
+        "Crit_%": 4.05,
+        "Prot": 1413,
+        "HP_%": 1.64
+    },
+    {
+        "Equipped": "RG",
+        "Slot": "Circle",
+        "Set": "Potency",
+        "Primary": "Health",
+        "Spd": 9,
+        "Off_%": 0.94,
+        "HP": 244,
+        "Def": 7
+    },
+    {
+        "Equipped": "Nihilus",
+        "Slot": "Circle",
+        "Set": "Speed",
+        "Primary": "Health",
+        "Spd": 8,
+        "Prot": 771,
+        "Def_%": 1.45,
+        "Ten_%": 1.67
+    },
+    {
+        "Equipped": "Han",
+        "Slot": "Circle",
+        "Set": "Potency",
+        "Primary": "Protection",
+        "Spd": 8,
+        "Crit_%": 2,
+        "Off": 32,
+        "Def": 11
+    },
+    {
+        "Equipped": "Ezra",
+        "Slot": "Circle",
+        "Set": "Crit Dam",
+        "Primary": "Health",
+        "Spd": 7,
+        "Prot": 993,
+        "Prot_%": 2.17,
+        "HP": 300
+    },
+    {
+        "Equipped": "Luke (FB)",
+        "Slot": "Circle",
+        "Set": "Crit Chnc",
+        "Primary": "Health",
+        "Spd": 6,
+        "Prot_%": 4.07,
+        "HP": 263,
+        "Ten_%": 1.57
+    },
+    {
+        "Equipped": "Lando",
+        "Slot": "Circle",
+        "Set": "Crit Dam",
+        "Primary": "Health",
+        "Spd": 5,
+        "Off": 68,
+        "Prot": 576,
+        "Def": 9
+    },
+    {
+        "Equipped": "Boba",
+        "Slot": "Circle",
+        "Set": "Crit Dam",
+        "Primary": "Protection",
+        "Spd": 5,
+        "Crit_%": 1.3,
+        "HP": 0.61,
+        "Ten_%": 1.61
+    },
+    {
+        "Equipped": "Lando",
+        "Slot": "Circle",
+        "Set": "Crit Dam",
+        "Primary": "Health",
+        "Spd": 5,
+        "Off": 68,
+        "Prot": 576,
+        "Def": 9
+    },
+    {
+        "Equipped": "Mace Windu",
+        "Slot": "Circle",
+        "Set": "Crit Chnc",
+        "Primary": "Health",
+        "Spd": 5,
+        "HP": 240,
+        "Def": 5,
+        "Ten_%": 1.82
+    },
+    {
+        "Equipped": "Hera",
+        "Slot": "Circle",
+        "Set": "Potency",
+        "Primary": "Health",
+        "Spd": 5,
+        "Crit_%": 1.92,
+        "HP": 320,
+        "Pot_%": 1.64
+    },
+    {
+        "Equipped": "Gen Ken",
+        "Slot": "Circle",
+        "Set": "Crit Chnc",
+        "Primary": "Health",
+        "Spd": 5,
+        "Prot": 705,
+        "HP": 1018,
+        "Def_%": 1.03
+    },
+    {
+        "Equipped": "Teebo",
+        "Slot": "Circle",
+        "Set": "Potency",
+        "Primary": "Health",
+        "Spd": 5,
+        "Off": 20,
+        "HP": 209,
+        "Pot_%": 1.84
+    },
+    {
+        "Equipped": "Ezra",
+        "Slot": "Circle",
+        "Set": "Crit Chnc",
+        "Primary": "Health",
+        "Spd": 5,
+        "Off": 27,
+        "Off_%": 0.39,
+        "HP": 277
+    },
+    {
+        "Equipped": "Leia",
+        "Slot": "Circle",
+        "Set": "Defense",
+        "Primary": "Protection",
+        "Spd": 5,
+        "Crit_%": 5.32,
+        "Off_%": 0.38,
+        "Prot": 1112
+    },
+    {
+        "Equipped": "Zeb",
+        "Slot": "Circle",
+        "Set": "Offense",
+        "Primary": "Health",
+        "Spd": 5,
+        "Off": 82,
+        "Off_%": 1.25,
+        "Prot": 1226
+    },
+    {
+        "Equipped": "Baze",
+        "Slot": "Circle",
+        "Set": "Health",
+        "Primary": "Protection",
+        "Crit_%": 1.97,
+        "Off": 131,
+        "Pot_%": 2.92,
+        "Ten_%": 1.5
+    },
+    {
+        "Equipped": "C. Luke",
+        "Slot": "Cross",
+        "Set": "Health",
+        "Primary": "Tenacity",
+        "Spd": 14,
+        "Crit_%": 1.33,
+        "Off_%": 0.4,
+        "HP_%": 0.66
+    },
+    {
+        "Equipped": "Lobot",
+        "Slot": "Cross",
+        "Set": "Tenacity",
+        "Primary": "Health",
+        "Spd": 13,
+        "Prot_%": 1.76,
+        "Def": 12,
+        "Pot_%": 3.29
+    },
+    {
+        "Equipped": "R2D2",
+        "Slot": "Cross",
+        "Set": "Offense",
+        "Primary": "Health",
+        "Spd": 13,
+        "Off": 27,
+        "Prot_%": 2.07,
+        "Ten_%": 1.15
+    },
+    {
+        "Equipped": "Chirrut",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Tenacity",
+        "Spd": 13,
+        "Crit_%": 1.7,
+        "Prot": 701,
+        "HP_%": 0.74
+    },
+    {
+        "Equipped": "Zeb",
+        "Slot": "Cross",
+        "Set": "Offense",
+        "Primary": "Health",
+        "Spd": 11,
+        "Off": 31,
+        "Off_%": 0.76,
+        "Prot": 943
+    },
+    {
+        "Equipped": "Han",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Potency",
+        "Spd": 11,
+        "HP": 252,
+        "Def_%": 1.47,
+        "Ten_%": 2.03
+    },
+    {
+        "Equipped": "Nihilus",
+        "Slot": "Cross",
+        "Set": "Speed",
+        "Primary": "Potency",
+        "Spd": 10,
+        "Prot_%": 2.19,
+        "HP": 357,
+        "Ten_%": 3.83
+    },
+    {
+        "Equipped": "Ezra",
+        "Slot": "Cross",
+        "Set": "Health",
+        "Primary": "Defense",
+        "Spd": 10,
+        "Prot": 1696,
+        "Pot_%": 1.61,
+        "Ten_%": 1.52
+    },
+    {
+        "Equipped": "Chewie",
+        "Slot": "Cross",
+        "Set": "Offense",
+        "Primary": "Health",
+        "Spd": 10,
+        "Crit_%": 1.5,
+        "Prot": 620,
+        "Pot_%": 4.97
+    },
+    {
+        "Equipped": "Greedo",
+        "Slot": "Cross",
+        "Set": "Crit Chnc",
+        "Primary": "Potency",
+        "Spd": 10,
+        "HP": 312,
+        "HP_%": 0.76,
+        "Def": 4
+    },
+    {
+        "Equipped": "Luke (FB)",
+        "Slot": "Cross",
+        "Set": "Health",
+        "Primary": "Defense",
+        "Spd": 9,
+        "Prot_%": 1.88,
+        "HP": 806,
+        "Ten_%": 1.47
+    },
+    {
+        "Equipped": "Kanan",
+        "Slot": "Cross",
+        "Set": "Defense",
+        "Primary": "Tenacity",
+        "Spd": 9,
+        "Def": 5,
+        "Def_%": 2.22,
+        "Pot_%": 1.79
+    },
+    {
+        "Equipped": "Ezra",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Defense",
+        "Spd": 9,
+        "Crit_%": 1.85,
+        "Prot_%": 1.16,
+        "Ten_%": 1.31
+    },
+    {
+        "Equipped": "IG-88",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Defense",
+        "Spd": 8,
+        "Off": 39,
+        "Off_%": 0.35,
+        "Def": 8
+    },
+    {
+        "Equipped": "Lando",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Defense",
+        "Spd": 7,
+        "Crit_%": 1.4,
+        "Off_%": 0.8,
+        "Ten_%": 1.81
+    },
+    {
+        "Equipped": "Shore Trp",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Offense",
+        "Spd": 7,
+        "Off": 34,
+        "Def_%": 2.07,
+        "Pot_%": 3.56
+    },
+    {
+        "Equipped": "Hera",
+        "Slot": "Cross",
+        "Set": "Defense",
+        "Primary": "Protection",
+        "Spd": 7,
+        "Crit_%": 3.18,
+        "Off": 31,
+        "HP": 514
+    },
+    {
+        "Equipped": "Gen Ken",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Protection",
+        "Spd": 6,
+        "Crit_%": 1.28,
+        "Off": 38,
+        "HP_%": 2.38
+    },
+    {
+        "Equipped": "QGJ",
+        "Slot": "Cross",
+        "Set": "Defense",
+        "Primary": "Potency",
+        "Spd": 6,
+        "Crit_%": 5.45,
+        "Off_%": 0.37,
+        "Def": 1.27
+    },
+    {
+        "Equipped": "Phasma",
+        "Slot": "Cross",
+        "Set": "Speed",
+        "Primary": "Tenacity",
+        "Spd": 5,
+        "Prot": 632,
+        "Prot_%": 1.74,
+        "HP": 0.79
+    },
+    {
+        "Equipped": "Obi Wan",
+        "Slot": "Cross",
+        "Set": "Health",
+        "Primary": "Potency",
+        "Spd": 5,
+        "Prot_%": 5.4,
+        "Def": 9,
+        "Ten_%": 2.16
+    },
+    {
+        "Equipped": "T.F.P.",
+        "Slot": "Cross",
+        "Set": "Crit Dam",
+        "Primary": "Tenacity",
+        "Spd": 5,
+        "Crit_%": 1.77,
+        "Off": 41,
+        "HP": 1032
+    },
+    {
+        "Equipped": "Savage",
+        "Slot": "Cross",
+        "Set": "Offense",
+        "Primary": "Defense",
+        "Spd": 5,
+        "Off": 0.49,
+        "HP": 0.87,
+        "Ten_%": 1.44
+    },
+    {
+        "Equipped": "Baze",
+        "Slot": "Cross",
+        "Set": "Health",
+        "Primary": "Protection",
+        "Prot": 717,
+        "HP_%": 0.8,
+        "Def": 8,
+        "Def_%": 1.69
+    },
+    {
+        "Equipped": "Zeb",
+        "Slot": "Diamond",
+        "Set": "Offense",
+        "Primary": "Defense",
+        "Spd": 14,
+        "Crit_%": 1.8,
+        "Prot": 822,
+        "Pot_%": 1.55
+    },
+    {
+        "Equipped": "R2D2",
+        "Slot": "Diamond",
+        "Set": "Offense",
+        "Primary": "Defense",
+        "Spd": 14,
+        "Off": 45,
+        "Prot_%": 1.97,
+        "HP_%": 0.76
+    },
+    {
+        "Equipped": "C. Luke",
+        "Slot": "Diamond",
+        "Set": "Speed",
+        "Primary": "Defense",
+        "Spd": 11,
+        "Prot": 1229,
+        "Def": 8,
+        "Pot_%": 2.1
+    },
+    {
+        "Equipped": "Chirrut",
+        "Slot": "Diamond",
+        "Set": "Crit Dam",
+        "Primary": "Defense",
+        "Spd": 10,
+        "Off_%": 0.34,
+        "Prot": 485,
+        "HP": 376
+    },
+    {
+        "Equipped": "Hera",
+        "Slot": "Diamond",
+        "Set": "Speed",
+        "Primary": "Defense",
+        "Spd": 9,
+        "Off_%": 0.33,
+        "Prot": 1339,
+        "Ten_%": 1.61
+    },
+    {
+        "Equipped": "Count Dooku",
+        "Slot": "Diamond",
+        "Set": "Speed",
+        "Primary": "Defense",
+        "Spd": 9,
+        "HP_%": 0.86,
+        "Def": 7,
+        "Pot_%": 1.68
+    },
+    {
+        "Equipped": "Nihilus",
+        "Slot": "Diamond",
+        "Set": "Speed",
+        "Primary": "Defense",
+        "Spd": 8,
+        "Crit_%": 1.7,
+        "HP": 674,
+        "Def": 23
+    },
+    {
+        "Equipped": "Ezra",
+        "Slot": "Diamond",
+        "Set": "Crit Chnc",
+        "Primary": "Defense",
+        "Spd": 8,
+        "Off": 46,
+        "Def": 5,
+        "Pot_%": 1.53
+    },
+    {
+        "Equipped": "Biggs",
+        "Slot": "Diamond",
+        "Set": "Crit Chnc",
+        "Primary": "Defense",
+        "Spd": 5,
+        "Off": 75,
+        "Prot": 765,
+        "Ten_%": 1.87
+    },
+    {
+        "Equipped": "Bistan",
+        "Slot": "Diamond",
+        "Set": "Potency",
+        "Primary": "Defense",
+        "Spd": 5,
+        "Crit_%": 1.65,
+        "Off_%": 0.55,
+        "Prot_%": 1.3
+    },
+    {
+        "Equipped": "Wedge",
+        "Slot": "Diamond",
+        "Set": "Defense",
+        "Primary": "Defense",
+        "Spd": 5,
+        "HP": 230,
+        "HP_%": 1.03,
+        "Ten_%": 1.64
+    },
+    {
+        "Equipped": "Poe Dam",
+        "Slot": "Diamond",
+        "Set": "Crit Chnc",
+        "Primary": "Defense",
+        "Spd": 5,
+        "HP": 244,
+        "HP_%": 0.9,
+        "Def": 5
+    },
+    {
+        "Equipped": "B2",
+        "Slot": "Diamond",
+        "Set": "Offense",
+        "Primary": "Defense",
+        "Spd": 5,
+        "Off_%": 0.49,
+        "Prot": 610,
+        "Prot_%": 1.17
+    },
+    {
+        "Equipped": "Rex",
+        "Slot": "Diamond",
+        "Set": "Crit Chnc",
+        "Primary": "Defense",
+        "Spd": 5,
+        "Off": 32,
+        "Prot": 732,
+        "Prot_%": 1.83
+    },
+    {
+        "Equipped": "Baze",
+        "Slot": "Diamond",
+        "Set": "Health",
+        "Primary": "Defense",
+        "Prot_%": 3.51,
+        "HP": 0.79,
+        "Def": 5,
+        "Ten_%": 4.3
+    },
+    {
+        "Equipped": "Han",
+        "Slot": "Diamond",
+        "Set": "Crit Dam",
+        "Primary": "Defense",
+        "Crit_%": 5.38,
+        "Off_%": 0.3,
+        "Prot": 1477,
+        "HP": 279
+    },
+    {
+        "Equipped": "Chirrut",
+        "Slot": "Square",
+        "Set": "Crit Chnc",
+        "Primary": "Offense",
+        "Spd": 18,
+        "Crit_%": 3.05,
+        "HP_%": 71,
+        "Def_%": 0.88
+    },
+    {
+        "Equipped": "Han",
+        "Slot": "Square",
+        "Set": "Crit Dam",
+        "Primary": "Offense",
+        "Spd": 14,
+        "Off": 34,
+        "Def_%": 2.19,
+        "Pot_%": 1.36
+    },
+    {
+        "Equipped": "Nihilus",
+        "Slot": "Square",
+        "Set": "Health",
+        "Primary": "Offense",
+        "Spd": 13,
+        "Off": 63,
+        "HP": 518,
+        "Def_%": 1.56
+    },
+    {
+        "Equipped": "C. Luke",
+        "Slot": "Square",
+        "Set": "Speed",
+        "Primary": "Offense",
+        "Spd": 9,
+        "Prot": 489,
+        "Prot_%": 4.84,
+        "Pot_%": 2.37
+    },
+    {
+        "Equipped": "Ezra",
+        "Slot": "Square",
+        "Set": "Crit Dam",
+        "Primary": "Offense",
+        "Spd": 9,
+        "Crit_%": 1.75,
+        "Off": 40,
+        "Def_%": 1.55
+    },
+    {
+        "Equipped": "Hera",
+        "Slot": "Square",
+        "Set": "Speed",
+        "Primary": "Offense",
+        "Spd": 8,
+        "Off": 33,
+        "Def_%": 1.54,
+        "Ten_%": 1.32
+    },
+    {
+        "Equipped": "R2D2",
+        "Slot": "Square",
+        "Set": "Health",
+        "Primary": "Offense",
+        "Spd": 7,
+        "Off": 77,
+        "Pot_%": 2.82,
+        "Ten_%": 3.32
+    },
+    {
+        "Equipped": "Boba",
+        "Slot": "Square",
+        "Set": "Crit Chnc",
+        "Primary": "Offense",
+        "Spd": 7,
+        "Crit_%": 1.32,
+        "Off": 21,
+        "Pot_%": 1.22
+    },
+    {
+        "Equipped": "5s",
+        "Slot": "Square",
+        "Set": "Offense",
+        "Primary": "Offense",
+        "Spd": 5,
+        "HP": 241,
+        "HP_%": 1.08,
+        "Ten_%": 1.85
+    },
+    {
+        "Equipped": "Ewok Sct",
+        "Slot": "Square",
+        "Set": "Crit Dam",
+        "Primary": "Offense",
+        "Spd": 5,
+        "Off_%": 33,
+        "Prot": 1113,
+        "Def_%": 0.85
+    },
+    {
+        "Equipped": "Chf Chirpa",
+        "Slot": "Square",
+        "Set": "Crit Dam",
+        "Primary": "Offense",
+        "Spd": 5,
+        "Prot_%": 1.96,
+        "HP": 0.58,
+        "Ten_%": 1.87
+    },
+    {
+        "Equipped": "Rex",
+        "Slot": "Square",
+        "Set": "Crit Dam",
+        "Primary": "Offense",
+        "Spd": 5,
+        "Prot": 1404,
+        "Prot_%": 5.1,
+        "HP": 322
+    },
+    {
+        "Equipped": "Zeb",
+        "Slot": "Square",
+        "Set": "Potency",
+        "Primary": "Offense",
+        "Spd": 5,
+        "Crit_%": 2.2,
+        "Pot_%": 1.27,
+        "Ten_%": 2.47
+    },
+    {
+        "Equipped": "Savage",
+        "Slot": "Square",
+        "Set": "Offense",
+        "Primary": "Offense",
+        "Spd": 5,
+        "Off": 28,
+        "Prot_%": 1.92,
+        "Def": 9
+    },
+    {
+        "Equipped": "St. Han",
+        "Slot": "Square",
+        "Set": "Offense",
+        "Primary": "Offense",
+        "Spd": 5,
+        "Off": 66,
+        "HP": 225,
+        "Def_%": 4.01
+    },
+    {
+        "Equipped": "Baze",
+        "Slot": "Square",
+        "Set": "Health",
+        "Primary": "Offense",
+        "Spd": 3,
+        "Off": 119,
+        "Def_%": 2.35,
+        "Ten_%": 1.13
+    },
+    {
+        "Equipped": "C. Luke",
+        "Slot": "Triangle",
+        "Set": "Speed",
+        "Primary": "Protection",
+        "Spd": 21,
+        "Off": 26,
+        "Off_%": 0.44,
+        "Def": 4
+    },
+    {
+        "Equipped": "Nihilus",
+        "Slot": "Triangle",
+        "Set": "Speed",
+        "Primary": "Defense",
+        "Spd": 15,
+        "Crit_%": 1.32,
+        "Pot_%": 1.02,
+        "Ten_%": 3.19
+    },
+    {
+        "Equipped": "Bodhi Rook",
+        "Slot": "Triangle",
+        "Set": "Defense",
+        "Primary": "Crit Chnc",
+        "Spd": 13,
+        "Off_%": 0.31,
+        "HP": 189
+    },
+    {
+        "Equipped": "Zeb",
+        "Slot": "Triangle",
+        "Set": "Potency",
+        "Primary": "Protection",
+        "Spd": 11,
+        "Off_%": 0.28,
+        "Prot": 738,
+        "HP_%": 1.09
+    },
+    {
+        "Equipped": "Han",
+        "Slot": "Triangle",
+        "Set": "Potency",
+        "Primary": "Crit Dam",
+        "Spd": 11,
+        "HP_%": 0.92,
+        "Def_%": 1.24,
+        "Ten_%": 2.04
+    },
+    {
+        "Equipped": "Kanan",
+        "Slot": "Triangle",
+        "Set": "Defense",
+        "Primary": "Protection",
+        "Spd": 10,
+        "Off_%": 0.39,
+        "Prot": 377,
+        "HP_%": 1.77
+    },
+    {
+        "Equipped": "Ezra",
+        "Slot": "Triangle",
+        "Set": "Crit Chnc",
+        "Primary": "Offense",
+        "Spd": 10,
+        "Prot": 452,
+        "HP": 687,
+        "Def": 8
+    },
+    {
+        "Equipped": "Hera",
+        "Slot": "Triangle",
+        "Set": "Speed",
+        "Primary": "Defense",
+        "Spd": 10,
+        "Off": 45,
+        "Prot": 1354,
+        "HP": 230
+    },
+    {
+        "Equipped": "Dengar",
+        "Slot": "Triangle",
+        "Set": "Tenacity",
+        "Primary": "Offense",
+        "Spd": 9,
+        "Off": 27,
+        "HP_%": 0.79,
+        "Pot_%": 1.98
+    },
+    {
+        "Equipped": "Chirrut",
+        "Slot": "Triangle",
+        "Set": "Crit Dam",
+        "Primary": "Crit Dam",
+        "Spd": 9,
+        "Crit_%": 3.4,
+        "Prot_%": 3.1,
+        "Ten_%": 1.38
+    },
+    {
+        "Equipped": "Rex",
+        "Slot": "Triangle",
+        "Set": "Crit Dam",
+        "Primary": "Defense",
+        "Spd": 9,
+        "Off": 25,
+        "HP_%": 0.59,
+        "Pot_%": 6.21
+    },
+    {
+        "Equipped": "Boba",
+        "Slot": "Triangle",
+        "Set": "Crit Chnc",
+        "Primary": "Protection",
+        "Spd": 9,
+        "Off": 24,
+        "HP": 231,
+        "Def_%": 1.09
+    },
+    {
+        "Equipped": "Geo Sold",
+        "Slot": "Triangle",
+        "Set": "Potency",
+        "Primary": "Health",
+        "Spd": 8,
+        "Prot": 1157,
+        "Prot_%": 1.7,
+        "Pot_%": 2.05
+    },
+    {
+        "Equipped": "Luke (FB)",
+        "Slot": "Triangle",
+        "Set": "Health",
+        "Primary": "Defense",
+        "Spd": 8,
+        "Crit_%": 1.65,
+        "HP": 320,
+        "Def": 17
+    },
+    {
+        "Equipped": "Phasma",
+        "Slot": "Triangle",
+        "Set": "Speed",
+        "Primary": "Crit Dam",
+        "Spd": 8,
+        "Off": 38,
+        "Off_%": 0.53,
+        "HP_%": 1.62
+    },
+    {
+        "Equipped": "B2",
+        "Slot": "Triangle",
+        "Set": "Defense",
+        "Primary": "Protection",
+        "Spd": 7,
+        "Off": 79,
+        "Prot": 617,
+        "Def_%": 2.89
+    },
+    {
+        "Equipped": "Palp",
+        "Slot": "Triangle",
+        "Set": "Potency",
+        "Primary": "Crit Dam",
+        "Spd": 5,
+        "HP": 240,
+        "HP_%": 0.69,
+        "Ten_%": 3.34
+    },
+    {
+        "Equipped": "Gen Ken",
+        "Slot": "Triangle",
+        "Set": "Crit Dam",
+        "Primary": "Protection",
+        "Spd": 5,
+        "Off": 44,
+        "HP": 0.86,
+        "HP_%": 0.86,
+        "Def": 2.93
+    },
+    {
+        "Equipped": "HK-47",
+        "Slot": "Triangle",
+        "Set": "Speed",
+        "Primary": "Crit Chnc",
+        "Spd": 5,
+        "Off_%": 0.45,
+        "Def": 5,
+        "Ten_%": 1.3
+    },
+    {
+        "Equipped": "Baze",
+        "Slot": "Triangle",
+        "Set": "Health",
+        "Primary": "Health",
+        "Prot": 687,
+        "HP": 376,
+        "Def": 7,
+        "Def_%": 3.7
+    }
+]
+}
