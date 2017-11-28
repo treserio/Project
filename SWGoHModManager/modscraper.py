@@ -34,4 +34,5 @@ for item in mods:
 #statmod-stat-label = label
 
 #first loop goes through both 1 and 2, 2 is x4 of 1
-#2nd item in array is string to compare with json values for placement
+#statmod-stat-label in array is string to compare with json values for placement
+#append values to array? one for values one for labels?
