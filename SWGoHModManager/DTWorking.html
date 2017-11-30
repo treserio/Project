@@ -8,6 +8,8 @@
 <script>
     $(document).ready(function() {
         $('#example').DataTable( {
+            iDisplayLength: -1,
+            lengthMenu: [[25,50,100,-1],[25,50,100,"All"]],
             ajax:  "modData.json",
             columns: [
                 { data: 'Equipped' },
@@ -39,8 +41,27 @@
                 { data: 'Ten_%',
                 "defaultContent": "" }
             ]
-    
         });
+
+        // Setup - add a text input to each footer cell
+        $('#example tfoot th').each( function () {
+            var title = $(this).text();
+            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        } );
+
+        // Apply the search
+     //   this.columns().every( function () {
+     //   var that = this;
+ 
+        //$( 'input', this.footer() ).on( 'keyup change', function () {
+            //if ( that.search() !== this.value ) {
+                //that
+                    //.search( this.value )
+                    //.draw();
+            //}
+        //} );
+
+
     } );
     
 </script>
