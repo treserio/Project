@@ -1,13 +1,6 @@
-{ "data": [
+{"data":[
     {
-        "Equipped": "Chirrut",
-        "Slot": "Circle",
-        "Set": "Crit Chnc",
-        "Primary": "Health",
-        "Spd": 14,
-        "Crit_%": 2.25,
-        "Prot": 525,
-        "Prot_%": 2.19
+        "Equipped":"Chirrut","Slot":"Circle","Set":"Crit Chnc","Primary":"Health","Spd":14,"Crit_%":2.25,"Prot":525,"Prot_%": 2.19
     },
     {
         "Equipped": "Hera",
