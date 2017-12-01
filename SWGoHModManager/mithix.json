@@ -1,0 +1,3974 @@
+{
+    "data": [
+        {
+            "Equipped": "First Order Stormtrooper",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Prot": 814,
+            "HP_%": 2.46,
+            "Spd": 10,
+            "HP": 286
+        },
+        {
+            "Equipped": "Admiral Ackbar",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "HP": 492,
+            "Pot_%": 1.91,
+            "Ten_%": 1.68,
+            "Crit_%": 1.68
+        },
+        {
+            "Equipped": "Royal Guard",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Off": 30,
+            "HP_%": 0.8,
+            "Pot_%": 1.99,
+            "Prot": 637
+        },
+        {
+            "Equipped": "Kanan Jarrus",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Prot": 1473,
+            "Def": 14,
+            "Pot_%": 1.71,
+            "HP_%": 0.89
+        },
+        {
+            "Equipped": "Barriss Offee",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Def": 15,
+            "Def_%": 1.27,
+            "Prot_%": 1.91,
+            "Spd": 3
+        },
+        {
+            "Equipped": "Jedi Consular",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Def": 13,
+            "Pot_%": 4.38,
+            "HP": 385,
+            "Off_%": 0.45
+        },
+        {
+            "Equipped": "Jawa Scavenger",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Spd": 13,
+            "Pot_%": 2.21,
+            "HP": 392,
+            "Off": 28
+        },
+        {
+            "Equipped": "Shoretrooper",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Spd": 10,
+            "Prot": 631,
+            "Def": 22,
+            "Crit_%": 1.82
+        },
+        {
+            "Equipped": "Ahsoka Tano",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Spd": 13,
+            "Off": 30,
+            "Prot": 815,
+            "Def_%": 0.85
+        },
+        {
+            "Equipped": "Hoth Rebel Soldier",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "HP": 428,
+            "Off_%": 0.3,
+            "Def_%": 4.29,
+            "Prot": 1738
+        },
+        {
+            "Equipped": "Stormtrooper Han",
+            "Slot": "Square",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Def": 15,
+            "Crit_%": 1.2,
+            "Spd": 4,
+            "HP": 266
+        },
+        {
+            "Equipped": "Darth Sidious",
+            "Slot": "Square",
+            "Set": "Def",
+            "Primary": "Offense",
+            "Spd": 4,
+            "Pot_%": 5.77,
+            "Crit_%": 2.79,
+            "HP_%": 1
+        },
+        {
+            "Equipped": "Savage Opress",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Off": 60,
+            "Crit_%": 5.17,
+            "HP": 320,
+            "Spd": 4
+        },
+        {
+            "Equipped": "Lando Calrissian",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Spd": 7,
+            "Pot_%": 1.84,
+            "Crit_%": 1.2,
+            "HP_%": 0.7
+        },
+        {
+            "Equipped": "Hera Syndulla",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "HP": 667,
+            "Prot": 1272,
+            "HP_%": 0.61,
+            "Spd": 3
+        },
+        {
+            "Equipped": "Cassian Andor",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot_%": 5.27,
+            "Spd": 5,
+            "Off": 42,
+            "Ten_%": 1.28
+        },
+        {
+            "Equipped": "Kylo Ren",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot_%": 4.06,
+            "Ten_%": 6.11,
+            "Spd": 4,
+            "Def": 9
+        },
+        {
+            "Equipped": "Bistan",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot": 1961,
+            "Spd": 4,
+            "Def": 8,
+            "HP_%": 0.66
+        },
+        {
+            "Equipped": "Death Trooper",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Def_%": 2.5,
+            "Def": 15,
+            "Prot": 616,
+            "Off": 115
+        },
+        {
+            "Equipped": "Darth Maul",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot": 2047,
+            "Crit_%": 4.02,
+            "Pot_%": 1.23,
+            "Prot_%": 2.03
+        },
+        {
+            "Equipped": "Boba Fett",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot_%": 3.22,
+            "HP": 1047,
+            "Spd": 3,
+            "Def": 6
+        },
+        {
+            "Equipped": "Sabine Wren",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "HP": 1028,
+            "Def": 12,
+            "Spd": 5,
+            "Prot": 537
+        },
+        {
+            "Equipped": "Princess Leia",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot_%": 1.9,
+            "Spd": 12,
+            "Def": 10,
+            "Prot": 674
+        },
+        {
+            "Equipped": "Rey (Scavenger)",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Spd": 8,
+            "Def": 6,
+            "Off": 42,
+            "Ten_%": 1.57
+        },
+        {
+            "Equipped": "First Order TIE Pilot",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Crit_%": 4.04,
+            "Ten_%": 1.16,
+            "Def": 6,
+            "HP": 223
+        },
+        {
+            "Equipped": "Resistance Trooper",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Ten_%": 2.56,
+            "Spd": 9,
+            "Pot_%": 1.82,
+            "Prot_%": 1.75
+        },
+        {
+            "Equipped": "Resistance Pilot",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Crit_%": 2.78,
+            "Spd": 9,
+            "Def": 6,
+            "Off": 43
+        },
+        {
+            "Equipped": "Dathcha",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "HP": 326,
+            "Ten_%": 1.49,
+            "Spd": 5,
+            "Prot": 431
+        },
+        {
+            "Equipped": "Snowtrooper",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Def_%": 4.44,
+            "Spd": 5,
+            "Ten_%": 1.21,
+            "Def": 6
+        },
+        {
+            "Equipped": "Baze Malbus",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Spd": 14,
+            "Off": 37,
+            "Prot_%": 1.43,
+            "HP": 394
+        },
+        {
+            "Equipped": "Zam Wesell",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Def": 29,
+            "HP_%": 1.03,
+            "Def_%": 1.57,
+            "Pot_%": 1.28
+        },
+        {
+            "Equipped": "Ewok Scout",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Def_%": 1.41,
+            "Crit_%": 4.7,
+            "Prot": 621,
+            "Ten_%": 2.24
+        },
+        {
+            "Equipped": "General Veers",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Pot_%": 1.91,
+            "Prot": 2978,
+            "HP": 396,
+            "Crit_%": 2.16
+        },
+        {
+            "Equipped": "Hoth Rebel Scout",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Off": 77,
+            "Def_%": 1.66,
+            "Spd": 5,
+            "Ten_%": 1.76
+        },
+        {
+            "Equipped": "HK-47",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot_%": 3.49,
+            "Pot_%": 2.1,
+            "Ten_%": 8.39,
+            "Spd": 3
+        },
+        {
+            "Equipped": "Darth Vader",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Spd": 9,
+            "Ten_%": 3.47,
+            "Off": 54,
+            "Prot": 794
+        },
+        {
+            "Equipped": "Commander Luke Skywalker",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot_%": 2.86,
+            "Spd": 11,
+            "Pot_%": 1.92,
+            "Def_%": 1.21
+        },
+        {
+            "Equipped": "TIE Fighter Pilot",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Spd": 9,
+            "Off": 75,
+            "Prot": 615,
+            "HP": 405
+        },
+        {
+            "Equipped": "Jyn Erso",
+            "Slot": "Square",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Prot_%": 3.65,
+            "Off": 43,
+            "Ten_%": 5.07,
+            "HP": 360
+        },
+        {
+            "Equipped": "Finn",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Spd": 9,
+            "Crit_%": 1.39,
+            "HP": 248,
+            "Prot": 708
+        },
+        {
+            "Equipped": "Captain Phasma",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Spd": 3,
+            "Ten_%": 5.15,
+            "Crit_%": 1.52,
+            "Prot": 735
+        },
+        {
+            "Equipped": "Chirrut Îmwe",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Crit_%": 5.64,
+            "Off": 58,
+            "Def_%": 1.29,
+            "HP_%": 0.63
+        },
+        {
+            "Equipped": "Old Daka",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Pot_%": 1.57,
+            "Prot_%": 1.59,
+            "Off": 72,
+            "HP": 1147
+        },
+        {
+            "Equipped": "Ezra Bridger",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Spd": 8,
+            "Off": 26,
+            "HP": 372,
+            "Pot_%": 1.99
+        },
+        {
+            "Equipped": "Jawa",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Pot_%": 2.97,
+            "Def": 9,
+            "Spd": 3,
+            "Off": 44
+        },
+        {
+            "Equipped": "Wedge Antilles",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Crit_%": 4.45,
+            "HP_%": 0.76,
+            "Ten_%": 3.24,
+            "HP": 394
+        },
+        {
+            "Equipped": "Han Solo",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Spd": 15,
+            "Pot_%": 1.16,
+            "Crit_%": 2.13,
+            "Off": 26
+        },
+        {
+            "Equipped": "Emperor Palpatine",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Def": 18,
+            "Spd": 9,
+            "Prot": 812,
+            "Off": 44
+        },
+        {
+            "Equipped": "Garazeb \"Zeb\" Orrelios",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Def": 12,
+            "Def_%": 2.47,
+            "Spd": 8,
+            "Prot": 449
+        },
+        {
+            "Equipped": "Biggs Darklighter",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Spd": 7,
+            "Prot": 1134,
+            "Crit_%": 1.84,
+            "Prot_%": 2.06
+        },
+        {
+            "Equipped": "Grand Moff Tarkin",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Def": 15,
+            "Prot_%": 1.82,
+            "Off": 76,
+            "HP": 859
+        },
+        {
+            "Equipped": "Cad Bane",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Def_%": 2.28,
+            "Prot": 650,
+            "Crit_%": 1.98,
+            "Off": 38
+        },
+        {
+            "Equipped": "Qui-Gon Jinn",
+            "Slot": "Square",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Off": 52,
+            "Prot": 1256,
+            "Prot_%": 1.82,
+            "HP_%": 2.5
+        },
+        {
+            "Equipped": "BB-8",
+            "Slot": "Square",
+            "Set": "Off",
+            "Primary": "Offense",
+            "Crit_%": 1.86,
+            "Off": 32,
+            "Spd": 16,
+            "HP": 399
+        },
+        {
+            "Equipped": "R2-D2",
+            "Slot": "Square",
+            "Set": "Off",
+            "Primary": "Offense",
+            "Prot": 825,
+            "Spd": 17,
+            "Crit_%": 1.41,
+            "Off": 29
+        },
+        {
+            "Equipped": "Grand Admiral Thrawn",
+            "Slot": "Square",
+            "Set": "Pot",
+            "Primary": "Offense",
+            "Spd": 17,
+            "Off": 42,
+            "Pot_%": 2.19,
+            "Ten_%": 3.53
+        },
+        {
+            "Equipped": "Teebo",
+            "Slot": "Square",
+            "Set": "Pot",
+            "Primary": "Offense",
+            "Def": 9,
+            "Prot": 574,
+            "Off": 39,
+            "Spd": 3
+        },
+        {
+            "Equipped": "CT-7567 \"Rex\"",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Spd": 9,
+            "Def": 8,
+            "HP_%": 1.05,
+            "Crit_%": 2.14
+        },
+        {
+            "Equipped": "Darth Nihilus",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Spd": 8,
+            "Prot": 1080,
+            "Def": 11,
+            "Pot_%": 2.01
+        },
+        {
+            "Equipped": "Asajj Ventress",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Off": 45,
+            "Crit_%": 1.48,
+            "Spd": 4,
+            "HP": 366
+        },
+        {
+            "Equipped": "Chief Nebit",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Def_%": 1.6,
+            "Ten_%": 5.06,
+            "Off": 35,
+            "Def": 7
+        },
+        {
+            "Equipped": "Poe Dameron",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "HP": 597,
+            "Spd": 11,
+            "Pot_%": 1.28,
+            "Prot_%": 3.17
+        },
+        {
+            "Equipped": "Grand Master Yoda",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Prot_%": 5.08,
+            "Prot": 575,
+            "Off": 36,
+            "Def_%": 1.22
+        },
+        {
+            "Equipped": "General Kenobi",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Spd": 13,
+            "Prot": 458,
+            "Def": 9,
+            "Off": 28
+        },
+        {
+            "Equipped": "Scarif Rebel Pathfinder",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Pot_%": 3.4,
+            "HP_%": 1.54,
+            "Spd": 11,
+            "Crit_%": 1.84
+        },
+        {
+            "Equipped": "First Order Officer",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Pot_%": 1.6,
+            "Off": 105,
+            "Ten_%": 2.2,
+            "Def": 6
+        },
+        {
+            "Equipped": "Lando Calrissian",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Speed",
+            "HP": 817,
+            "Prot": 700,
+            "Pot_%": 1.59,
+            "Prot_%": 1.37
+        },
+        {
+            "Equipped": "First Order Stormtrooper",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Def_%": 3.53,
+            "Spd": 5,
+            "HP": 704,
+            "HP_%": 0.83
+        },
+        {
+            "Equipped": "Zam Wesell",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Spd": 7,
+            "Crit_%": 1.45,
+            "Pot_%": 1.8,
+            "HP_%": 0.8
+        },
+        {
+            "Equipped": "Jedi Consular",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Prot": 495,
+            "Ten_%": 1.13,
+            "Def": 5,
+            "Pot_%": 1.84
+        },
+        {
+            "Equipped": "Jawa Scavenger",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "HP_%": 0.71,
+            "Def": 8,
+            "Crit_%": 1.2,
+            "Pot_%": 2.17
+        },
+        {
+            "Equipped": "Biggs Darklighter",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Speed",
+            "Crit_%": 1.63,
+            "Pot_%": 4.18,
+            "Off": 28,
+            "Ten_%": 1.43
+        },
+        {
+            "Equipped": "Ahsoka Tano",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "HP_%": 0.73,
+            "Off": 35,
+            "HP": 402,
+            "Def_%": 1.69
+        },
+        {
+            "Equipped": "Stormtrooper Han",
+            "Slot": "Arrow",
+            "Set": "HPs",
+            "Primary": "Critical Avoidance",
+            "HP": 854,
+            "Spd": 4,
+            "Ten_%": 1.15,
+            "Def": 9
+        },
+        {
+            "Equipped": "Savage Opress",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Off_%": 0.47,
+            "Prot": 435,
+            "Def_%": 1.1,
+            "Off": 41
+        },
+        {
+            "Equipped": "Hera Syndulla",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "HP_%": 1.08,
+            "Ten_%": 1.56,
+            "Prot_%": 1.55,
+            "Off_%": 0.39
+        },
+        {
+            "Equipped": "Cassian Andor",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Crit_%": 1.69,
+            "HP_%": 2.58,
+            "Def_%": 1.29,
+            "Off_%": 0.29
+        },
+        {
+            "Equipped": "Captain Phasma",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Def_%": 1.25,
+            "Prot_%": 1.75,
+            "Ten_%": 2.23,
+            "Crit_%": 1.23
+        },
+        {
+            "Equipped": "Sabine Wren",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "HP_%": 1.42,
+            "HP": 357,
+            "Pot_%": 1.51,
+            "Ten_%": 1.41
+        },
+        {
+            "Equipped": "Resistance Pilot",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Def": 8,
+            "HP": 386,
+            "Prot_%": 2.03,
+            "Def_%": 0.98
+        },
+        {
+            "Equipped": "Ezra Bridger",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Pot_%": 1.64,
+            "Off": 39,
+            "Crit_%": 1.18,
+            "Off_%": 0.45
+        },
+        {
+            "Equipped": "Baze Malbus",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Prot": 1283,
+            "Off_%": 0.55,
+            "Def_%": 1.33,
+            "Prot_%": 2.24
+        },
+        {
+            "Equipped": "Wedge Antilles",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Prot_%": 2.82,
+            "Def_%": 2.97,
+            "Ten_%": 3.22,
+            "Pot_%": 1.71
+        },
+        {
+            "Equipped": "Ewok Scout",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Pot_%": 1.39,
+            "HP": 348,
+            "Ten_%": 1.77,
+            "Off_%": 0.54
+        },
+        {
+            "Equipped": "Han Solo",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Off": 29,
+            "Prot": 1862,
+            "Pot_%": 1.82,
+            "HP_%": 1.07
+        },
+        {
+            "Equipped": "Emperor Palpatine",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Off": 83,
+            "Off_%": 0.53,
+            "Ten_%": 5.06,
+            "Prot": 590
+        },
+        {
+            "Equipped": "Garazeb \"Zeb\" Orrelios",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Prot": 511,
+            "HP": 308,
+            "Prot_%": 1.89,
+            "Def": 6
+        },
+        {
+            "Equipped": "General Veers",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "HP": 254,
+            "Off": 41,
+            "Def_%": 1.41,
+            "Ten_%": 1.31
+        },
+        {
+            "Equipped": "Darth Vader",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Off_%": 0.86,
+            "Off": 39,
+            "Ten_%": 1.46,
+            "Crit_%": 2.06
+        },
+        {
+            "Equipped": "TIE Fighter Pilot",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Off_%": 0.34,
+            "Def_%": 1.46,
+            "HP": 309,
+            "Ten_%": 1.75
+        },
+        {
+            "Equipped": "Scarif Rebel Pathfinder",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Def": 5,
+            "HP_%": 0.68,
+            "Off": 42,
+            "Prot_%": 1.52
+        },
+        {
+            "Equipped": "Cad Bane",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off_%": 0.55,
+            "Crit_%": 6.14,
+            "Ten_%": 1.34,
+            "Pot_%": 3.7
+        },
+        {
+            "Equipped": "Finn",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Crit_%": 7.36,
+            "Ten_%": 1.25,
+            "Def_%": 1.6,
+            "Off_%": 0.84
+        },
+        {
+            "Equipped": "Chirrut Îmwe",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Pot_%": 1.44,
+            "HP_%": 0.73,
+            "Ten_%": 2,
+            "Prot": 672
+        },
+        {
+            "Equipped": "Bistan",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "HP": 662,
+            "Def": 5,
+            "HP_%": 1.06,
+            "Prot_%": 1.75
+        },
+        {
+            "Equipped": "Princess Leia",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Off": 39,
+            "Def_%": 3.97,
+            "Pot_%": 1.23,
+            "HP": 223
+        },
+        {
+            "Equipped": "Resistance Trooper",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Ten_%": 1.92,
+            "Prot": 829,
+            "HP_%": 1.06,
+            "Prot_%": 1.71
+        },
+        {
+            "Equipped": "Commander Luke Skywalker",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "HP_%": 1.35,
+            "Crit_%": 3.48,
+            "Prot": 603,
+            "Off_%": 0.32
+        },
+        {
+            "Equipped": "Jyn Erso",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Off": 35,
+            "Prot_%": 1.86,
+            "HP_%": 1.01,
+            "Prot": 698
+        },
+        {
+            "Equipped": "Shoretrooper",
+            "Slot": "Arrow",
+            "Set": "Ten",
+            "Primary": "Protection",
+            "HP_%": 0.91,
+            "Prot": 2034,
+            "Spd": 16,
+            "Crit_%": 1.53
+        },
+        {
+            "Equipped": "Darth Nihilus",
+            "Slot": "Arrow",
+            "Set": "Pot",
+            "Primary": "Speed",
+            "HP_%": 1.04,
+            "Off": 74,
+            "Def_%": 2.1,
+            "Crit_%": 4.95
+        },
+        {
+            "Equipped": "Darth Maul",
+            "Slot": "Arrow",
+            "Set": "Pot",
+            "Primary": "Speed",
+            "Prot": 1592,
+            "Ten_%": 3.94,
+            "HP": 296,
+            "Def": 6
+        },
+        {
+            "Equipped": "Snowtrooper",
+            "Slot": "Arrow",
+            "Set": "Pot",
+            "Primary": "Speed",
+            "HP": 460,
+            "HP_%": 0.79,
+            "Prot": 645,
+            "Pot_%": 1.88
+        },
+        {
+            "Equipped": "Hoth Rebel Soldier",
+            "Slot": "Arrow",
+            "Set": "Pot",
+            "Primary": "Speed",
+            "Off_%": 0.8,
+            "Def": 6,
+            "HP": 355,
+            "Crit_%": 1.74
+        },
+        {
+            "Equipped": "CT-7567 \"Rex\"",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "HP": 380,
+            "HP_%": 1.56,
+            "Prot": 1292,
+            "Pot_%": 4.93
+        },
+        {
+            "Equipped": "Asajj Ventress",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Pot_%": 3.48,
+            "Def": 8,
+            "Crit_%": 1.76,
+            "Prot": 533
+        },
+        {
+            "Equipped": "Death Trooper",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Ten_%": 5.52,
+            "Prot_%": 1.93,
+            "HP_%": 1.05,
+            "Def": 6
+        },
+        {
+            "Equipped": "Boba Fett",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Critical Avoidance",
+            "Def_%": 2.72,
+            "Crit_%": 2.15,
+            "HP": 999,
+            "Spd": 9
+        },
+        {
+            "Equipped": "BB-8",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Prot": 1399,
+            "Pot_%": 1.79,
+            "HP_%": 0.87,
+            "Prot_%": 2.16
+        },
+        {
+            "Equipped": "R2-D2",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "HP": 628,
+            "Def": 5,
+            "Crit_%": 1.75,
+            "Prot_%": 1.72
+        },
+        {
+            "Equipped": "First Order TIE Pilot",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Critical Avoidance",
+            "Spd": 3,
+            "Off_%": 0.84,
+            "Crit_%": 5.06,
+            "Off": 83
+        },
+        {
+            "Equipped": "Kanan Jarrus",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Pot_%": 5.16,
+            "Prot_%": 3.47,
+            "Ten_%": 1.68,
+            "Prot": 490
+        },
+        {
+            "Equipped": "Poe Dameron",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Off": 64,
+            "Ten_%": 1.57,
+            "Prot": 696,
+            "Def_%": 1.65
+        },
+        {
+            "Equipped": "Barriss Offee",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Spd": 9,
+            "Prot": 1114,
+            "Pot_%": 1.14,
+            "HP": 411
+        },
+        {
+            "Equipped": "Grand Admiral Thrawn",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Def": 7,
+            "Crit_%": 6.07,
+            "HP": 216,
+            "Off": 40
+        },
+        {
+            "Equipped": "Grand Moff Tarkin",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Def": 18,
+            "HP": 304,
+            "Pot_%": 3.15,
+            "Ten_%": 1.93
+        },
+        {
+            "Equipped": "General Kenobi",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Prot_%": 2.04,
+            "Prot": 737,
+            "Def": 5,
+            "Off": 30
+        },
+        {
+            "Equipped": "First Order Officer",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Def": 23,
+            "Def_%": 2.32,
+            "Prot": 433,
+            "Ten_%": 1.16
+        },
+        {
+            "Equipped": "Darth Sidious",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Def_%": 3.5,
+            "Crit_%": 1.62,
+            "Def": 4,
+            "HP_%": 0.94
+        },
+        {
+            "Equipped": "First Order Stormtrooper",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "Off_%": 0.73,
+            "Spd": 8,
+            "Crit_%": 1.23,
+            "HP": 287
+        },
+        {
+            "Equipped": "Barriss Offee",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "HP": 307,
+            "Spd": 3,
+            "Prot": 477,
+            "Off_%": 0.44
+        },
+        {
+            "Equipped": "Jawa Scavenger",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "Spd": 9,
+            "Def": 7,
+            "HP_%": 1,
+            "Crit_%": 1.24
+        },
+        {
+            "Equipped": "Shoretrooper",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "Crit_%": 2.94,
+            "Prot": 727,
+            "Spd": 14,
+            "Pot_%": 1.65
+        },
+        {
+            "Equipped": "Ahsoka Tano",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "Ten_%": 4.77,
+            "Spd": 3,
+            "HP": 276,
+            "Prot": 601
+        },
+        {
+            "Equipped": "Hoth Rebel Soldier",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "HP_%": 1.71,
+            "Prot_%": 1.38,
+            "Prot": 781,
+            "Ten_%": 1.81
+        },
+        {
+            "Equipped": "Stormtrooper Han",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "Prot": 1322,
+            "Spd": 4,
+            "Def": 9,
+            "Crit_%": 1.15
+        },
+        {
+            "Equipped": "Baze Malbus",
+            "Slot": "Diamond",
+            "Set": "Def",
+            "Primary": "Defense",
+            "Pot_%": 2.13,
+            "Spd": 15,
+            "Ten_%": 4.49,
+            "Prot_%": 1.31
+        },
+        {
+            "Equipped": "Savage Opress",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 10,
+            "HP": 426,
+            "Prot_%": 2.03,
+            "Def": 8
+        },
+        {
+            "Equipped": "Lando Calrissian",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 8,
+            "HP": 630,
+            "Pot_%": 1.77,
+            "Prot_%": 1.36
+        },
+        {
+            "Equipped": "Cassian Andor",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off": 87,
+            "Prot_%": 3.15,
+            "Spd": 3,
+            "HP_%": 0.58
+        },
+        {
+            "Equipped": "Kylo Ren",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "HP": 563,
+            "Spd": 9,
+            "Prot": 524,
+            "Off_%": 0.31
+        },
+        {
+            "Equipped": "Finn",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "HP": 534,
+            "Ten_%": 1.78,
+            "Spd": 12,
+            "Crit_%": 1.49
+        },
+        {
+            "Equipped": "Captain Phasma",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 9,
+            "Pot_%": 2.06,
+            "Def": 9,
+            "HP": 238
+        },
+        {
+            "Equipped": "Chirrut Îmwe",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 4,
+            "Crit_%": 2.67,
+            "HP": 1403,
+            "Prot": 589
+        },
+        {
+            "Equipped": "Bistan",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off": 39,
+            "HP": 975,
+            "Spd": 10,
+            "Off_%": 0.33
+        },
+        {
+            "Equipped": "Old Daka",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Pot_%": 5.34,
+            "Prot_%": 2.01,
+            "Ten_%": 1.71,
+            "Prot": 721
+        },
+        {
+            "Equipped": "Death Trooper",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 7,
+            "Off": 58,
+            "Pot_%": 2.07,
+            "Prot_%": 1.54
+        },
+        {
+            "Equipped": "Darth Maul",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Crit_%": 3.85,
+            "Off": 46,
+            "Off_%": 0.45,
+            "Prot_%": 1.51
+        },
+        {
+            "Equipped": "Boba Fett",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Crit_%": 1.49,
+            "Off_%": 1.09,
+            "Prot_%": 4.19,
+            "HP": 341
+        },
+        {
+            "Equipped": "BB-8",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Def": 23,
+            "Spd": 9,
+            "HP_%": 1.87,
+            "Prot": 676
+        },
+        {
+            "Equipped": "Sabine Wren",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off": 86,
+            "Off_%": 0.5,
+            "Spd": 5,
+            "Crit_%": 1.73
+        },
+        {
+            "Equipped": "Princess Leia",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off_%": 0.69,
+            "Prot_%": 3.57,
+            "Off": 72,
+            "Spd": 9
+        },
+        {
+            "Equipped": "Rey (Scavenger)",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off": 104,
+            "HP": 338,
+            "Pot_%": 1.92,
+            "HP_%": 0.66
+        },
+        {
+            "Equipped": "First Order TIE Pilot",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Crit_%": 2.96,
+            "Ten_%": 3.18,
+            "Off": 80,
+            "Def": 5
+        },
+        {
+            "Equipped": "Resistance Trooper",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 12,
+            "Pot_%": 5.3,
+            "Def": 5,
+            "HP": 254
+        },
+        {
+            "Equipped": "Resistance Pilot",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 8,
+            "Pot_%": 3.75,
+            "Crit_%": 3.35,
+            "Def": 6
+        },
+        {
+            "Equipped": "Ezra Bridger",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 8,
+            "Crit_%": 3.87,
+            "Off": 25,
+            "Pot_%": 1.79
+        },
+        {
+            "Equipped": "Dathcha",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off_%": 1.06,
+            "Prot_%": 2.65,
+            "Crit_%": 1.91,
+            "Off": 30
+        },
+        {
+            "Equipped": "Jawa",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off": 54,
+            "Crit_%": 2.17,
+            "Ten_%": 2.13,
+            "Prot": 527
+        },
+        {
+            "Equipped": "Zam Wesell",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Crit_%": 3.45,
+            "HP": 328,
+            "Def": 9,
+            "Off": 41
+        },
+        {
+            "Equipped": "Ewok Scout",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Ten_%": 1.26,
+            "Prot_%": 2.94,
+            "Off": 119,
+            "Crit_%": 2.02
+        },
+        {
+            "Equipped": "Han Solo",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 14,
+            "Crit_%": 4.2,
+            "Pot_%": 2.03,
+            "HP_%": 0.63
+        },
+        {
+            "Equipped": "Emperor Palpatine",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "HP_%": 1.33,
+            "Spd": 10,
+            "Off": 27,
+            "Off_%": 0.46
+        },
+        {
+            "Equipped": "Garazeb \"Zeb\" Orrelios",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 11,
+            "Pot_%": 2.02,
+            "HP_%": 0.87,
+            "Off": 25
+        },
+        {
+            "Equipped": "Biggs Darklighter",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off_%": 1.14,
+            "Pot_%": 4.36,
+            "Off": 25,
+            "Spd": 9
+        },
+        {
+            "Equipped": "General Veers",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "HP": 414,
+            "Spd": 7,
+            "Pot_%": 4.55,
+            "Ten_%": 2.24
+        },
+        {
+            "Equipped": "Hoth Rebel Scout",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Spd": 11,
+            "Def": 4,
+            "HP": 422,
+            "Off": 40
+        },
+        {
+            "Equipped": "HK-47",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Off": 52,
+            "Prot": 1279,
+            "HP": 268,
+            "HP_%": 0.72
+        },
+        {
+            "Equipped": "Darth Vader",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Pot_%": 1.82,
+            "Spd": 12,
+            "Off": 23,
+            "HP_%": 0.69
+        },
+        {
+            "Equipped": "Commander Luke Skywalker",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Pot_%": 1.45,
+            "Spd": 13,
+            "Prot": 678,
+            "Crit_%": 1.61
+        },
+        {
+            "Equipped": "Jyn Erso",
+            "Slot": "Diamond",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "Prot": 926,
+            "Spd": 8,
+            "Ten_%": 1.82,
+            "HP_%": 0.78
+        },
+        {
+            "Equipped": "CT-7567 \"Rex\"",
+            "Slot": "Diamond",
+            "Set": "Crit_%",
+            "Primary": "Defense",
+            "HP": 819,
+            "Spd": 8,
+            "HP_%": 0.72,
+            "Off_%": 0.34
+        },
+        {
+            "Equipped": "Hera Syndulla",
+            "Slot": "Diamond",
+            "Set": "Crit_%",
+            "Primary": "Defense",
+            "Spd": 10,
+            "Off": 32,
+            "Prot": 779,
+            "HP": 238
+        },
+        {
+            "Equipped": "Wedge Antilles",
+            "Slot": "Diamond",
+            "Set": "Crit_%",
+            "Primary": "Defense",
+            "Crit_%": 3.8,
+            "HP": 766,
+            "Pot_%": 1.91,
+            "Prot": 543
+        },
+        {
+            "Equipped": "Grand Moff Tarkin",
+            "Slot": "Diamond",
+            "Set": "Crit_%",
+            "Primary": "Defense",
+            "HP_%": 0.94,
+            "HP": 1065,
+            "Spd": 4,
+            "Prot_%": 1.72
+        },
+        {
+            "Equipped": "TIE Fighter Pilot",
+            "Slot": "Diamond",
+            "Set": "Crit_%",
+            "Primary": "Defense",
+            "Spd": 7,
+            "Off": 45,
+            "HP_%": 0.87,
+            "Prot": 595
+        },
+        {
+            "Equipped": "Cad Bane",
+            "Slot": "Diamond",
+            "Set": "Crit_%",
+            "Primary": "Defense",
+            "Off_%": 1.27,
+            "Def": 17,
+            "Pot_%": 1.66,
+            "Crit_%": 1.62
+        },
+        {
+            "Equipped": "Jedi Consular",
+            "Slot": "Diamond",
+            "Set": "Ten",
+            "Primary": "Defense",
+            "HP_%": 0.62,
+            "Def": 22,
+            "Pot_%": 1.52,
+            "Ten_%": 1.9
+        },
+        {
+            "Equipped": "Snowtrooper",
+            "Slot": "Diamond",
+            "Set": "Pot",
+            "Primary": "Defense",
+            "Crit_%": 4.68,
+            "HP": 308,
+            "Spd": 9,
+            "Ten_%": 2.1
+        },
+        {
+            "Equipped": "Grand Admiral Thrawn",
+            "Slot": "Diamond",
+            "Set": "Pot",
+            "Primary": "Defense",
+            "Spd": 21,
+            "HP": 229,
+            "Off_%": 1.01,
+            "Prot_%": 1.54
+        },
+        {
+            "Equipped": "Darth Nihilus",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Prot": 415,
+            "Spd": 13,
+            "Pot_%": 1.2,
+            "Crit_%": 1.4
+        },
+        {
+            "Equipped": "Asajj Ventress",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Def": 16,
+            "Spd": 9,
+            "Prot_%": 1.92,
+            "HP": 269
+        },
+        {
+            "Equipped": "Admiral Ackbar",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Prot_%": 3.87,
+            "HP": 358,
+            "Pot_%": 2.21,
+            "Prot": 574
+        },
+        {
+            "Equipped": "R2-D2",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Prot_%": 1.29,
+            "Spd": 11,
+            "Ten_%": 5.06,
+            "Off": 38
+        },
+        {
+            "Equipped": "Chief Chirpa",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Pot_%": 3.04,
+            "Spd": 6,
+            "Prot": 475,
+            "Def": 9
+        },
+        {
+            "Equipped": "Chief Nebit",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "HP": 1108,
+            "Ten_%": 2.63,
+            "Off": 45,
+            "HP_%": 0.85
+        },
+        {
+            "Equipped": "Kanan Jarrus",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Off_%": 0.86,
+            "Def": 6,
+            "Prot_%": 1.67,
+            "Pot_%": 2.01
+        },
+        {
+            "Equipped": "Poe Dameron",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Spd": 8,
+            "HP": 283,
+            "Def": 8,
+            "Crit_%": 1.9
+        },
+        {
+            "Equipped": "Grand Master Yoda",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Prot": 447,
+            "Crit_%": 4.5,
+            "Pot_%": 1.21,
+            "HP": 417
+        },
+        {
+            "Equipped": "General Kenobi",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Spd": 11,
+            "HP_%": 0.71,
+            "Def": 5,
+            "HP": 300
+        },
+        {
+            "Equipped": "Scarif Rebel Pathfinder",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "HP_%": 1.65,
+            "Spd": 3,
+            "Prot": 743,
+            "Off": 31
+        },
+        {
+            "Equipped": "First Order Officer",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Spd": 9,
+            "Pot_%": 2.21,
+            "HP_%": 0.68,
+            "Prot_%": 1.22
+        },
+        {
+            "Equipped": "Darth Sidious",
+            "Slot": "Diamond",
+            "Set": "Spd",
+            "Primary": "Defense",
+            "Crit_%": 4.22,
+            "HP": 251,
+            "Prot": 809,
+            "Prot_%": 2.07
+        },
+        {
+            "Equipped": "First Order Stormtrooper",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "HP_%": 0.99,
+            "Crit_%": 3.64,
+            "Spd": 8,
+            "Prot": 1770
+        },
+        {
+            "Equipped": "Cassian Andor",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Critical Chance",
+            "Prot_%": 3.79,
+            "Def": 5,
+            "Spd": 4,
+            "HP_%": 0.86
+        },
+        {
+            "Equipped": "Asajj Ventress",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Critical Chance",
+            "Off": 82,
+            "Pot_%": 1.62,
+            "HP": 837,
+            "Def": 5
+        },
+        {
+            "Equipped": "Death Trooper",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Critical Damage",
+            "Prot": 1281,
+            "Def": 8,
+            "HP": 224,
+            "Ten_%": 1.89
+        },
+        {
+            "Equipped": "R2-D2",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Critical Damage",
+            "Pot_%": 2.17,
+            "Spd": 13,
+            "HP": 370,
+            "HP_%": 0.94
+        },
+        {
+            "Equipped": "Zam Wesell",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Spd": 9,
+            "Pot_%": 3.7,
+            "HP_%": 0.68,
+            "Def_%": 1.48
+        },
+        {
+            "Equipped": "Shoretrooper",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "HP_%": 1.4,
+            "HP": 568,
+            "Spd": 10,
+            "Ten_%": 1.98
+        },
+        {
+            "Equipped": "General Veers",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Critical Damage",
+            "Def_%": 1.14,
+            "Def": 6,
+            "Off_%": 0.35,
+            "Crit_%": 2.04
+        },
+        {
+            "Equipped": "Hoth Rebel Soldier",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Critical Damage",
+            "Pot_%": 1.96,
+            "Off_%": 0.38,
+            "Ten_%": 1.99,
+            "HP_%": 0.67
+        },
+        {
+            "Equipped": "General Kenobi",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Off": 90,
+            "Spd": 10,
+            "Off_%": 0.41,
+            "Def": 9
+        },
+        {
+            "Equipped": "Jyn Erso",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Critical Chance",
+            "HP": 579,
+            "Def_%": 3.88,
+            "Off": 37,
+            "Ten_%": 1.34
+        },
+        {
+            "Equipped": "Stormtrooper Han",
+            "Slot": "Triangle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Prot": 1265,
+            "HP_%": 1.56,
+            "Def_%": 1.52,
+            "Ten_%": 1.33
+        },
+        {
+            "Equipped": "Baze Malbus",
+            "Slot": "Triangle",
+            "Set": "Def",
+            "Primary": "Critical Damage",
+            "Off_%": 0.99,
+            "Pot_%": 1.99,
+            "Spd": 8,
+            "Crit_%": 5.63
+        },
+        {
+            "Equipped": "Savage Opress",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Pot_%": 3.52,
+            "HP": 640,
+            "Off": 60,
+            "Def": 9
+        },
+        {
+            "Equipped": "Hera Syndulla",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Chance",
+            "Ten_%": 3.28,
+            "Prot": 704,
+            "Off": 34,
+            "HP": 345
+        },
+        {
+            "Equipped": "Finn",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Ten_%": 4.61,
+            "Spd": 4,
+            "HP": 246,
+            "Crit_%": 1.99
+        },
+        {
+            "Equipped": "Chirrut Îmwe",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Def_%": 2.38,
+            "Def": 7,
+            "Off_%": 0.47,
+            "HP": 382
+        },
+        {
+            "Equipped": "Bistan",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "HP": 623,
+            "Spd": 5,
+            "Off": 36,
+            "Prot_%": 1.68
+        },
+        {
+            "Equipped": "Old Daka",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Crit_%": 1.51,
+            "Spd": 9,
+            "Off_%": 1.2,
+            "Ten_%": 1.36
+        },
+        {
+            "Equipped": "Princess Leia",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Spd": 5,
+            "Off": 24,
+            "Prot_%": 1.24,
+            "Ten_%": 2.07
+        },
+        {
+            "Equipped": "First Order TIE Pilot",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Prot": 765,
+            "Pot_%": 1.73,
+            "Def": 5,
+            "Spd": 4
+        },
+        {
+            "Equipped": "Resistance Pilot",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Off_%": 0.38,
+            "Prot": 448,
+            "HP": 313,
+            "Def": 8
+        },
+        {
+            "Equipped": "Ezra Bridger",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Off_%": 0.29,
+            "Prot": 811,
+            "Prot_%": 1.99,
+            "HP": 366
+        },
+        {
+            "Equipped": "Snowtrooper",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Off": 94,
+            "Prot": 680,
+            "Ten_%": 2.11,
+            "Prot_%": 1.84
+        },
+        {
+            "Equipped": "Wedge Antilles",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Ten_%": 1.75,
+            "Off_%": 0.49,
+            "HP_%": 0.95,
+            "Spd": 4
+        },
+        {
+            "Equipped": "Darth Vader",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "HP": 426,
+            "Prot_%": 2.19,
+            "HP_%": 0.73,
+            "Off_%": 0.43
+        },
+        {
+            "Equipped": "TIE Fighter Pilot",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Def": 13,
+            "Prot_%": 3.3,
+            "Prot": 644,
+            "HP_%": 1.02
+        },
+        {
+            "Equipped": "Scarif Rebel Pathfinder",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Def_%": 2.78,
+            "Crit_%": 3.04,
+            "Prot": 1854,
+            "Off_%": 0.36
+        },
+        {
+            "Equipped": "Cad Bane",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 10,
+            "Pot_%": 3.41,
+            "Crit_%": 2.17,
+            "HP_%": 0.73
+        },
+        {
+            "Equipped": "Lando Calrissian",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Def_%": 2.38,
+            "Prot": 553,
+            "HP_%": 1.03,
+            "Crit_%": 1.56
+        },
+        {
+            "Equipped": "Kylo Ren",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Def_%": 3.29,
+            "Def": 15,
+            "Prot": 595,
+            "Off": 37
+        },
+        {
+            "Equipped": "Captain Phasma",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Def": 6,
+            "Off": 42,
+            "Def_%": 1,
+            "Prot_%": 2.05
+        },
+        {
+            "Equipped": "Sabine Wren",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "HP": 776,
+            "Off": 32,
+            "Prot_%": 1.97,
+            "Prot": 450
+        },
+        {
+            "Equipped": "Resistance Trooper",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "HP_%": 0.95,
+            "Ten_%": 1.95,
+            "Off": 35,
+            "Off_%": 0.32
+        },
+        {
+            "Equipped": "Jawa",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Defense",
+            "HP": 915,
+            "Spd": 8,
+            "Ten_%": 1.67,
+            "Off_%": 0.78
+        },
+        {
+            "Equipped": "Ewok Scout",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Def": 9,
+            "Def_%": 2.99,
+            "Spd": 3,
+            "HP": 324
+        },
+        {
+            "Equipped": "Han Solo",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Def": 5,
+            "Spd": 13,
+            "Def_%": 1.55,
+            "Crit_%": 1.28
+        },
+        {
+            "Equipped": "Garazeb \"Zeb\" Orrelios",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Pot_%": 1.46,
+            "Spd": 5,
+            "Prot_%": 1.19,
+            "HP": 361
+        },
+        {
+            "Equipped": "Biggs Darklighter",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Ten_%": 1.34,
+            "HP_%": 0.81,
+            "HP": 215,
+            "Off": 39
+        },
+        {
+            "Equipped": "Jawa Scavenger",
+            "Slot": "Triangle",
+            "Set": "Ten",
+            "Primary": "Critical Damage",
+            "HP": 718,
+            "Spd": 10,
+            "Off": 36,
+            "Prot_%": 1.74
+        },
+        {
+            "Equipped": "Boba Fett",
+            "Slot": "Triangle",
+            "Set": "Off",
+            "Primary": "Protection",
+            "Prot": 1619,
+            "HP": 380,
+            "HP_%": 1.36,
+            "Off": 73
+        },
+        {
+            "Equipped": "Geonosian Soldier",
+            "Slot": "Triangle",
+            "Set": "Off",
+            "Primary": "Critical Chance",
+            "Def_%": 1.09,
+            "HP_%": 2.34,
+            "Prot_%": 3.37,
+            "Pot_%": 3.74
+        },
+        {
+            "Equipped": "Jedi Consular",
+            "Slot": "Triangle",
+            "Set": "Pot",
+            "Primary": "Critical Chance",
+            "Prot": 1773,
+            "HP": 564,
+            "Pot_%": 2.93,
+            "Off": 31
+        },
+        {
+            "Equipped": "Teebo",
+            "Slot": "Triangle",
+            "Set": "Pot",
+            "Primary": "Critical Chance",
+            "Def_%": 1.31,
+            "Prot": 1401,
+            "HP": 1036,
+            "HP_%": 0.87
+        },
+        {
+            "Equipped": "CT-7567 \"Rex\"",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Damage",
+            "Ten_%": 2.5,
+            "HP_%": 1.25,
+            "Pot_%": 1.68,
+            "Spd": 4
+        },
+        {
+            "Equipped": "Darth Nihilus",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Damage",
+            "Def": 9,
+            "Spd": 5,
+            "Off_%": 2.35,
+            "Ten_%": 1.16
+        },
+        {
+            "Equipped": "Admiral Ackbar",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Prot": 651,
+            "Off_%": 0.55,
+            "Ten_%": 2,
+            "Spd": 5
+        },
+        {
+            "Equipped": "Darth Maul",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Damage",
+            "Off": 50,
+            "Spd": 9,
+            "HP": 324,
+            "Def_%": 0.92
+        },
+        {
+            "Equipped": "Kanan Jarrus",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Chance",
+            "Def": 28,
+            "HP_%": 0.79,
+            "Off_%": 0.51,
+            "Spd": 3
+        },
+        {
+            "Equipped": "Poe Dameron",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Damage",
+            "HP_%": 2.28,
+            "Def": 15,
+            "Off": 57,
+            "Pot_%": 1.34
+        },
+        {
+            "Equipped": "Grand Admiral Thrawn",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Prot": 813,
+            "Spd": 17,
+            "Prot_%": 1.46,
+            "Crit_%": 1.62
+        },
+        {
+            "Equipped": "Grand Moff Tarkin",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Damage",
+            "HP_%": 1.71,
+            "Off": 44,
+            "Crit_%": 1.48,
+            "Spd": 4
+        },
+        {
+            "Equipped": "First Order Officer",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Chance",
+            "HP": 687,
+            "Prot": 1586,
+            "Ten_%": 2.09,
+            "Spd": 5
+        },
+        {
+            "Equipped": "Darth Sidious",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Damage",
+            "Spd": 11,
+            "Pot_%": 1.76,
+            "Crit_%": 1.44,
+            "Def": 7
+        },
+        {
+            "Equipped": "First Order Stormtrooper",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Def": 7,
+            "Off_%": 0.34,
+            "Prot": 702,
+            "Crit_%": 2.12
+        },
+        {
+            "Equipped": "Admiral Ackbar",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Health",
+            "Spd": 8,
+            "Def": 5,
+            "Off_%": 0.29,
+            "Def_%": 1.07
+        },
+        {
+            "Equipped": "First Order TIE Pilot",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Health",
+            "Crit_%": 3.43,
+            "Off_%": 0.52,
+            "Pot_%": 1.51,
+            "Ten_%": 1.21
+        },
+        {
+            "Equipped": "Royal Guard",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Health",
+            "Spd": 8,
+            "Def": 5,
+            "HP": 400,
+            "Prot": 434
+        },
+        {
+            "Equipped": "Poe Dameron",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "HP": 756,
+            "Pot_%": 4.13,
+            "Off": 32,
+            "Spd": 3
+        },
+        {
+            "Equipped": "Shoretrooper",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Ten_%": 3.71,
+            "Spd": 8,
+            "Prot": 481,
+            "HP_%": 0.89
+        },
+        {
+            "Equipped": "Ahsoka Tano",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Health",
+            "Off_%": 0.34,
+            "Def_%": 0.89,
+            "HP": 360,
+            "Off": 43
+        },
+        {
+            "Equipped": "Hoth Rebel Soldier",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Off": 27,
+            "HP": 918,
+            "Def_%": 1.01,
+            "Pot_%": 1.89
+        },
+        {
+            "Equipped": "Grand Master Yoda",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Health",
+            "Prot_%": 3.67,
+            "HP": 684,
+            "Off": 41,
+            "Def_%": 1.68
+        },
+        {
+            "Equipped": "Savage Opress",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Ten_%": 1.59,
+            "Pot_%": 6.58,
+            "Spd": 3,
+            "Off_%": 0.43
+        },
+        {
+            "Equipped": "Lando Calrissian",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off_%": 1.31,
+            "Off": 37,
+            "Prot": 1349,
+            "HP_%": 2.1
+        },
+        {
+            "Equipped": "Cassian Andor",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Def": 18,
+            "Crit_%": 4.01,
+            "Prot": 766,
+            "Def_%": 3.4
+        },
+        {
+            "Equipped": "Kylo Ren",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off_%": 0.33,
+            "Off": 45,
+            "HP": 257,
+            "Prot": 802
+        },
+        {
+            "Equipped": "Finn",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 8,
+            "HP_%": 0.98,
+            "Def": 9,
+            "Pot_%": 1.19
+        },
+        {
+            "Equipped": "Captain Phasma",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off_%": 0.5,
+            "HP_%": 1.1,
+            "Ten_%": 2.14,
+            "Off": 46
+        },
+        {
+            "Equipped": "Chirrut Îmwe",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Spd": 9,
+            "Crit_%": 1.26,
+            "Off": 42,
+            "Off_%": 0.51
+        },
+        {
+            "Equipped": "Bistan",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Def_%": 4.03,
+            "Pot_%": 1.9,
+            "Crit_%": 1.66,
+            "Off_%": 0.41
+        },
+        {
+            "Equipped": "Old Daka",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off": 73,
+            "Prot": 1121,
+            "Def_%": 2.46,
+            "Ten_%": 2.05
+        },
+        {
+            "Equipped": "Death Trooper",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Pot_%": 2.78,
+            "Spd": 7,
+            "Def": 6,
+            "Def_%": 1.57
+        },
+        {
+            "Equipped": "Darth Maul",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Def_%": 1.14,
+            "Prot": 733,
+            "Spd": 3,
+            "Ten_%": 2.14
+        },
+        {
+            "Equipped": "Boba Fett",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Crit_%": 1.8,
+            "Spd": 4,
+            "HP": 230,
+            "Def": 6
+        },
+        {
+            "Equipped": "Princess Leia",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off": 70,
+            "Prot": 1212,
+            "Def": 14,
+            "Spd": 10
+        },
+        {
+            "Equipped": "Resistance Trooper",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Crit_%": 4.25,
+            "Spd": 5,
+            "Pot_%": 1.68,
+            "HP": 398
+        },
+        {
+            "Equipped": "Dathcha",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off": 55,
+            "Off_%": 0.87,
+            "HP": 554,
+            "Pot_%": 3.17
+        },
+        {
+            "Equipped": "Baze Malbus",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 13,
+            "Crit_%": 1.4,
+            "HP_%": 0.9,
+            "Off": 40
+        },
+        {
+            "Equipped": "Jawa",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Def": 15,
+            "Ten_%": 3.43,
+            "HP": 646,
+            "HP_%": 0.7
+        },
+        {
+            "Equipped": "Wedge Antilles",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "HP_%": 0.66,
+            "Def": 12,
+            "Prot": 1171,
+            "Off": 114
+        },
+        {
+            "Equipped": "Zam Wesell",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Prot_%": 5.44,
+            "Ten_%": 4.02,
+            "HP": 214,
+            "Off": 70
+        },
+        {
+            "Equipped": "Ewok Scout",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Spd": 8,
+            "Ten_%": 1.41,
+            "Off_%": 0.47,
+            "Def": 6
+        },
+        {
+            "Equipped": "Han Solo",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 13,
+            "HP_%": 0.84,
+            "Off": 33,
+            "Def_%": 1.62
+        },
+        {
+            "Equipped": "Garazeb \"Zeb\" Orrelios",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Pot_%": 4.12,
+            "Def": 15,
+            "HP": 370,
+            "Off_%": 0.47
+        },
+        {
+            "Equipped": "Jedi Consular",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Prot": 1400,
+            "Ten_%": 4.08,
+            "Pot_%": 3.92,
+            "Spd": 3
+        },
+        {
+            "Equipped": "Biggs Darklighter",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Crit_%": 3.2,
+            "Spd": 8,
+            "Pot_%": 1.76,
+            "Ten_%": 1.19
+        },
+        {
+            "Equipped": "General Veers",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Spd": 8,
+            "Pot_%": 2.15,
+            "Off": 32,
+            "Prot_%": 1.36
+        },
+        {
+            "Equipped": "Hoth Rebel Scout",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Prot": 1013,
+            "Off": 119,
+            "Pot_%": 1.96,
+            "Def": 7
+        },
+        {
+            "Equipped": "HK-47",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Def": 18,
+            "Ten_%": 2.11,
+            "Pot_%": 3.15,
+            "Prot": 722
+        },
+        {
+            "Equipped": "Darth Vader",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 10,
+            "Pot_%": 2.13,
+            "HP_%": 0.97,
+            "Prot": 445
+        },
+        {
+            "Equipped": "Commander Luke Skywalker",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 11,
+            "Off_%": 0.55,
+            "Ten_%": 1.24,
+            "HP": 381
+        },
+        {
+            "Equipped": "TIE Fighter Pilot",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Ten_%": 2.1,
+            "Crit_%": 5.53,
+            "Off": 39,
+            "Def_%": 1.16
+        },
+        {
+            "Equipped": "Jyn Erso",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Spd": 5,
+            "Pot_%": 6.04,
+            "Off_%": 0.38,
+            "HP": 218
+        },
+        {
+            "Equipped": "Cad Bane",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off": 71,
+            "Off_%": 0.53,
+            "Def_%": 1.26,
+            "Crit_%": 1.73
+        },
+        {
+            "Equipped": "Hera Syndulla",
+            "Slot": "Circle",
+            "Set": "Crit_%",
+            "Primary": "Protection",
+            "HP": 962,
+            "HP_%": 1.02,
+            "Def_%": 3.23,
+            "Off": 28
+        },
+        {
+            "Equipped": "Sabine Wren",
+            "Slot": "Circle",
+            "Set": "Crit_%",
+            "Primary": "Protection",
+            "Prot": 1756,
+            "Spd": 5,
+            "Pot_%": 1.57,
+            "HP_%": 0.9
+        },
+        {
+            "Equipped": "Rey (Scavenger)",
+            "Slot": "Circle",
+            "Set": "Crit_%",
+            "Primary": "Protection",
+            "Crit_%": 3.12,
+            "Prot": 692,
+            "Def_%": 1.16,
+            "Def": 9
+        },
+        {
+            "Equipped": "Resistance Pilot",
+            "Slot": "Circle",
+            "Set": "Crit_%",
+            "Primary": "Protection",
+            "Off_%": 1.06,
+            "Spd": 9,
+            "Ten_%": 1.48,
+            "Pot_%": 2.06
+        },
+        {
+            "Equipped": "Ezra Bridger",
+            "Slot": "Circle",
+            "Set": "Crit_%",
+            "Primary": "Protection",
+            "Spd": 9,
+            "Pot_%": 1.61,
+            "Def_%": 1.67,
+            "HP_%": 0.81
+        },
+        {
+            "Equipped": "Emperor Palpatine",
+            "Slot": "Circle",
+            "Set": "Crit_%",
+            "Primary": "Health",
+            "Spd": 8,
+            "Ten_%": 7.2,
+            "Crit_%": 1.74,
+            "Off_%": 0.43
+        },
+        {
+            "Equipped": "Jawa Scavenger",
+            "Slot": "Circle",
+            "Set": "Ten",
+            "Primary": "Protection",
+            "Def": 19,
+            "Pot_%": 1.47,
+            "Off_%": 0.29,
+            "Ten_%": 1.66
+        },
+        {
+            "Equipped": "Teebo",
+            "Slot": "Circle",
+            "Set": "Pot",
+            "Primary": "Protection",
+            "Spd": 5,
+            "Ten_%": 3.4,
+            "Crit_%": 5.01,
+            "HP": 376
+        },
+        {
+            "Equipped": "First Order Officer",
+            "Slot": "Circle",
+            "Set": "Pot",
+            "Primary": "Protection",
+            "Off": 101,
+            "HP_%": 1.67,
+            "Ten_%": 1.84,
+            "Pot_%": 4.14
+        },
+        {
+            "Equipped": "Qui-Gon Jinn",
+            "Slot": "Circle",
+            "Set": "Pot",
+            "Primary": "Protection",
+            "Off": 32,
+            "Prot": 1924,
+            "Spd": 5,
+            "Def": 8
+        },
+        {
+            "Equipped": "CT-7567 \"Rex\"",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Off": 41,
+            "HP_%": 2.33,
+            "Spd": 3,
+            "Crit_%": 4.82
+        },
+        {
+            "Equipped": "Darth Nihilus",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Ten_%": 4.15,
+            "Off_%": 0.28,
+            "Prot": 482,
+            "Spd": 4
+        },
+        {
+            "Equipped": "Asajj Ventress",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "HP_%": 1.08,
+            "Off": 76,
+            "Crit_%": 4.14,
+            "Prot": 1104
+        },
+        {
+            "Equipped": "BB-8",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Def": 5,
+            "Prot": 2135,
+            "Spd": 7,
+            "HP": 310
+        },
+        {
+            "Equipped": "R2-D2",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Spd": 8,
+            "Off": 36,
+            "Prot": 828,
+            "Crit_%": 2.12
+        },
+        {
+            "Equipped": "Chief Chirpa",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Ten_%": 3.23,
+            "Pot_%": 3.7,
+            "Def_%": 1.47,
+            "Def": 9
+        },
+        {
+            "Equipped": "Chief Nebit",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Def_%": 2.79,
+            "HP": 1118,
+            "Prot": 1084,
+            "HP_%": 0.72
+        },
+        {
+            "Equipped": "Kanan Jarrus",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Health",
+            "Def_%": 2.74,
+            "Ten_%": 4.77,
+            "Pot_%": 1.65,
+            "Spd": 5
+        },
+        {
+            "Equipped": "Barriss Offee",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Def_%": 3.81,
+            "Ten_%": 1.81,
+            "Prot": 483,
+            "Off_%": 0.38
+        },
+        {
+            "Equipped": "Grand Admiral Thrawn",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Spd": 12,
+            "Def": 8,
+            "HP": 503,
+            "Crit_%": 1.56
+        },
+        {
+            "Equipped": "Grand Moff Tarkin",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Crit_%": 4.75,
+            "Off_%": 0.43,
+            "Off": 37,
+            "Prot": 563
+        },
+        {
+            "Equipped": "General Kenobi",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Pot_%": 3.08,
+            "Spd": 10,
+            "Def": 22,
+            "Crit_%": 1.97
+        },
+        {
+            "Equipped": "Scarif Rebel Pathfinder",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Off": 70,
+            "Prot": 896,
+            "Pot_%": 1.68,
+            "Def_%": 1.05
+        },
+        {
+            "Equipped": "Darth Sidious",
+            "Slot": "Circle",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Ten_%": 3.27,
+            "Crit_%": 3.32,
+            "HP": 634,
+            "Prot": 805
+        },
+        {
+            "Equipped": "First Order Stormtrooper",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Prot": 1564,
+            "Def": 7,
+            "Spd": 7,
+            "Def_%": 1.42
+        },
+        {
+            "Equipped": "Cassian Andor",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "HP_%": 1.12,
+            "Spd": 4,
+            "Def": 9,
+            "Prot_%": 1.23
+        },
+        {
+            "Equipped": "Asajj Ventress",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Def": 7,
+            "Spd": 8,
+            "Def_%": 5.68,
+            "Off_%": 0.49
+        },
+        {
+            "Equipped": "Chief Chirpa",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Off": 62,
+            "Def_%": 2.28,
+            "Spd": 4,
+            "HP": 298
+        },
+        {
+            "Equipped": "Kanan Jarrus",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "Ten_%": 1.5,
+            "Def": 5,
+            "HP_%": 0.94,
+            "Prot": 530
+        },
+        {
+            "Equipped": "Poe Dameron",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "Off": 72,
+            "Spd": 9,
+            "HP": 352,
+            "HP_%": 0.75
+        },
+        {
+            "Equipped": "Jedi Consular",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Off_%": 0.65,
+            "HP": 376,
+            "Crit_%": 1.82,
+            "HP_%": 0.88
+        },
+        {
+            "Equipped": "Jawa Scavenger",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "Def_%": 0.99,
+            "Spd": 5,
+            "Off_%": 0.5,
+            "Off": 42
+        },
+        {
+            "Equipped": "Ahsoka Tano",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Prot": 692,
+            "Prot_%": 4.84,
+            "Ten_%": 4.65,
+            "Spd": 5
+        },
+        {
+            "Equipped": "General Veers",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "Spd": 6,
+            "Crit_%": 4.4,
+            "Off": 32,
+            "Off_%": 0.28
+        },
+        {
+            "Equipped": "Hoth Rebel Scout",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Offense",
+            "Crit_%": 1.57,
+            "Prot": 776,
+            "Prot_%": 2.21,
+            "Off": 32
+        },
+        {
+            "Equipped": "Grand Master Yoda",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "Def_%": 1.04,
+            "Off": 35,
+            "Prot_%": 1.39,
+            "HP_%": 0.62
+        },
+        {
+            "Equipped": "Stormtrooper Han",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "Def": 17,
+            "HP": 340,
+            "Prot_%": 1.22,
+            "Spd": 3
+        },
+        {
+            "Equipped": "Qui-Gon Jinn",
+            "Slot": "Cross",
+            "Set": "HPs",
+            "Primary": "Potency",
+            "Spd": 4,
+            "Prot_%": 1.68,
+            "Def_%": 1.42,
+            "Off_%": 0.52
+        },
+        {
+            "Equipped": "Boba Fett",
+            "Slot": "Cross",
+            "Set": "Def",
+            "Primary": "Tenacity",
+            "Spd": 11,
+            "HP": 357,
+            "Prot_%": 3.32,
+            "Def_%": 0.85
+        },
+        {
+            "Equipped": "Darth Sidious",
+            "Slot": "Cross",
+            "Set": "Def",
+            "Primary": "Potency",
+            "Def_%": 3.37,
+            "Spd": 4,
+            "Ten_%": 1.88,
+            "Crit_%": 1.92
+        },
+        {
+            "Equipped": "Savage Opress",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "HP_%": 1.45,
+            "Def_%": 0.94,
+            "HP": 748,
+            "Spd": 9
+        },
+        {
+            "Equipped": "Lando Calrissian",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 5,
+            "Def": 22,
+            "Pot_%": 2.92,
+            "Crit_%": 1.28
+        },
+        {
+            "Equipped": "Hera Syndulla",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "HP_%": 0.75,
+            "HP": 354,
+            "Off_%": 0.35,
+            "Prot": 626
+        },
+        {
+            "Equipped": "Kylo Ren",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Prot_%": 5.95,
+            "Ten_%": 2.13,
+            "Spd": 9,
+            "Prot": 690
+        },
+        {
+            "Equipped": "Finn",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Off_%": 0.75,
+            "Prot_%": 3.93,
+            "HP": 755,
+            "Def_%": 1.46
+        },
+        {
+            "Equipped": "Captain Phasma",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Off": 33,
+            "Def": 8,
+            "Spd": 3,
+            "HP": 366
+        },
+        {
+            "Equipped": "Chirrut Îmwe",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Tenacity",
+            "Pot_%": 1.54,
+            "Spd": 13,
+            "Off": 28,
+            "Crit_%": 1.74
+        },
+        {
+            "Equipped": "Old Daka",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Pot_%": 3.59,
+            "HP": 463,
+            "Spd": 5,
+            "Off": 43
+        },
+        {
+            "Equipped": "Death Trooper",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Tenacity",
+            "Prot": 1977,
+            "Spd": 13,
+            "Off": 39,
+            "HP": 292
+        },
+        {
+            "Equipped": "Darth Maul",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Tenacity",
+            "Off_%": 0.75,
+            "Def_%": 1.16,
+            "Prot_%": 4.75,
+            "HP_%": 1.54
+        },
+        {
+            "Equipped": "Sabine Wren",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Def_%": 2.26,
+            "HP_%": 1.49,
+            "Prot_%": 2.81,
+            "Crit_%": 3.09
+        },
+        {
+            "Equipped": "Rey (Scavenger)",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Off_%": 0.53,
+            "Def": 20,
+            "Spd": 5,
+            "HP_%": 0.84
+        },
+        {
+            "Equipped": "First Order TIE Pilot",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "HP_%": 1.96,
+            "Prot": 477,
+            "Spd": 3,
+            "Def": 8
+        },
+        {
+            "Equipped": "Resistance Trooper",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Off": 24,
+            "HP": 1388,
+            "Off_%": 0.32,
+            "Crit_%": 3.41
+        },
+        {
+            "Equipped": "Ezra Bridger",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Off": 90,
+            "Crit_%": 1.87,
+            "Spd": 12,
+            "Def": 7
+        },
+        {
+            "Equipped": "Dathcha",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Offense",
+            "Def_%": 1.63,
+            "Spd": 5,
+            "Pot_%": 1.21,
+            "Prot": 441
+        },
+        {
+            "Equipped": "Snowtrooper",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Prot": 1274,
+            "Def_%": 2.06,
+            "Off_%": 0.47,
+            "Crit_%": 1.51
+        },
+        {
+            "Equipped": "Baze Malbus",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 15,
+            "Def_%": 1.61,
+            "Ten_%": 1.79,
+            "Def": 6
+        },
+        {
+            "Equipped": "Wedge Antilles",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Prot_%": 3.51,
+            "HP_%": 1.52,
+            "Off": 46,
+            "HP": 329
+        },
+        {
+            "Equipped": "Zam Wesell",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Prot_%": 1.49,
+            "Crit_%": 4.89,
+            "Prot": 828,
+            "Off_%": 0.5
+        },
+        {
+            "Equipped": "Ewok Scout",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Crit_%": 5.6,
+            "Spd": 5,
+            "Ten_%": 1.81,
+            "Off": 29
+        },
+        {
+            "Equipped": "Han Solo",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Crit_%": 2.99,
+            "Off": 61,
+            "Prot": 797,
+            "HP": 254
+        },
+        {
+            "Equipped": "Emperor Palpatine",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Def_%": 1.17,
+            "Off_%": 0.38,
+            "HP": 231,
+            "Crit_%": 1.98
+        },
+        {
+            "Equipped": "Garazeb \"Zeb\" Orrelios",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Def": 23,
+            "HP_%": 0.78,
+            "Prot": 1608,
+            "Off_%": 0.4
+        },
+        {
+            "Equipped": "Biggs Darklighter",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Spd": 7,
+            "Pot_%": 1.23,
+            "Def": 6,
+            "HP_%": 0.59
+        },
+        {
+            "Equipped": "Commander Luke Skywalker",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Potency",
+            "Prot": 1253,
+            "Spd": 7,
+            "Off_%": 0.28,
+            "Off": 36
+        },
+        {
+            "Equipped": "Jyn Erso",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Health",
+            "Spd": 7,
+            "Ten_%": 2.49,
+            "Def": 5,
+            "Def_%": 1.62
+        },
+        {
+            "Equipped": "Cad Bane",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Tenacity",
+            "Prot": 1120,
+            "Prot_%": 3.34,
+            "Def": 14,
+            "Off": 69
+        },
+        {
+            "Equipped": "CT-7567 \"Rex\"",
+            "Slot": "Cross",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Spd": 3,
+            "Pot_%": 6.79,
+            "HP_%": 1.06,
+            "Def": 7
+        },
+        {
+            "Equipped": "Bistan",
+            "Slot": "Cross",
+            "Set": "Crit_%",
+            "Primary": "Potency",
+            "Off_%": 0.94,
+            "Def": 7,
+            "Prot_%": 1.22,
+            "Crit_%": 6.35
+        },
+        {
+            "Equipped": "Princess Leia",
+            "Slot": "Cross",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Spd": 9,
+            "Prot_%": 3.42,
+            "Def_%": 1.11,
+            "Ten_%": 1.77
+        },
+        {
+            "Equipped": "Resistance Pilot",
+            "Slot": "Cross",
+            "Set": "Crit_%",
+            "Primary": "Potency",
+            "Prot_%": 1.52,
+            "HP_%": 0.86,
+            "Prot": 805,
+            "Def_%": 1.57
+        },
+        {
+            "Equipped": "TIE Fighter Pilot",
+            "Slot": "Cross",
+            "Set": "Crit_%",
+            "Primary": "Potency",
+            "Crit_%": 4.04,
+            "Ten_%": 3.01,
+            "HP_%": 1.03,
+            "HP": 277
+        },
+        {
+            "Equipped": "Chief Nebit",
+            "Slot": "Cross",
+            "Set": "Ten",
+            "Primary": "Protection",
+            "Prot": 421,
+            "Crit_%": 7.24,
+            "Ten_%": 1.45,
+            "Def": 5
+        },
+        {
+            "Equipped": "Shoretrooper",
+            "Slot": "Cross",
+            "Set": "Ten",
+            "Primary": "Protection",
+            "Def_%": 2.95,
+            "Spd": 10,
+            "Off": 31,
+            "HP_%": 0.72
+        },
+        {
+            "Equipped": "Darth Vader",
+            "Slot": "Cross",
+            "Set": "Off",
+            "Primary": "Potency",
+            "Spd": 9,
+            "Ten_%": 3.08,
+            "Prot_%": 1.53,
+            "Def_%": 1.35
+        },
+        {
+            "Equipped": "Hoth Rebel Soldier",
+            "Slot": "Cross",
+            "Set": "Pot",
+            "Primary": "Tenacity",
+            "Off_%": 1.38,
+            "Prot_%": 1.5,
+            "Crit_%": 2.18,
+            "Def": 8
+        },
+        {
+            "Equipped": "Teebo",
+            "Slot": "Cross",
+            "Set": "Pot",
+            "Primary": "Potency",
+            "Crit_%": 2.89,
+            "Ten_%": 1.48,
+            "Off": 25,
+            "Prot": 629
+        },
+        {
+            "Equipped": "First Order Officer",
+            "Slot": "Cross",
+            "Set": "Pot",
+            "Primary": "Health",
+            "Def": 22,
+            "HP": 826,
+            "Spd": 5,
+            "Prot_%": 1.35
+        },
+        {
+            "Equipped": "Darth Nihilus",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "HP": 402,
+            "Spd": 13,
+            "Crit_%": 2.07,
+            "Ten_%": 1.91
+        },
+        {
+            "Equipped": "Admiral Ackbar",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Spd": 10,
+            "HP": 769,
+            "Def": 6,
+            "Def_%": 1.32
+        },
+        {
+            "Equipped": "BB-8",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Spd": 11,
+            "Prot": 788,
+            "Ten_%": 2.17,
+            "HP": 427
+        },
+        {
+            "Equipped": "R2-D2",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Potency",
+            "Spd": 8,
+            "Off_%": 0.45,
+            "Def": 7,
+            "Prot": 800
+        },
+        {
+            "Equipped": "Barriss Offee",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "HP_%": 1.03,
+            "Ten_%": 5.48,
+            "Spd": 4,
+            "Off": 38
+        },
+        {
+            "Equipped": "Grand Admiral Thrawn",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Potency",
+            "Crit_%": 2.9,
+            "Spd": 11,
+            "Off_%": 0.78,
+            "Def": 5
+        },
+        {
+            "Equipped": "Grand Moff Tarkin",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Potency",
+            "Spd": 8,
+            "Ten_%": 1.23,
+            "Off_%": 0.31,
+            "Off": 33
+        },
+        {
+            "Equipped": "General Kenobi",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Spd": 9,
+            "Def_%": 0.86,
+            "Off_%": 0.43,
+            "Crit_%": 1.55
+        },
+        {
+            "Equipped": "Scarif Rebel Pathfinder",
+            "Slot": "Cross",
+            "Set": "Spd",
+            "Primary": "Protection",
+            "Def_%": 1.69,
+            "Prot": 1767,
+            "HP": 769,
+            "Off_%": 0.45
+        },
+        {
+            "Equipped": "Chief Chirpa",
+            "Slot": "Square",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "Ten_%": 3.42,
+            "Pot_%": 3.69,
+            "Spd": 6,
+            "Prot_%": 3.01
+        },
+        {
+            "Equipped": "Chief Chirpa",
+            "Slot": "Arrow",
+            "Set": "Def",
+            "Primary": "Speed",
+            "HP": 564,
+            "Prot": 532,
+            "Ten_%": 1.37,
+            "Crit_%": 1.54
+        },
+        {
+            "Equipped": "Royal Guard",
+            "Slot": "Arrow",
+            "Set": "Def",
+            "Primary": "Speed",
+            "Prot": 568,
+            "HP": 780,
+            "Off_%": 0.79,
+            "Def_%": 1.12
+        },
+        {
+            "Equipped": "Rey (Scavenger)",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Pot_%": 4.07,
+            "Def_%": 1.29,
+            "Off": 31,
+            "Off_%": 0.35
+        },
+        {
+            "Equipped": "Jawa",
+            "Slot": "Arrow",
+            "Set": "Crit Dam",
+            "Primary": "Speed",
+            "Ten_%": 1.55,
+            "Prot": 695,
+            "Prot_%": 2.88,
+            "HP_%": 2.01
+        },
+        {
+            "Equipped": "Kylo Ren",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "HP_%": 1.85,
+            "Off_%": 0.62,
+            "Prot_%": 1.74,
+            "Crit_%": 1.9
+        },
+        {
+            "Equipped": "Old Daka",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Crit_%": 2.91,
+            "Ten_%": 2.72,
+            "Off": 47,
+            "Off_%": 0.76
+        },
+        {
+            "Equipped": "Dathcha",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Protection",
+            "HP": 382,
+            "Off": 56,
+            "Crit_%": 3.15,
+            "Pot_%": 1.06
+        },
+        {
+            "Equipped": "Geonosian Soldier",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Off_%": 0.78,
+            "HP_%": 2.18,
+            "Crit_%": 1.54,
+            "Def": 5
+        },
+        {
+            "Equipped": "HK-47",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Pot_%": 5.12,
+            "Ten_%": 1.37,
+            "HP_%": 1.67,
+            "HP": 344
+        },
+        {
+            "Equipped": "Qui-Gon Jinn",
+            "Slot": "Arrow",
+            "Set": "Crit_%",
+            "Primary": "Speed",
+            "Pot_%": 3.3,
+            "HP": 173,
+            "Prot": 601,
+            "Def_%": 0.92
+        },
+        {
+            "Equipped": "Admiral Ackbar",
+            "Slot": "Arrow",
+            "Set": "Spd",
+            "Primary": "Speed",
+            "Def_%": 3.73,
+            "Off_%": 0.32,
+            "Prot": 599,
+            "Def": 7
+        },
+        {
+            "Equipped": "Royal Guard",
+            "Slot": "Diamond",
+            "Set": "HPs",
+            "Primary": "Defense",
+            "HP": 595,
+            "Spd": 8,
+            "Prot": 408,
+            "Off": 28
+        },
+        {
+            "Equipped": "Geonosian Soldier",
+            "Slot": "Diamond",
+            "Set": "Off",
+            "Primary": "Defense",
+            "Spd": 7,
+            "Crit_%": 3,
+            "HP": 632,
+            "HP_%": 0.78
+        },
+        {
+            "Equipped": "Qui-Gon Jinn",
+            "Slot": "Diamond",
+            "Set": "Pot",
+            "Primary": "Defense",
+            "HP": 190,
+            "Spd": 7,
+            "Off": 77,
+            "Pot_%": 1.26
+        },
+        {
+            "Equipped": "Royal Guard",
+            "Slot": "Triangle",
+            "Set": "Def",
+            "Primary": "Defense",
+            "Def": 14,
+            "HP": 330,
+            "Prot": 1445,
+            "Off": 33
+        },
+        {
+            "Equipped": "Emperor Palpatine",
+            "Slot": "Triangle",
+            "Set": "Crit Dam",
+            "Primary": "Critical Damage",
+            "Prot": 912,
+            "Def": 7,
+            "Off": 20,
+            "HP": 1180
+        },
+        {
+            "Equipped": "Rey (Scavenger)",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Off": 60,
+            "HP": 325,
+            "Off_%": 0.47,
+            "Prot_%": 1.66
+        },
+        {
+            "Equipped": "Dathcha",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Offense",
+            "Off": 109,
+            "HP": 262,
+            "Def": 4,
+            "Ten_%": 1.34
+        },
+        {
+            "Equipped": "HK-47",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Spd": 4,
+            "Off": 21,
+            "Ten_%": 1.64,
+            "HP": 264
+        },
+        {
+            "Equipped": "Commander Luke Skywalker",
+            "Slot": "Triangle",
+            "Set": "Crit_%",
+            "Primary": "Critical Damage",
+            "Prot_%": 1.65,
+            "Crit_%": 1.29,
+            "Off_%": 0.42,
+            "Spd": 20
+        },
+        {
+            "Equipped": "Chief Nebit",
+            "Slot": "Triangle",
+            "Set": "Ten",
+            "Primary": "Protection",
+            "Prot": 634,
+            "Pot_%": 3.65,
+            "Spd": 4,
+            "HP_%": 0.59
+        },
+        {
+            "Equipped": "BB-8",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Critical Damage",
+            "Off_%": 0.43,
+            "Off": 18,
+            "Def_%": 4.9,
+            "Crit_%": 1.66
+        },
+        {
+            "Equipped": "Chief Chirpa",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Health",
+            "Crit_%": 2.9,
+            "Spd": 6,
+            "Def_%": 1.22,
+            "HP": 192
+        },
+        {
+            "Equipped": "Barriss Offee",
+            "Slot": "Triangle",
+            "Set": "Spd",
+            "Primary": "Offense",
+            "HP": 463,
+            "Def_%": 2.16,
+            "Prot_%": 1.61,
+            "Crit_%": 1.28
+        },
+        {
+            "Equipped": "Stormtrooper Han",
+            "Slot": "Circle",
+            "Set": "HPs",
+            "Primary": "Protection",
+            "Spd": 12,
+            "Def": 6,
+            "Prot": 564,
+            "Def_%": 1.06
+        },
+        {
+            "Equipped": "Snowtrooper",
+            "Slot": "Circle",
+            "Set": "Crit Dam",
+            "Primary": "Protection",
+            "Crit_%": 5.88,
+            "Ten_%": 3.09,
+            "Spd": 4,
+            "Def": 5
+        },
+        {
+            "Equipped": "Geonosian Soldier",
+            "Slot": "Circle",
+            "Set": "Off",
+            "Primary": "Protection",
+            "Prot": 422,
+            "Pot_%": 1.81,
+            "Spd": 12,
+            "Def_%": 0.84
+        },
+        {
+            "Equipped": "Royal Guard",
+            "Slot": "Cross",
+            "Set": "Def",
+            "Primary": "Potency",
+            "Def_%": 1.16,
+            "Spd": 5,
+            "Ten_%": 2.7,
+            "Prot": 1414
+        },
+        {
+            "Equipped": "Jawa",
+            "Slot": "Cross",
+            "Set": "Crit Dam",
+            "Primary": "Defense",
+            "HP": 479,
+            "Prot": 1721,
+            "Ten_%": 1.7,
+            "Spd": 4
+        },
+        {
+            "Equipped": "Geonosian Soldier",
+            "Slot": "Cross",
+            "Set": "Crit_%",
+            "Primary": "Health",
+            "Prot": 988,
+            "Off": 60,
+            "Crit_%": 3.05,
+            "Prot_%": 1.01
+        }
+    ]
+}
