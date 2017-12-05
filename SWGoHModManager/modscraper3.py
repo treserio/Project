@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 #statmod-stat-label = label
 
 #optimally pulls the username from an input field on the page to insert into string
-url = "https://swgoh.gg/u/seanluc/mods/"
+url = "https://swgoh.gg/u/sert/mods/"
 #Start of export string
 modjson = "{\"data\":["
 #Counter for pagenation, and starts at 2 for 2nd mods screen.
@@ -56,21 +56,21 @@ while True:
             modjson += "\"Slot\":\"Circle\","
         #Finding the set, the title contains a text identifier valid entries are below
         if 'Health' in names[nmcnt]:
-            modjson += "\"Set\":\"HPs\","
+            modjson += "\"Set\":\"Health\","
         if 'Defense' in names[nmcnt]:
-            modjson += "\"Set\":\"Def\","
+            modjson += "\"Set\":\"Defense\","
         if 'Speed' in names[nmcnt]:
-            modjson += "\"Set\":\"Spd\","
+            modjson += "\"Set\":\"Speed\","
         if 'Crit Chance' in names[nmcnt]:
-            modjson += "\"Set\":\"Crit_%\","
+            modjson += "\"Set\":\"Critical Chance\","
         if 'Crit Damage' in names[nmcnt]:
-            modjson += "\"Set\":\"Crit Dam\","
+            modjson += "\"Set\":\"Critical Damage\","
         if 'Tenacity' in names[nmcnt]:
-            modjson += "\"Set\":\"Ten\","
+            modjson += "\"Set\":\"Tenacity\","
         if 'Offense' in names[nmcnt]:
-            modjson += "\"Set\":\"Off\","
+            modjson += "\"Set\":\"Offense\","
         if 'Potency' in names[nmcnt]:
-            modjson += "\"Set\":\"Pot\","
+            modjson += "\"Set\":\"Potency\","
         #Increment again to get ready for next mods Equipped Character name.
         nmcnt += 1
         #Primary stat on mod
@@ -82,27 +82,27 @@ while True:
             if label == "Speed":
                 modjson += "\"Spd\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Critical Chance" and value.endswith("%"):
-                modjson += "\"Crit_%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                modjson += "\"Crit%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Offense" and value.endswith("%"):
-                modjson += "\"Off_%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                modjson += "\"Off%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Offense":
                 modjson += "\"Off\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Protection" and value.endswith("%"):
-                modjson += "\"Prot_%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                modjson += "\"Prot%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Protection":
                 modjson += "\"Prot\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Health" and value.endswith("%"):
-                modjson += "\"HP_%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                modjson += "\"HP%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Health":
                 modjson += "\"HP\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Defense" and value.endswith("%"):
-                modjson += "\"Def_%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                modjson += "\"Def%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Defense":
                 modjson += "\"Def\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Potency" and value.endswith("%"):
-                modjson += "\"Pot_%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                modjson += "\"Pot%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             elif label == "Tenacity" and value.endswith("%"):
-                modjson += "\"Ten_%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                modjson += "\"Ten%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             j += 1
         #Clean up the object
         modjson = modjson[:-1]    
@@ -112,7 +112,7 @@ while True:
     #Although the number is in the "class=pagination" div page = soup.find_all("ul", {"class": "pagination"})
     try: 
         nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
-        url = 'https://swgoh.gg/u/seanluc/mods/' + '?page=' + str(pgcnt)
+        url = 'https://swgoh.gg/u/sert/mods/' + '?page=' + str(pgcnt)
         print(url)
         pgcnt += 1
     except: #Needs to end infinite loop, clean up and finalize string
@@ -122,7 +122,7 @@ while True:
         modjson += "]}"
         break
 
-jsonf = open("seanluc.json","w")
+jsonf = open("sert.json","w")
 jsonf.write(modjson)
 jsonf.close()
 exit()

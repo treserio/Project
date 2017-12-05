@@ -3,40 +3,45 @@ $(document).ready(function() {
         //iDisplayLength: -1,
         //lengthMenu: [[10,30,50,-1],[10,30,50,"All"]],
         scrollY: '300px',
-        scrollX: "100%",
+        scrollX: '100%',
         paging: false,
-        ajax:  "Sert.json",
-        dom: 'ltip',
+        ajax:  'Sert.json',
+        dom: 'ltip', //removes top search bar
+        // should enable a fixed column on the left, but isn't working
+        fixedColumns: {
+            leftColumns: 1,
+            rightColumns: 0
+        },
         columns: [
-            { data: 'Equipped' },
-            { data: 'Slot' },
-            { data: 'Set' },
+            { data: 'Equipped', width: '90px'},
+            { data: 'Slot'  },
+            { data: 'Set', width: '40px' },
             { data: 'Primary' },
             { data: 'Spd',
             "defaultContent": "" },
-            { data: 'Crit_%',
+            { data: 'Crit%',
             "defaultContent": "" },
             { data: 'Off',
             "defaultContent": "" },
-            { data: 'Off_%',
+            { data: 'Off%',
             "defaultContent": "" },
             { data: 'Prot',
             "defaultContent": "" },
-            { data: 'Prot_%',
+            { data: 'Prot%',
             "defaultContent": "" },
             { data: 'HP',
             "defaultContent": "" },
-            { data: 'HP_%',
+            { data: 'HP%',
             "defaultContent": "" },
             { data: 'Def',
             "defaultContent": "" },
-            { data: 'Def_%',
+            { data: 'Def%',
             "defaultContent": "" },
-            { data: 'Pot_%',
+            { data: 'Pot%',
             "defaultContent": "" },
-            { data: 'Ten_%',
+            { data: 'Ten%',
             "defaultContent": "" }
-        ]
+        ],
     });
 
     //select filter search from drop down, try to find again list?
@@ -45,18 +50,22 @@ $(document).ready(function() {
 
 
     //Setup - add a text input to each footer cell
-    $('.dataTables_scrollFootInner tfoot th srch').each( function () {
+    $('.dataTables_scrollFootInner srch').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-    } );
-
-    datatableInstance.columns().everey(function() {
-        var dataTableColumn = this;
     });
 
-    $(this.tfoot()).find('input').on('keyup', 'change', function() {
-        dataTableColumn.search(this.value).draw();
-    });
+    var table = $('#moddata').DataTable();
     
+    // Apply the filter
+    table.columns().every( function () {
+        var column = this;
+    
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            column
+                .search( this.value )
+                .draw();
+        } );
+    } );
     
 })
