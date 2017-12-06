@@ -6,12 +6,13 @@
 <link rel="stylesheet" href="../CSS/moddataStyles.css">
 <script src="../Scripts/jquery-ui-1.12.1/jquery-1.12.4.js"></script>
 <script src="../dataTables/dataTables.1.10.16.min.js"></script>
-<script src="../Scripts/modDataTable.js"></script>
+<script async src="../Scripts/modDataTable.js"></script>
+<script src="../Scripts/assignmentTables.js"></script>
 </head>
 
 <!-- only using values in the json for headers -->
 <body>
-<div class="container">
+<div id="squadMembr0" class="container">
     <table id="moddata" class="display">
         <thead>
             <tr>
@@ -55,7 +56,7 @@
         </tfoot>
     </table>
 </div>
-<div class="container">
+<div id="squadMembr1" class=container>
 <table id="squad1" class="display assigned" cellspacing="0" width="100%">
     <thead>
             <tr>
@@ -79,7 +80,7 @@
         </thead>
     </table>
 </div>
-<div class="container">
+<div id="squadMembr2" class="container">
     <table id="squad2" class="display assigned" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -103,7 +104,7 @@
         </thead>
     </table>
 </div>
-<div class="container">
+<div id="squadMembr3" class="container">
     <table id="squad3" class="display assigned" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -127,7 +128,7 @@
         </thead>
     </table>
 </div>
-<div class="container">
+<div id="squadMembr4" class="container">
     <table id="squad4" class="display assigned" width="100%">
         <thead>
             <tr>
@@ -152,7 +153,7 @@
     </table>
 </div>
 <div class="container">
-    <table id="squad5" class="display assigned" width="100%">
+    <table id="squad5" class="display assigned">
         <thead>
             <tr>
                 <th>Equipped</th>

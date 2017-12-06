@@ -1,3 +1,4 @@
+// This fills an existing table with data supplied through the screen scraping of www.swgoh.gg into a json file, the swgoh.gg account name should match the one used for this site.
 $(document).ready(function() {
     $('#moddata').DataTable( {
         //iDisplayLength: -1,
@@ -5,7 +6,7 @@ $(document).ready(function() {
         scrollY: '300px',
         scrollX: '100%',
         paging: false,
-        ajax:  'Sert.json',
+        ajax:  'AcctData/Sert.json',
         dom: 'ltip', //removes top search bar
         // should enable a fixed column on the left, but isn't working
         fixedColumns: {
