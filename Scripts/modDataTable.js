@@ -6,7 +6,9 @@ $(document).ready(function() {
         scrollY: '300px',
         scrollX: '100%',
         paging: false,
-        ajax:  'AcctData/Sert.json',
+        ajax:  {
+            url: 'AcctData/Sert.json'            
+        },
         dom: 'ltip', //removes top search bar
         // should enable a fixed column on the left, but isn't working
         fixedColumns: {
