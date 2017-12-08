@@ -1,4 +1,5 @@
-//$document ready function
+// No longer used this was a method of drawing the dom by editing the html elements, which seems to have kept the elements from being picked up ultimately. I rewrote this in tblBuilder2.js.
+
 var sqdtbls = [];
 //Creates an array of tables to allow users to drag mods from the top table to the lower in order to customize sets. When it's assigned to a lower table it should color the associated row in the top.
 var nameselect = [];

@@ -30,7 +30,7 @@ while True:
     names = []
     for img in soup.find_all('img', alt=True):
         names.append(str(img['alt']))
-    #Mods per page with correlated information, only thing missing is the shape of the mod and type.../sigh check image type for correlation
+    #Mods per page with correlated information, check image type for correlation
     #append values to string, older versions of python recommend arrays and then joining but it's obsolete now.
     #Mod Counter
     i=0
@@ -75,7 +75,7 @@ while True:
         nmcnt += 1
         #Primary stat on mod
         modjson += "\"Primary\":\"" + item.find_all("span", {"class": "statmod-stat-label"})[0].text + "\","
-        #Setting Secondary stats
+        #Setting Secondary stats, this will fail if the mod doesn't have 4 2ndary stats, needs a check added.
         while (j < 4):
             label = str(mods2[i].find_all("span", {"class": "statmod-stat-label"})[j].text)
             value = str(mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text)
@@ -104,8 +104,9 @@ while True:
             elif label == "Tenacity" and value.endswith("%"):
                 modjson += "\"Ten%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
             j += 1
-        #Clean up the object
-        modjson = modjson[:-1]    
+        #Add final Assigned field
+        modjson += "\"Assigned\": \"\""
+            
         modjson += "},"    
         i += 1
     #Tries to find the next page, it should reset the url to the next page and we begin the process over again, probably will exit an infinite loop at last page(exception), since I can't think of an easy way to predetermine a user's number of pages.

@@ -7,7 +7,7 @@ $(document).ready(function() {
         scrollX: '100%',
         paging: false,
         ajax:  {
-            url: 'AcctData/Sert.json'            
+            url: 'AcctData/sert.json'            
         },
         dom: 'ltip', //removes top search bar
         // should enable a fixed column on the left, but isn't working
@@ -47,11 +47,7 @@ $(document).ready(function() {
         ],
     });
 
-    //select filter search from drop down, try to find again list?
-//maybe create a dragtag <drag></drag> for slot column? to cope entire row information to assigned 1, 2, 3, 4, 5
-
-
-
+//select filter search from drop down, try to find again list? This would be for those with only ~6 options
     //Setup - add a text input to each footer cell
     $('.dataTables_scrollFootInner srch').each( function () {
         var title = $(this).text();

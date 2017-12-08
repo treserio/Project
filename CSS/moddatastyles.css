@@ -1,10 +1,12 @@
 .container {
     width: 935px;
     padding-bottom: 10px;
+    float:left;
 }
 .container2 {
     width: 935px;
     padding-bottom: 10px;
+    overflow: scroll;
 }
 
 tfoot input {
@@ -13,4 +15,9 @@ tfoot input {
 
 table {
     table-layout: fixed;
+}
+
+.btnholdr {
+    float: right;
+    background-color: purple;
 }
