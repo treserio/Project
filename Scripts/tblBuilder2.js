@@ -92,7 +92,7 @@ $.getJSON('AcctData/sert.json', function(jsonfile) {
     });
 });
 
-//function for grabbing correct mod data from JSON file with search field input.  RIGHT NOW - it's only for the first slot.
+//function for grabbing correct mod data from JSON file with search field input.
 $('[id^=membrName').on('autocompleteclose', function() {
     var namesearch = this.value;
     var id = this.id;
@@ -110,6 +110,7 @@ $('[id^=membrName').on('autocompleteclose', function() {
                 });
             }
         }
+        // Run function to redraw table with correct mods found in Array and apply to correct table by id
         redraw(modArray, id);
     });
 });
