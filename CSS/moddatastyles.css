@@ -1,7 +1,8 @@
-.container {
+.dtWrap {
     width: 935px;
     padding-bottom: 10px;
     float:left;
+    display: none;
 }
 .container2 {
     width: 935px;

@@ -7,14 +7,17 @@
 <script src='../Scripts/jquery-ui-1.12.1/jquery-1.12.4.js'></script>
 <script src='../Scripts/dataTables/dataTables.1.10.16.min.js'></script>
 <script src='../Scripts/jquery-ui-1.12.1/jquery-ui.js'></script>
-<script async src='../Scripts/modDataTable.js'></script>
+<script async src='../Scripts/modDataTableOnClick.js'></script>
 <script async src='../Scripts/tblBuilder2.js'></script>
+<script src='../Scripts/dataCollection.js'></script>
 </head>
 <!-- only using values in the json for headers -->
 <body>
 <div>
-<span class='btnholdr'>Find the Button</span>
-<div id='dataTable' class='container'>
+<div class='btnholdr'>
+    <div><input type=text><input type=button value="Submit" id=srchBtn></div>
+</div>
+<div id='dataTable' class='dtWrap'>
     <table id='moddata' class='display'>
         <thead>
             <tr>
@@ -34,6 +37,7 @@
                 <th>Def%</th>
                 <th>Pot%</th>
                 <th>Ten%</th>
+                <th>Assigned</th>
             </tr>
         </thead>
         <tfoot>
@@ -42,6 +46,7 @@
                 <th><srch>Slot</srch></th>
                 <th><srch>Set</srch></th>
                 <th><srch>Primary</srch></th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
