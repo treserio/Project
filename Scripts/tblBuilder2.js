@@ -72,32 +72,12 @@ for (var i = 0; i<5; i++) {
     document.getElementById('squadMembr'+i).appendChild(sqdtbls[i]);
 }
 
-//Setting up jquery auto complete for squadMembr# fields based on Equipped list in json file.
-$.getJSON('AcctData/sert.json', function(jsonfile) {
-    var namelist = [];
-    //check for datafile
-    if (jsonfile == null) {
-        console.log('nodatafile');
-    } else {
-        for (var key in jsonfile.data) {
-            //check for unique entries
-            if ($.inArray(jsonfile.data[key].Equipped, namelist) === -1) {
-                namelist.push(jsonfile.data[key].Equipped);
-            }
-        }
-    }
-    //Apply autocomplete list to input fields, 0 to 4
-    $('[id^=membrName').autocomplete( {
-        source: namelist
-    });
-});
-
-//function for grabbing correct mod data from JSON file with search field input.
+//function for grabbing correct mod data from JSON file with autocomplete field input.
 $('[id^=membrName').on('autocompleteclose', function() {
     var namesearch = this.value;
-    var id = this.id;
+    var id = this.id.slice(-1);
     
-    $.getJSON('AcctData/sert.json', function(jsonfile) {
+    $.getJSON(filelocation, function(jsonfile) {
         var modArray = [];
         //check for datafile, and push data into array
         if (jsonfile == null) {
@@ -112,409 +92,466 @@ $('[id^=membrName').on('autocompleteclose', function() {
         }
         // Run function to redraw table with correct mods found in Array and apply to correct table by id
         redraw(modArray, id);
+        //Change assigned values in dataTable to show the item is now in one of the assigned tables. Figure out when to save the json with changes? After redraw? Maybe save event is easiest? Warn on refresh that assigned values will be cleared.
+        var table = $('#moddata').DataTable();
+        table.rows().every( function () {
+            // check for which assigned table was used
+            if (id == 0) {
+                // clear out any previous assignment that is now incorrect
+                if (this.data().Assigned == '1st' && this.data().Equipped != namesearch) {
+                    this.data().Assigned = '';
+                    this.draw();
+                // enter the correct value into assigned to color the row based on the table it's in.
+                } else if (this.data().Equipped == namesearch) {
+                    this.data().Assigned = '1st';
+                    this.draw();
+                }
+            } else if (id == 1) {
+                // clear out any previous assignment that is now incorrect
+                if (this.data().Equipped != namesearch && this.data().Assigned == '2nd') {
+                    this.data().Assigned = '';
+                    this.draw();
+                // enter the correct value into assigned to color the row based on the table it's in.
+                } else if (this.data().Equipped == namesearch) {
+                    this.data().Assigned = '2nd';
+                    this.draw();
+                }
+            } else if (id == 2) {
+                // clear out any previous assignment that is now incorrect
+                if (this.data().Equipped != namesearch && this.data().Assigned == '3rd') {
+                    this.data().Assigned = '';
+                    this.draw();
+                // enter the correct value into assigned to color the row based on the table it's in.
+                } else if (this.data().Equipped == namesearch) {
+                    this.data().Assigned = '3rd';
+                    this.draw();
+                }
+            } else if (id == 3) {
+                // clear out any previous assignment that is now incorrect
+                if (this.data().Equipped != namesearch && this.data().Assigned == '4th') {
+                    this.data().Assigned = '';
+                    this.draw();
+                // enter the correct value into assigned to color the row based on the table it's in.
+                } else if (this.data().Equipped == namesearch) {
+                    this.data().Assigned = '4th';
+                    this.draw();
+                }
+            } else if (id == 4) {
+                // clear out any previous assignment that is now incorrect
+                if (this.data().Equipped != namesearch && this.data().Assigned == '5th') {
+                    this.data().Assigned = '';
+                    this.draw();
+                // enter the correct value into assigned to color the row based on the table it's in.
+                } else if (this.data().Equipped == namesearch) {
+                    this.data().Assigned = '5th';
+                    this.draw();
+                }
+            }
+        });
+
     });
 });
 
 //trying to figure out redrawing the dom based on the array data from autocomplete's json qrep
+//Needs a way to remove values from cells if the character doesn't have 6 mods equiped
 redraw = function ( array, id ) {
-    tbl = id.slice(-1);
 
     for (var i = 0; i < array.length; i++) {
         if (array[i].Slot == "Square") {
-            sqdtbls[tbl].tBodies[0].rows[0].cells[0].innerHTML = array[i].Equipped;
-            sqdtbls[tbl].tBodies[0].rows[0].cells[1].innerHTML = array[i].Slot;
-            sqdtbls[tbl].tBodies[0].rows[0].cells[2].innerHTML = array[i].Set;
-            sqdtbls[tbl].tBodies[0].rows[0].cells[3].innerHTML = array[i].Primary;
+            sqdtbls[id].tBodies[0].rows[0].cells[0].innerHTML = array[i].Equipped;
+            sqdtbls[id].tBodies[0].rows[0].cells[1].innerHTML = array[i].Slot;
+            sqdtbls[id].tBodies[0].rows[0].cells[2].innerHTML = array[i].Set;
+            sqdtbls[id].tBodies[0].rows[0].cells[3].innerHTML = array[i].Primary;
 
             if ( array[i].hasOwnProperty('Spd') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[4].innerHTML = array[i]['Spd'];
+                sqdtbls[id].tBodies[0].rows[0].cells[4].innerHTML = array[i]['Spd'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[4].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[4].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Crit%') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[5].innerHTML = array[i]['Crit%'];
+                sqdtbls[id].tBodies[0].rows[0].cells[5].innerHTML = array[i]['Crit%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[5].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[5].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[6].innerHTML = array[i]['Off'];
+                sqdtbls[id].tBodies[0].rows[0].cells[6].innerHTML = array[i]['Off'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[6].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[6].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off%') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[7].innerHTML = array[i]['Off%'];
+                sqdtbls[id].tBodies[0].rows[0].cells[7].innerHTML = array[i]['Off%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[7].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[7].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[8].innerHTML = array[i]['Prot'];
+                sqdtbls[id].tBodies[0].rows[0].cells[8].innerHTML = array[i]['Prot'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[8].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[8].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[9].innerHTML = array[i]['Prot%'];
+                sqdtbls[id].tBodies[0].rows[0].cells[9].innerHTML = array[i]['Prot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[9].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[9].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[10].innerHTML = array[i]['HP'];
+                sqdtbls[id].tBodies[0].rows[0].cells[10].innerHTML = array[i]['HP'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[10].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[10].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP%') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[11].innerHTML = array[i]['HP%'];
+                sqdtbls[id].tBodies[0].rows[0].cells[11].innerHTML = array[i]['HP%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[11].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[11].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[12].innerHTML = array[i]['Def'];
+                sqdtbls[id].tBodies[0].rows[0].cells[12].innerHTML = array[i]['Def'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[12].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[12].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def%') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[13].innerHTML = array[i]['Def%'];
+                sqdtbls[id].tBodies[0].rows[0].cells[13].innerHTML = array[i]['Def%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[13].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[13].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Pot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[14].innerHTML = array[i]['Pot%'];
+                sqdtbls[id].tBodies[0].rows[0].cells[14].innerHTML = array[i]['Pot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[14].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[14].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Ten%') ) {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[15].innerHTML = array[i]['Ten%'];
+                sqdtbls[id].tBodies[0].rows[0].cells[15].innerHTML = array[i]['Ten%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[0].cells[15].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[0].cells[15].innerHTML = '';
             }
         } else if (array[i].Slot == "Arrow") {
-            sqdtbls[tbl].tBodies[0].rows[1].cells[0].innerHTML = array[i].Equipped;
-            sqdtbls[tbl].tBodies[0].rows[1].cells[1].innerHTML = array[i].Slot;
-            sqdtbls[tbl].tBodies[0].rows[1].cells[2].innerHTML = array[i].Set;
-            sqdtbls[tbl].tBodies[0].rows[1].cells[3].innerHTML = array[i].Primary;
+            sqdtbls[id].tBodies[0].rows[1].cells[0].innerHTML = array[i].Equipped;
+            sqdtbls[id].tBodies[0].rows[1].cells[1].innerHTML = array[i].Slot;
+            sqdtbls[id].tBodies[0].rows[1].cells[2].innerHTML = array[i].Set;
+            sqdtbls[id].tBodies[0].rows[1].cells[3].innerHTML = array[i].Primary;
 
             if ( array[i].hasOwnProperty('Spd') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[4].innerHTML = array[i]['Spd'];
+                sqdtbls[id].tBodies[0].rows[1].cells[4].innerHTML = array[i]['Spd'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[4].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[4].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Crit%') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[5].innerHTML = array[i]['Crit%'];
+                sqdtbls[id].tBodies[0].rows[1].cells[5].innerHTML = array[i]['Crit%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[5].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[5].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[6].innerHTML = array[i]['Off'];
+                sqdtbls[id].tBodies[0].rows[1].cells[6].innerHTML = array[i]['Off'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[6].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[6].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off%') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[7].innerHTML = array[i]['Off%'];
+                sqdtbls[id].tBodies[0].rows[1].cells[7].innerHTML = array[i]['Off%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[7].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[7].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[8].innerHTML = array[i]['Prot'];
+                sqdtbls[id].tBodies[0].rows[1].cells[8].innerHTML = array[i]['Prot'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[8].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[8].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[9].innerHTML = array[i]['Prot%'];
+                sqdtbls[id].tBodies[0].rows[1].cells[9].innerHTML = array[i]['Prot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[9].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[9].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[10].innerHTML = array[i]['HP'];
+                sqdtbls[id].tBodies[0].rows[1].cells[10].innerHTML = array[i]['HP'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[10].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[10].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP%') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[11].innerHTML = array[i]['HP%'];
+                sqdtbls[id].tBodies[0].rows[1].cells[11].innerHTML = array[i]['HP%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[11].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[11].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[12].innerHTML = array[i]['Def'];
+                sqdtbls[id].tBodies[0].rows[1].cells[12].innerHTML = array[i]['Def'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[12].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[12].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def%') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[13].innerHTML = array[i]['Def%'];
+                sqdtbls[id].tBodies[0].rows[1].cells[13].innerHTML = array[i]['Def%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[13].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[13].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Pot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[14].innerHTML = array[i]['Pot%'];
+                sqdtbls[id].tBodies[0].rows[1].cells[14].innerHTML = array[i]['Pot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[14].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[14].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Ten%') ) {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[15].innerHTML = array[i]['Ten%'];
+                sqdtbls[id].tBodies[0].rows[1].cells[15].innerHTML = array[i]['Ten%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[1].cells[15].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[1].cells[15].innerHTML = '';
             }
         } else if (array[i].Slot == "Diamond") {
-            sqdtbls[tbl].tBodies[0].rows[2].cells[0].innerHTML = array[i].Equipped;
-            sqdtbls[tbl].tBodies[0].rows[2].cells[1].innerHTML = array[i].Slot;
-            sqdtbls[tbl].tBodies[0].rows[2].cells[2].innerHTML = array[i].Set;
-            sqdtbls[tbl].tBodies[0].rows[2].cells[3].innerHTML = array[i].Primary;
+            sqdtbls[id].tBodies[0].rows[2].cells[0].innerHTML = array[i].Equipped;
+            sqdtbls[id].tBodies[0].rows[2].cells[1].innerHTML = array[i].Slot;
+            sqdtbls[id].tBodies[0].rows[2].cells[2].innerHTML = array[i].Set;
+            sqdtbls[id].tBodies[0].rows[2].cells[3].innerHTML = array[i].Primary;
 
             if ( array[i].hasOwnProperty('Spd') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[4].innerHTML = array[i]['Spd'];
+                sqdtbls[id].tBodies[0].rows[2].cells[4].innerHTML = array[i]['Spd'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[4].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[4].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Crit%') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[5].innerHTML = array[i]['Crit%'];
+                sqdtbls[id].tBodies[0].rows[2].cells[5].innerHTML = array[i]['Crit%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[5].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[5].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[6].innerHTML = array[i]['Off'];
+                sqdtbls[id].tBodies[0].rows[2].cells[6].innerHTML = array[i]['Off'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[6].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[6].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off%') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[7].innerHTML = array[i]['Off%'];
+                sqdtbls[id].tBodies[0].rows[2].cells[7].innerHTML = array[i]['Off%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[7].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[7].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[8].innerHTML = array[i]['Prot'];
+                sqdtbls[id].tBodies[0].rows[2].cells[8].innerHTML = array[i]['Prot'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[8].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[8].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[9].innerHTML = array[i]['Prot%'];
+                sqdtbls[id].tBodies[0].rows[2].cells[9].innerHTML = array[i]['Prot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[9].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[9].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[10].innerHTML = array[i]['HP'];
+                sqdtbls[id].tBodies[0].rows[2].cells[10].innerHTML = array[i]['HP'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[10].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[10].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP%') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[11].innerHTML = array[i]['HP%'];
+                sqdtbls[id].tBodies[0].rows[2].cells[11].innerHTML = array[i]['HP%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[11].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[11].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[12].innerHTML = array[i]['Def'];
+                sqdtbls[id].tBodies[0].rows[2].cells[12].innerHTML = array[i]['Def'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[12].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[12].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def%') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[13].innerHTML = array[i]['Def%'];
+                sqdtbls[id].tBodies[0].rows[2].cells[13].innerHTML = array[i]['Def%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[13].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[13].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Pot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[14].innerHTML = array[i]['Pot%'];
+                sqdtbls[id].tBodies[0].rows[2].cells[14].innerHTML = array[i]['Pot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[14].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[14].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Ten%') ) {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[15].innerHTML = array[i]['Ten%'];
+                sqdtbls[id].tBodies[0].rows[2].cells[15].innerHTML = array[i]['Ten%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[2].cells[15].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[2].cells[15].innerHTML = '';
             }
         } else if (array[i].Slot == "Triangle") {
-            sqdtbls[tbl].tBodies[0].rows[3].cells[0].innerHTML = array[i].Equipped;
-            sqdtbls[tbl].tBodies[0].rows[3].cells[1].innerHTML = array[i].Slot;
-            sqdtbls[tbl].tBodies[0].rows[3].cells[2].innerHTML = array[i].Set;
-            sqdtbls[tbl].tBodies[0].rows[3].cells[3].innerHTML = array[i].Primary;
+            sqdtbls[id].tBodies[0].rows[3].cells[0].innerHTML = array[i].Equipped;
+            sqdtbls[id].tBodies[0].rows[3].cells[1].innerHTML = array[i].Slot;
+            sqdtbls[id].tBodies[0].rows[3].cells[2].innerHTML = array[i].Set;
+            sqdtbls[id].tBodies[0].rows[3].cells[3].innerHTML = array[i].Primary;
 
             if ( array[i].hasOwnProperty('Spd') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[4].innerHTML = array[i]['Spd'];
+                sqdtbls[id].tBodies[0].rows[3].cells[4].innerHTML = array[i]['Spd'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[4].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[4].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Crit%') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[5].innerHTML = array[i]['Crit%'];
+                sqdtbls[id].tBodies[0].rows[3].cells[5].innerHTML = array[i]['Crit%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[5].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[5].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[6].innerHTML = array[i]['Off'];
+                sqdtbls[id].tBodies[0].rows[3].cells[6].innerHTML = array[i]['Off'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[6].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[6].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off%') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[7].innerHTML = array[i]['Off%'];
+                sqdtbls[id].tBodies[0].rows[3].cells[7].innerHTML = array[i]['Off%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[7].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[7].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[8].innerHTML = array[i]['Prot'];
+                sqdtbls[id].tBodies[0].rows[3].cells[8].innerHTML = array[i]['Prot'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[8].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[8].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[9].innerHTML = array[i]['Prot%'];
+                sqdtbls[id].tBodies[0].rows[3].cells[9].innerHTML = array[i]['Prot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[9].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[9].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[10].innerHTML = array[i]['HP'];
+                sqdtbls[id].tBodies[0].rows[3].cells[10].innerHTML = array[i]['HP'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[10].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[10].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP%') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[11].innerHTML = array[i]['HP%'];
+                sqdtbls[id].tBodies[0].rows[3].cells[11].innerHTML = array[i]['HP%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[11].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[11].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[12].innerHTML = array[i]['Def'];
+                sqdtbls[id].tBodies[0].rows[3].cells[12].innerHTML = array[i]['Def'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[12].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[12].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def%') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[13].innerHTML = array[i]['Def%'];
+                sqdtbls[id].tBodies[0].rows[3].cells[13].innerHTML = array[i]['Def%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[13].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[13].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Pot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[14].innerHTML = array[i]['Pot%'];
+                sqdtbls[id].tBodies[0].rows[3].cells[14].innerHTML = array[i]['Pot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[14].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[14].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Ten%') ) {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[15].innerHTML = array[i]['Ten%'];
+                sqdtbls[id].tBodies[0].rows[3].cells[15].innerHTML = array[i]['Ten%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[3].cells[15].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[3].cells[15].innerHTML = '';
             }
         } else if (array[i].Slot == "Circle") {
-            sqdtbls[tbl].tBodies[0].rows[4].cells[0].innerHTML = array[i].Equipped;
-            sqdtbls[tbl].tBodies[0].rows[4].cells[1].innerHTML = array[i].Slot;
-            sqdtbls[tbl].tBodies[0].rows[4].cells[2].innerHTML = array[i].Set;
-            sqdtbls[tbl].tBodies[0].rows[4].cells[3].innerHTML = array[i].Primary;
+            sqdtbls[id].tBodies[0].rows[4].cells[0].innerHTML = array[i].Equipped;
+            sqdtbls[id].tBodies[0].rows[4].cells[1].innerHTML = array[i].Slot;
+            sqdtbls[id].tBodies[0].rows[4].cells[2].innerHTML = array[i].Set;
+            sqdtbls[id].tBodies[0].rows[4].cells[3].innerHTML = array[i].Primary;
 
             if ( array[i].hasOwnProperty('Spd') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[4].innerHTML = array[i]['Spd'];
+                sqdtbls[id].tBodies[0].rows[4].cells[4].innerHTML = array[i]['Spd'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[4].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[4].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Crit%') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[5].innerHTML = array[i]['Crit%'];
+                sqdtbls[id].tBodies[0].rows[4].cells[5].innerHTML = array[i]['Crit%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[5].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[5].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[6].innerHTML = array[i]['Off'];
+                sqdtbls[id].tBodies[0].rows[4].cells[6].innerHTML = array[i]['Off'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[6].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[6].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off%') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[7].innerHTML = array[i]['Off%'];
+                sqdtbls[id].tBodies[0].rows[4].cells[7].innerHTML = array[i]['Off%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[7].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[7].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[8].innerHTML = array[i]['Prot'];
+                sqdtbls[id].tBodies[0].rows[4].cells[8].innerHTML = array[i]['Prot'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[8].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[8].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[9].innerHTML = array[i]['Prot%'];
+                sqdtbls[id].tBodies[0].rows[4].cells[9].innerHTML = array[i]['Prot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[9].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[9].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[10].innerHTML = array[i]['HP'];
+                sqdtbls[id].tBodies[0].rows[4].cells[10].innerHTML = array[i]['HP'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[10].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[10].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP%') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[11].innerHTML = array[i]['HP%'];
+                sqdtbls[id].tBodies[0].rows[4].cells[11].innerHTML = array[i]['HP%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[11].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[11].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[12].innerHTML = array[i]['Def'];
+                sqdtbls[id].tBodies[0].rows[4].cells[12].innerHTML = array[i]['Def'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[12].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[12].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def%') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[13].innerHTML = array[i]['Def%'];
+                sqdtbls[id].tBodies[0].rows[4].cells[13].innerHTML = array[i]['Def%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[13].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[13].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Pot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[14].innerHTML = array[i]['Pot%'];
+                sqdtbls[id].tBodies[0].rows[4].cells[14].innerHTML = array[i]['Pot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[14].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[14].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Ten%') ) {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[15].innerHTML = array[i]['Ten%'];
+                sqdtbls[id].tBodies[0].rows[4].cells[15].innerHTML = array[i]['Ten%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[4].cells[15].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[4].cells[15].innerHTML = '';
             }
         } else if (array[i].Slot == "Cross") {
-            sqdtbls[tbl].tBodies[0].rows[5].cells[0].innerHTML = array[i].Equipped;
-            sqdtbls[tbl].tBodies[0].rows[5].cells[1].innerHTML = array[i].Slot;
-            sqdtbls[tbl].tBodies[0].rows[5].cells[2].innerHTML = array[i].Set;
-            sqdtbls[tbl].tBodies[0].rows[5].cells[3].innerHTML = array[i].Primary;
+            sqdtbls[id].tBodies[0].rows[5].cells[0].innerHTML = array[i].Equipped;
+            sqdtbls[id].tBodies[0].rows[5].cells[1].innerHTML = array[i].Slot;
+            sqdtbls[id].tBodies[0].rows[5].cells[2].innerHTML = array[i].Set;
+            sqdtbls[id].tBodies[0].rows[5].cells[3].innerHTML = array[i].Primary;
 
             if ( array[i].hasOwnProperty('Spd') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[4].innerHTML = array[i]['Spd'];
+                sqdtbls[id].tBodies[0].rows[5].cells[4].innerHTML = array[i]['Spd'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[4].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[4].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Crit%') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[5].innerHTML = array[i]['Crit%'];
+                sqdtbls[id].tBodies[0].rows[5].cells[5].innerHTML = array[i]['Crit%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[5].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[5].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[6].innerHTML = array[i]['Off'];
+                sqdtbls[id].tBodies[0].rows[5].cells[6].innerHTML = array[i]['Off'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[6].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[6].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Off%') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[7].innerHTML = array[i]['Off%'];
+                sqdtbls[id].tBodies[0].rows[5].cells[7].innerHTML = array[i]['Off%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[7].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[7].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[8].innerHTML = array[i]['Prot'];
+                sqdtbls[id].tBodies[0].rows[5].cells[8].innerHTML = array[i]['Prot'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[8].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[8].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Prot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[9].innerHTML = array[i]['Prot%'];
+                sqdtbls[id].tBodies[0].rows[5].cells[9].innerHTML = array[i]['Prot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[9].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[9].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[10].innerHTML = array[i]['HP'];
+                sqdtbls[id].tBodies[0].rows[5].cells[10].innerHTML = array[i]['HP'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[10].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[10].innerHTML = '';
             }
             if (array[i].hasOwnProperty('HP%') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[11].innerHTML = array[i]['HP%'];
+                sqdtbls[id].tBodies[0].rows[5].cells[11].innerHTML = array[i]['HP%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[11].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[11].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[12].innerHTML = array[i]['Def'];
+                sqdtbls[id].tBodies[0].rows[5].cells[12].innerHTML = array[i]['Def'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[12].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[12].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Def%') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[13].innerHTML = array[i]['Def%'];
+                sqdtbls[id].tBodies[0].rows[5].cells[13].innerHTML = array[i]['Def%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[13].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[13].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Pot%') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[14].innerHTML = array[i]['Pot%'];
+                sqdtbls[id].tBodies[0].rows[5].cells[14].innerHTML = array[i]['Pot%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[14].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[14].innerHTML = '';
             }
             if (array[i].hasOwnProperty('Ten%') ) {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[15].innerHTML = array[i]['Ten%'];
+                sqdtbls[id].tBodies[0].rows[5].cells[15].innerHTML = array[i]['Ten%'];
             } else {
-                sqdtbls[tbl].tBodies[0].rows[5].cells[15].innerHTML = '';
+                sqdtbls[id].tBodies[0].rows[5].cells[15].innerHTML = '';
             }
         }
     }

@@ -53,8 +53,10 @@ function drawDataTbl (search) {
         ],
         // Function for coloring table rows based on assigned values
         rowCallback: function( row, data, index ) {
-            if ( data.Assigned == "1st" ) {
-              $('td', row).css("background-color","blue");
+            if ( data.Assigned == "" ) {
+                $('td', row).css("background-color","");
+            } else if ( data.Assigned == "1st" ) {
+                $('td', row).css("background-color","blue");
             } else if ( data.Assigned == "2nd" ) {
                 $('td', row).css("background-color","green");
             } else if ( data.Assigned == "3rd" ) {
