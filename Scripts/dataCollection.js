@@ -1,37 +1,41 @@
-var filelocation = '';
+var filelocation = ''; // figure out how to make this available to auto complete without being global? unsure what this is for again...
 $(document).ready(function(){
     $('#srchBtn').click(function(){
         // Grab the search text
         srchstring = $(this).prev().val();
         filelocation = 'AcctData/' +srchstring+ '.json';
-
-        if (srchstring == "") {
-            alert('Invalid id');
-            //possibly after checking if url is available
-        } else {
-            // Display the hidden dataTable
-            $('.dtWrap').css('display', 'inline');
+        console.log(filelocation);
+        if (srchstring == "") { // check if resulting url is good?
+            alert('Invalid swgoh id');
             
-            //Setting up jquery auto complete for squadMembr# fields based on Equipped list in json file.
+        } else {
             $.getJSON('AcctData/' +srchstring+ '.json', function(jsonfile) {
+                // Display the hidden dataTable
+                $('.dtWrap').css('display', 'inline');
+                // Populate the dataTable
+                drawDataTbl(srchstring);
+
+                // Setup Autocomplete, first create array of names, then apply to autocomplete.
                 var namelist = [];
-                //check for datafile
-                if (jsonfile == null) {  // USE THIS FOR CHECKING IF JSON FILE ALREADY EXISTS
-                    console.log('no datafile');
-                } else {
-                    for (var key in jsonfile.data) {
-                        //check for unique entries
-                        if ($.inArray(jsonfile.data[key].Equipped, namelist) === -1) {
-                            namelist.push(jsonfile.data[key].Equipped);
-                        }
+                for (var key in jsonfile.data) {
+                    //check for unique entries and add to the namelist array for setting autocomplete
+                    if ($.inArray(jsonfile.data[key].Equipped, namelist) === -1) {
+                        namelist.push(jsonfile.data[key].Equipped);
                     }
                 }
                 //Apply autocomplete list to input fields, 0 to 4
                 $('[id^=membrName').autocomplete( {
                     source: namelist
                 });
-            });
-            drawDataTbl(srchstring);
+            //if .getJSON fails run the python script to create the file, probably should move autocomplete out of this function.
+            }).fail(function(data) {
+                alert("failed");/*
+                $.ajax({
+                        url: '/AcctData/modscraper3.py',
+                        data: srchstring,
+                        success: drawDataTbl(srchstring)
+                    }); // now run another getJSON to get the right file? does on success drawDataTbl(srchstring) work?*/
+            })
         }
     });
 });

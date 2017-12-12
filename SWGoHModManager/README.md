@@ -2,6 +2,7 @@ Known bugs:
 
     * if a screen scrape is done on a mod with <4 secondary stats it will break the scrape
     * redraw function doesn't remove previous cell values if the new name doesn't have a full set of 6 mods.
+        Nore does it remove the values from another table...probably fine for checking out multiple configurations on the same character!
     * autocomplete throws the name at the bottom of the page for some reason
 
 Things to finish:

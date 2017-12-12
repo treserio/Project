@@ -22,3 +22,7 @@ table {
     float: right;
     background-color: purple;
 }
+/* Keeps the auto complete options from showing up in the DOM */
+.ui-helper-hidden-accessible{
+    display:none !important;
+}
