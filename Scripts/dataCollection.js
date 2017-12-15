@@ -29,9 +29,9 @@ $(document).ready(function(){
                 });
             //if .getJSON fails run the python script to create the file, probably should move autocomplete out of this function.
             }).fail(function(data) {
-                alert("failed"); /*
+                alert("Gathering Data"); /*
                 $.ajax({
-                        url: '/AcctData/modscraper3.py',
+                        url: '/AcctData/modscraper4.py',
                         data: srchstring,
                         success: drawDataTbl(srchstring)
                     }); // now run another getJSON to get the right file? does on success drawDataTbl(srchstring) work? */
