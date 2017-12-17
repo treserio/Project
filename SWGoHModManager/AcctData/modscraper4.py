@@ -11,9 +11,10 @@ app = Flask(__name__)
 #statmod-stat-value = number
 #statmod-stat-label = label
 
-@app.route("/modscraper")
+@app.route("/AcctData/modscraper4.py", methods=['POST'])
+srchstring = sert #request.form['srchstring']
     #optimally pulls the username from an input field on the page to insert into string
-    url = "https://swgoh.gg/u/sert/mods/"
+    url = "https://swgoh.gg/u/" +srchstring+ "/mods/"
     #Start of export string
     modjson = "{\"data\":["
     #Counter for pagenation, and starts at 2 for 2nd mods screen.
@@ -115,7 +116,7 @@ app = Flask(__name__)
         #Although the number is in the "class=pagination" div page = soup.find_all("ul", {"class": "pagination"})
         try: 
             nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
-            url = 'https://swgoh.gg/u/sert/mods/' + '?page=' + str(pgcnt)
+            url = 'https://swgoh.gg/u/'+srchstring+'/mods/' + '?page=' + str(pgcnt)
             print(url)
             pgcnt += 1
         except: #Needs to end infinite loop, clean up and finalize string
@@ -125,7 +126,7 @@ app = Flask(__name__)
             modjson += "]}"
             break
 
-    jsonf = open("sert.json","w")
+    jsonf = open( srchstring+".json","w")
     jsonf.write(modjson)
     jsonf.close()
     exit()
