@@ -123,7 +123,7 @@ while True:
         modjson += "]}"
         break
 
-jsonf = open("sert.json","w")
+jsonf = open("../SWGoHModManager/AcctData/sert.json","w")
 jsonf.write(modjson)
 jsonf.close()
 exit()

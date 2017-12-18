@@ -1,5 +1,7 @@
 #The one issue I haven't been able to address yet is to make sure all equiped mods showing on swgoh.gg have all 4 secondary stats or it will break.
 
+#!/usr/local/bin/python3
+
 import requests
 from bs4 import BeautifulSoup
 from flask import Flask
@@ -12,7 +14,7 @@ app = Flask(__name__)
 #statmod-stat-label = label
 
 @app.route("/AcctData/modscraper4.py", methods=['POST'])
-srchstring = sert #request.form['srchstring']
+    srchstring = request.form['refreshJSON']
     #optimally pulls the username from an input field on the page to insert into string
     url = "https://swgoh.gg/u/" +srchstring+ "/mods/"
     #Start of export string

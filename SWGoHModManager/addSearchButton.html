@@ -9,14 +9,14 @@
 <script src='../Scripts/jquery-ui-1.12.1/jquery-ui.js'></script>
 <script async src='../Scripts/modDataTableOnClick.js'></script>
 <script async src='../Scripts/tblBuilder2.js'></script>
-<script async src='../Scripts/dataCollection.js'></script>
+<script async src='../Scripts/dataCollection2.js'></script>
 </head>
 <!-- only using values in the json for headers -->
 <body>
 <div>
 <div class='btnholdr'>
-    <form method="POST" action="/AcctData/modscraper"><input  name='srchstring' type=text autofocus><input type=button value="Submit" id=srchBtn></form>
-    <div><input type=text><input type=button value="Submit" id=refrshJSON></div>
+    <input  name='srchstring' type=text autofocus><input type=button value="Submit" id=srchBtn></form>
+    <form method="POST" action="/AcctData/modscraper4.py"><input type=text name=refreshJSON><input type=button value="Submit"></form></div>
 </div>
 <div id='dataTable' class='dtWrap'>
     <table id='moddata' class='display'>

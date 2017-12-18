@@ -4,8 +4,9 @@ $(document).ready(function(){
         // Grab the search text
         srchstring = $(this).prev().val();
         filelocation = 'AcctData/' +srchstring+ '.json';
-        console.log(filelocation);
-        if (srchstring == "") { // check if resulting url is good?
+        
+        // check if resulting url is good? no good method with CORS that'll work. Possibly in an NPM package, yay I have a sticker for that.
+        if (srchstring == "") { 
             alert('Invalid swgoh id');
             
         } else {
@@ -29,12 +30,7 @@ $(document).ready(function(){
                 });
             //if .getJSON fails run the python script to create the file, probably should move autocomplete out of this function.
             }).fail(function(data) {
-                alert("Gathering Data"); /*
-                $.ajax({
-                        url: '/AcctData/modscraper4.py',
-                        data: srchstring,
-                        success: drawDataTbl(srchstring)
-                    }); // now run another getJSON to get the right file? does on success drawDataTbl(srchstring) work? */
+                alert("Please use the fetch option below");
             })
         }
     });
