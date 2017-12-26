@@ -22,6 +22,22 @@ table {
     float: right;
     background-color: purple;
 }
+
+#squadMembr0 {
+    background-color: lightblue;
+}
+#squadMembr1 {
+    background-color: lightgreen;
+}
+#squadMembr2 {
+    background-color: orange;
+}
+#squadMembr3 {
+    background-color: rgb(160, 81, 160);
+}
+#squadMembr4 {
+    background-color: rgb(207, 207, 0);
+}
 /* Keeps the auto complete options from showing up in the DOM */
 .ui-helper-hidden-accessible {
     display:none !important;

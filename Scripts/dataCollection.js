@@ -28,6 +28,19 @@ $(document).ready(function(){
                 $('[id^=membrName').autocomplete( {
                     source: namelist
                 });
+                
+                $('#moddata tbody').on('click', 'tr', function(){
+                    $(this).draggable({
+                        helper: 'clone'
+                    });
+                });
+
+                $('.container2').droppable({
+                    accept: '#dragging',
+                    drop: function (ev, ui) {
+                        alert('dropped');
+                    }
+                });
             //if .getJSON fails run the python script to create the file, probably should move autocomplete out of this function.
             }).fail(function(data) {
                 alert("Please use the fetch option below");

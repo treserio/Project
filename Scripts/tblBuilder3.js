@@ -550,3 +550,7 @@ recolor = function ( namesearch, id ) {
         }
     });
 }
+
+$('#dragging').draggable({
+    
+});

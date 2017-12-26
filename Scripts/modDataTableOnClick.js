@@ -56,15 +56,15 @@ function drawDataTbl (search) {
             if ( data.Assigned == "" ) {
                 $('td', row).css("background-color","");
             } else if ( data.Assigned == "1st" ) {
-                $('td', row).css("background-color","blue");
+                $('td', row).css("background-color","lightblue");
             } else if ( data.Assigned == "2nd" ) {
-                $('td', row).css("background-color","green");
+                $('td', row).css("background-color","lightgreen");
             } else if ( data.Assigned == "3rd" ) {
                 $('td', row).css("background-color","orange");
             } else if ( data.Assigned == "4th" ) {
-                $('td', row).css("background-color","purple");
+                $('td', row).css("background-color",'rgb(160, 81, 160)');
             } else if ( data.Assigned == "5th" ) {
-                $('td', row).css("background-color","yellow");
+                $('td', row).css("background-color",'rgb(207, 207, 0)');
             }
         }
     });
