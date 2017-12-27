@@ -1,8 +1,8 @@
 // This fills an existing table with data supplied through the screen scraping of www.swgoh.gg into a json file, the swgoh.gg account name should match the one used for this site.
 function drawDataTbl (search) {
     $('#moddata').DataTable( {
-        //iDisplayLength: -1,
-        //lengthMenu: [[10,30,50,-1],[10,30,50,"All"]],
+        iDisplayLength: 10,
+        lengthMenu: [[10,30,50,-1],[10,30,50,"All"]],
         destroy: true,  //rewrites the datatable
         scrollY: '300px',
         scrollX: '100%',
@@ -69,6 +69,7 @@ function drawDataTbl (search) {
         }
     });
 //select filter search from drop down, try to find again list? This would be for those with only ~6 options
+
      //Setup - add a text input to each footer cell
     $('.dataTables_scrollFootInner srch').each( function () {
         var title = $(this).text();
@@ -86,5 +87,16 @@ function drawDataTbl (search) {
                 .search(this.value)
                 .draw();
         } );
-    } );  
+    } );
+    
+    //Collecting row data on click, will also need a popup to determine where it goes.
+    $('.dataTable').on('click', 'tbody tr', function() {
+        //Need id to be assigned by clicking on an option and we're done.
+        id = 0;
+        modArray = [];
+        modArray.push(table.row(this).data());
+        redraw(modArray, id);
+        recolorsngl(modArray[0].Equipped, id, modArray[0].Slot);
+        $('#moddata').DataTable().draw();
+    });
 }

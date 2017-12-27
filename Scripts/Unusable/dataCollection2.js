@@ -1,3 +1,5 @@
+//CORS issues this solution doesn't work
+
 var filelocation = ''; // figure out how to make this available to auto complete without being global? unsure what this is for again...
 $(document).ready(function(){
     $('#srchBtn').click(function(){

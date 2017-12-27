@@ -550,3 +550,50 @@ recolor = function ( namesearch, id ) {
         }
     });
 }
+
+recolorsngl = function ( namesearch, id, asSlot ) {
+    $('#moddata').DataTable().rows().every( function () {
+        // check for which assigned table was used
+        if (id == 0) {
+            // clear out any previous assignment that is now incorrect
+            if (this.data().Equipped != namesearch && this.data().Assigned == '1st' && this.data().Slot == asSlot) {
+                this.data().Assigned = '';
+            // enter the correct value into assigned to color the row based on the table it's in.
+            } else if (this.data().Equipped == namesearch && this.data().Slot == asSlot) {
+                this.data().Assigned = '1st';
+            }
+        } else if (id == 1) {
+            // clear out any previous assignment that is now incorrect
+            if (this.data().Equipped != namesearch && this.data().Assigned == '2nd' && this.data().Slot == asSlot) {
+                this.data().Assigned = '';
+            // enter the correct value into assigned to color the row based on the table it's in.
+            } else if (this.data().Equipped == namesearch && this.data().Slot == asSlot) {
+                this.data().Assigned = '2nd';
+            }
+        } else if (id == 2) {
+            // clear out any previous assignment that is now incorrect
+            if (this.data().Equipped != namesearch && this.data().Assigned == '3rd' && this.data().Slot == asSlot) {
+                this.data().Assigned = '';
+            // enter the correct value into assigned to color the row based on the table it's in.
+            } else if (this.data().Equipped == namesearch && this.data().Slot == asSlot) {
+                this.data().Assigned = '3rd';
+            }
+        } else if (id == 3) {
+            // clear out any previous assignment that is now incorrect
+            if (this.data().Equipped != namesearch && this.data().Assigned == '4th' && this.data().Slot == asSlot) {
+                this.data().Assigned = '';
+            // enter the correct value into assigned to color the row based on the table it's in.
+            } else if (this.data().Equipped == namesearch && this.data().Slot == asSlot) {
+                this.data().Assigned = '4th';
+            }
+        } else if (id == 4) {
+            // clear out any previous assignment that is now incorrect
+            if (this.data().Equipped != namesearch && this.data().Assigned == '5th' && this.data().Slot == asSlot) {
+                this.data().Assigned = '';
+            // enter the correct value into assigned to color the row based on the table it's in.
+            } else if (this.data().Equipped == namesearch && this.data().Slot == asSlot) {
+                this.data().Assigned = '5th';
+            }
+        }
+    });
+}

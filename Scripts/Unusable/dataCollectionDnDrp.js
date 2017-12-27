@@ -13,7 +13,6 @@ $(document).ready(function(){
             $.getJSON('AcctData/' +srchstring+ '.json', function(jsonfile) {
                 // Display the hidden dataTable
                 $('.dtWrap').css('display', 'inline');
-                $('.assignBtnWrap').css('display','inline')
                 // Populate the dataTable
                 drawDataTbl(srchstring);
 
@@ -28,6 +27,21 @@ $(document).ready(function(){
                 //Apply autocomplete list to input fields, 0 to 4
                 $('[id^=membrName').autocomplete( {
                     source: namelist
+                });
+
+                
+                
+                $('#moddata tbody').on('click', 'tr', function(){
+                    $(this).draggable({
+                        helper: 'clone'
+                    });
+                });
+
+                $('.container2').droppable({
+                    accept: 'tr',
+                    drop: function (ev, ui) {
+                        alert('dropped');
+                    }
                 });
             //if .getJSON fails run the python script to create the file, probably should move autocomplete out of this function.
             }).fail(function(data) {

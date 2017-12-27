@@ -8,15 +8,15 @@
 <script src='../Scripts/dataTables/dataTables.1.10.16.min.js'></script>
 <script src='../Scripts/jquery-ui-1.12.1/jquery-ui.js'></script>
 <script async src='../Scripts/modDataTableOnClick.js'></script>
-<script async src='../Scripts/tblBuilder3.js'></script>
+<script async src='../Scripts/tblBuilder2.js'></script>
 <script async src='../Scripts/dataCollection.js'></script>
 </head>
 <!-- only using values in the json for headers -->
 <body>
 <div>
 <div class='btnholdr'>
-    <input  name='srchstring' type=text autofocus><input type=button value="Submit" id=srchBtn></form>
-    <form method="POST" action="/AcctData/modscraper4.py"><input type=text name=refreshJSON><input type=button value="Submit"></form></div>
+    <input  name='srchstring' type=text autofocus><input type=button value="Submit" id=srchBtn>
+    <form method="POST" action="/AcctData/modscraper4.py"><input type=text name=refreshJSON><input type=button value="Submit"></form>
 </div>
 <div id='dataTable' class='dtWrap'>
     <table id='moddata' class='display'>
@@ -64,13 +64,22 @@
         </tfoot>
     </table>
 </div>
+<div class='assignBtnWrap'>
+<form>
+    <div class='assgnBtn1'><input name='modset' type=radio value=0></div>
+    <div class='assgnBtn2'><input name='modset' type=radio value=1></div>
+    <div class='assgnBtn3'><input name='modset' type=radio value=2></div>
+    <div class='assgnBtn4'><input name='modset' type=radio value=3></div>
+    <div class='assgnBtn5'><input name='modset' type=radio value=4></div>
+</form>
 </div>
+</div>
+
 <div id='squadMembr0' class='container2'></div>
 <div id='squadMembr1' class='container2'></div>
 <div id='squadMembr2' class='container2'></div>
 <div id='squadMembr3' class='container2'></div>
 <div id='squadMembr4' class='container2'></div>
-<div id='dragging'>Drag me!</div>
 </body>
 <!--Extra ModSet column in json, when name is selected find and clear all mods with same modset, then assign all mods with autocomplete selected name the set number for the appropriate table. For datatable, include column but hide it? Then find out to change row color based on modset # -->
 </html>
