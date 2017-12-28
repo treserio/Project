@@ -92,7 +92,7 @@ function drawDataTbl (search) {
     //Collecting row data on click, will also need a popup to determine where it goes.
     $('.dataTable').on('click', 'tbody tr', function() {
         //Need id to be assigned by clicking on an option and we're done.
-        id = 0;
+        id = $("input[name='modset']:checked").val();
         modArray = [];
         modArray.push(table.row(this).data());
         redraw(modArray, id);
