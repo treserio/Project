@@ -7,7 +7,7 @@ $(document).ready(function(){
         
         // check if resulting url is good? no good method with CORS that'll work. Possibly in an NPM package, yay I have a sticker for that.
         if (srchstring == "") { 
-            alert('Invalid swgoh id');
+            alert('Please enter a swgoh.gg id');
             
         } else {
             $.getJSON('AcctData/' +srchstring+ '.json', function(jsonfile) {
@@ -31,7 +31,7 @@ $(document).ready(function(){
                 });
             //if .getJSON fails run the python script to create the file, probably should move autocomplete out of this function.
             }).fail(function(data) {
-                alert("Please use the fetch option below");
+                alert('Please contact Sert#7357 on discord\nin order to have your mod data collected');
             })
         }
     });

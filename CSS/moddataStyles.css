@@ -20,6 +20,7 @@ table {
 
 .btnholdr {
     float: right;
+    width: 225px;
 }
 
 .assignBtnWrap {
@@ -79,8 +80,12 @@ table {
     display:none !important;
 }
 
-.ui-menu .ui-menu-item a{
-    background:red;
-    height:10px;
-    font-size:8px;
+.ui-autocomplete {
+    background-color: rgb(22, 21, 21);
+    color: whitesmoke;
+    width: 150px;
 }
+
+.ui-autocomplete .ui-menu-item-wrapper:hover {
+    background-color: rgba(0, 128, 0, 0.562);
+ }

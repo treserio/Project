@@ -9,7 +9,8 @@ for (var i = 0; i<5; i++) {
     nameselect.push(document.createElement('input'));
     $(nameselect[i]).attr({
         'id': 'membrName'+i,
-        'type': 'text'
+        'type': 'text',
+        'placeholder':'Find Mods Equipped by:'
     });
     sqdtbls.push(document.createElement('table'));
     $(sqdtbls[i]).attr({

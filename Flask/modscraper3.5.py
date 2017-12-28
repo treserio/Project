@@ -9,8 +9,8 @@ from bs4 import BeautifulSoup
 #statmod-stat-value = number
 #statmod-stat-label = label
 
-#optimally pulls the username from an input field on the page to indarthscooty into string
-url = "https://swgoh.gg/u/darthscooty/mods/"
+#optimally pulls the username from an input field on the page to insert into string
+url = "https://swgoh.gg/u/sert/mods/"
 #Start of export string
 modjson = "{\"data\":["
 #Counter for pagenation, and starts at 2 for 2nd mods screen.
@@ -77,32 +77,35 @@ while True:
         modjson += "\"Primary\":\"" + item.find_all("span", {"class": "statmod-stat-label"})[0].text + "\","
         #Setting Secondary stats, this will fail if the mod doesn't have 4 2ndary stats, needs a check added.
         while (j < 4):
-            label = str(mods2[i].find_all("span", {"class": "statmod-stat-label"})[j].text)
-            value = str(mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text)
-            if label == "Speed":
-                modjson += "\"Spd\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Critical Chance" and value.endswith("%"):
-                modjson += "\"Crit%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Offense" and value.endswith("%"):
-                modjson += "\"Off%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Offense":
-                modjson += "\"Off\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Protection" and value.endswith("%"):
-                modjson += "\"Prot%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Protection":
-                modjson += "\"Prot\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Health" and value.endswith("%"):
-                modjson += "\"HP%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Health":
-                modjson += "\"HP\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Defense" and value.endswith("%"):
-                modjson += "\"Def%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Defense":
-                modjson += "\"Def\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Potency" and value.endswith("%"):
-                modjson += "\"Pot%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
-            elif label == "Tenacity" and value.endswith("%"):
-                modjson += "\"Ten%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+            try:
+                label = str(mods2[i].find_all("span", {"class": "statmod-stat-label"})[j].text)
+                value = str(mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text)
+                if label == "Speed":
+                    modjson += "\"Spd\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Critical Chance" and value.endswith("%"):
+                    modjson += "\"Crit%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Offense" and value.endswith("%"):
+                    modjson += "\"Off%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Offense":
+                    modjson += "\"Off\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Protection" and value.endswith("%"):
+                    modjson += "\"Prot%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Protection":
+                    modjson += "\"Prot\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Health" and value.endswith("%"):
+                    modjson += "\"HP%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Health":
+                    modjson += "\"HP\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Defense" and value.endswith("%"):
+                    modjson += "\"Def%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Defense":
+                    modjson += "\"Def\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Potency" and value.endswith("%"):
+                    modjson += "\"Pot%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+                elif label == "Tenacity" and value.endswith("%"):
+                    modjson += "\"Ten%\":" + mods2[i].find_all("span", {"class": "statmod-stat-value"})[j].text.replace('+', '').replace('%', '') + ","
+            except:
+                pass
             j += 1
         #Add final Assigned field
         modjson += "\"Assigned\": \"\""
@@ -113,7 +116,7 @@ while True:
     #Although the number is in the "class=pagination" div page = soup.find_all("ul", {"class": "pagination"})
     try: 
         nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
-        url = 'https://swgoh.gg/u/darthscooty/mods/' + '?page=' + str(pgcnt)
+        url = 'https://swgoh.gg/u/sert/mods/' + '?page=' + str(pgcnt)
         print(url)
         pgcnt += 1
     except: #Needs to end infinite loop, clean up and finalize string
@@ -123,7 +126,7 @@ while True:
         modjson += "]}"
         break
 
-jsonf = open("../SWGoHModManager/AcctData/darthscooty.json","w")
+jsonf = open("../SWGoHModManager/AcctData/sert.json","w")
 jsonf.write(modjson)
 jsonf.close()
 exit()
