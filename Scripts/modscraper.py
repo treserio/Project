@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 #statmod-stat-label = label
 
 #optimally pulls the username from an input field on the page to insert into string
-url = "https://swgoh.gg/u/whiteroom/mods/"
+url = "https://swgoh.gg/u/tk42185/mods/"
 #Start of export string
 modjson = "{\"data\":["
 #Counter for pagenation, and starts at 2 for 2nd mods screen.
@@ -116,7 +116,7 @@ while True:
     #Although the number is in the "class=pagination" div page = soup.find_all("ul", {"class": "pagination"})
     try: 
         nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
-        url = 'https://swgoh.gg/u/whiteroom/mods/' + '?page=' + str(pgcnt)
+        url = 'https://swgoh.gg/u/tk42185/mods/' + '?page=' + str(pgcnt)
         print(url)
         pgcnt += 1
     except: #Needs to end infinite loop, clean up and finalize string
@@ -126,7 +126,7 @@ while True:
         modjson += "]}"
         break
 
-jsonf = open("../AcctData/whiteroom.json","w")
+jsonf = open("../AcctData/tk42185.json","w")
 jsonf.write(modjson)
 jsonf.close()
 exit()
