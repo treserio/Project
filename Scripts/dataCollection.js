@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('#srchBtn').click(function(){
         // Grab the search text
         srchstring = $(this).prev().val();
+        srchstring = srchstring.toLowerCase();
         filelocation = 'AcctData/' +srchstring+ '.json';
         
         // check if resulting url is good? no good method with CORS that'll work. Possibly in an NPM package, yay I have a sticker for that.

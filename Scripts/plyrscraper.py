@@ -1,6 +1,8 @@
 #The one issue I haven't been able to address yet is to make sure all equiped mods showing on swgoh.gg have all 4 secondary stats or it will break.
 
 import requests
+import random
+import time
 from bs4 import BeautifulSoup
 #.text for element text
 #.replace('x','y') to replace a character
@@ -10,12 +12,12 @@ from bs4 import BeautifulSoup
 #statmod-stat-label = label
 
 #optimally pulls the username from an input field on the page to insert into string
-url = "https://swgoh.gg/u/tk42185/mods/"
+url = "https://swgoh.gg/u/mighty/mods/"
 #Start of export string
 modjson = "{\"data\":["
 #Counter for pagenation, and starts at 2 for 2nd mods screen.
 pgcnt=2
-
+random.seed(None, 100)
 #Pagenation loop should start here
 while True:
     #fetching html from swgoh
@@ -109,14 +111,15 @@ while True:
             j += 1
         #Add final Assigned field
         modjson += "\"Assigned\": \"\""
-            
         modjson += "},"    
         i += 1
     #Tries to find the next page, it should reset the url to the next page and we begin the process over again, probably will exit an infinite loop at last page(exception), since I can't think of an easy way to predetermine a user's number of pages.
     #Although the number is in the "class=pagination" div page = soup.find_all("ul", {"class": "pagination"})
     try: 
         nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
-        url = 'https://swgoh.gg/u/tk42185/mods/' + '?page=' + str(pgcnt)
+        pause = random.uniform(10,40)
+        time.sleep(pause)
+        url = 'https://swgoh.gg/u/mighty/mods/' + '?page=' + str(pgcnt) #move below pause
         print(url)
         pgcnt += 1
     except: #Needs to end infinite loop, clean up and finalize string
@@ -126,7 +129,7 @@ while True:
         modjson += "]}"
         break
 
-jsonf = open("../AcctData/tk42185.json","w")
+jsonf = open("../AcctData/mighty.json","w")
 jsonf.write(modjson)
 jsonf.close()
 exit()
