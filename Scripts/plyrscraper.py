@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 #statmod-stat-label = label
 
 #optimally pulls the username from an input field on the page to insert into string
-url = "https://swgoh.gg/u/mighty/mods/"
+url = "https://swgoh.gg/u/sert/mods/"
 #Start of export string
 modjson = "{\"data\":["
 #Counter for pagenation, and starts at 2 for 2nd mods screen.
@@ -119,7 +119,7 @@ while True:
         nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
         pause = random.uniform(10,40)
         time.sleep(pause)
-        url = 'https://swgoh.gg/u/mighty/mods/' + '?page=' + str(pgcnt) #move below pause
+        url = 'https://swgoh.gg/u/sert/mods/' + '?page=' + str(pgcnt) #move below pause
         print(url)
         pgcnt += 1
     except: #Needs to end infinite loop, clean up and finalize string
@@ -129,7 +129,7 @@ while True:
         modjson += "]}"
         break
 
-jsonf = open("../AcctData/mighty.json","w")
+jsonf = open("../AcctData/sert.json","w")
 jsonf.write(modjson)
 jsonf.close()
 exit()
