@@ -20,7 +20,7 @@ gldcontent = BeautifulSoup(gldfetch.content)
 #setting the random.seed based on system time
 random.seed(None, 100)
 #hold off on next fetch
-pause = random.uniform(5,70)
+pause = random.uniform(20,70)
 time.sleep(pause)
 # Array for player urls
 plyrAry = []
@@ -135,7 +135,7 @@ for player in plyrAry:
         #Although the number is in the "class=pagination" div page = soup.find_all("ul", {"class": "pagination"})
         try: 
             nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
-            pause = random.uniform(15,70)
+            pause = random.uniform(23,70)
             time.sleep(pause)
             plyrurl = 'https://swgoh.gg'+player+'mods/?page=' + str(pgcnt)
             print(plyrurl)
