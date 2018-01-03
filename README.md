@@ -4,13 +4,18 @@ Now that the data acquisition is complete I need to finish a front end, or app, 
 
 Right now the data scraper will run ~once a week for all DL guilds on a seperate evening.
 
-Known bugs:
+Known bugs:\n
     * redraw of dataTables resets scroll position, and will need to be persistant
+
     * Replace '%20' with '' in scraper
 
 Things to finish:
     * Add ability to save modifications, since updates will be weekly, possibly a way to assign mods to another character.
+
     * Clear button for each assignment table
+
     * Add a collapse option to hide the table information, hide thead and tbody
+
     * Create a totals row for each table, to be displayed even when the table collapses, add in tfoot
+    
     * Incorporate max gear stats for each character, to add in another row for total calculation, based on assigned auto complete value

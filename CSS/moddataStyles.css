@@ -4,12 +4,14 @@
     float: left;
     display: none;
 }
-.container2 {
+.colorTblWrap {
     width: 935px;
-    padding-bottom: 10px;
-    overflow: scroll;
+    position: relative;
 }
-
+.colorTbl {
+    width: 935px;
+    overflow: auto;
+}
 tfoot input {
     width: 100%;
 }
@@ -18,17 +20,22 @@ table {
     table-layout: fixed;
 }
 
-.btnholdr {
+.userInput {
     float: right;
     width: 225px;
 }
 
+.tblBtns {
+    float: right;
+}
+
+/* Container for radio assignment buttons for colored tables */
 .assignBtnWrap {
     padding-top: 40px;
     float: left;
     display: none;
 }
-
+/* Radio buttons to select which colored table to assign the mod to */
 .assgnBtn1 {
     padding-top: 5px;
     padding-bottom: 4px;
@@ -60,6 +67,7 @@ table {
     background-color:  rgb(207, 207, 0);
 }
 
+/* squad member table settings */
 #squadMembr0 {
     background-color: lightblue;
 }
@@ -75,17 +83,19 @@ table {
 #squadMembr4 {
     background-color: rgb(207, 207, 0);
 }
+
+/* Autocomplete Styling */
 /* Keeps the auto complete options from showing up in the DOM */
 .ui-helper-hidden-accessible {
     display:none !important;
 }
-
+/* Colors the autocomplete text */
 .ui-autocomplete {
     background-color: rgb(22, 21, 21);
     color: whitesmoke;
     width: 150px;
 }
-
+/* autocomplete hover color */
 .ui-autocomplete .ui-menu-item-wrapper:hover {
     background-color: rgba(0, 128, 0, 0.562);
  }

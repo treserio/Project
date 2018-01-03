@@ -14,8 +14,8 @@ $(document).ready(function(){
         } else {
             $.getJSON('AcctData/' +srchstring+ '.json', function(jsonfile) {
                 // Display the hidden dataTable
-                $('.dtWrap').css('display', 'inline');
-                $('.assignBtnWrap').css('display','inline')
+                $('.dtWrap').css('display', 'block');
+                $('.assignBtnWrap').css('display','block')
                 // Populate the dataTable
                 drawDataTbl(srchstring);
 
