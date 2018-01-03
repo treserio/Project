@@ -2,11 +2,14 @@ Since there isn't a good way to collect data from SWGoH for mods I decided I'd m
 
 Now that the data acquisition is complete I need to finish a front end, or app, for account login and storing mod data so it doesn't need to be updated until requested. Probably storing the json in a table and using the same account name that's listed on swgoh, or requiring it, to pull into the scrape script.
 
+Right now the data scraper will run ~once a week for all DL guilds on a seperate evening.
+
 Known bugs:
-    * Make submit default action for enter
-    * redraw function doesn't remove previous cell values if the new name doesn't have a full set of 6 mods.
-        Nore does it remove the values from another table...probably fine for checking out multiple configurations on the same character!
+    * redraw of dataTables resets scroll position, and will need to be persistant
 
 Things to finish:
-    * Check for existing json file and run python script if missing.
-    * Recreate option to refresh mod data for existing json.
+    * Add ability to save modifications, since updates will be weekly, possibly a way to assign mods to another character.
+    * Clear button for each assignment table
+    * Add a collapse option to hide the table information, hide thead and tbody
+    * Create a totals row for each table, to be displayed even when the table collapses, add in tfoot
+    * Incorporate max gear stats for each character, to add in another row for total calculation, based on assigned auto complete value

@@ -117,7 +117,7 @@ while True:
     #Although the number is in the "class=pagination" div page = soup.find_all("ul", {"class": "pagination"})
     try: 
         nxt = soup.find_all("a", {"aria-label": "Next"})[0].text
-        pause = random.uniform(10,40)
+        pause = random.uniform(20,70)
         time.sleep(pause)
         url = 'https://swgoh.gg/u/sert/mods/' + '?page=' + str(pgcnt) #move below pause
         print(url)

@@ -1,8 +1,9 @@
 var filelocation = ''; // figure out how to make this available to auto complete without being global? unsure what this is for again...
 $(document).ready(function(){
-    $('#srchBtn').click(function(){
+    $('#srchForm').submit(function(event){
+        event.preventDefault();
         // Grab the search text
-        srchstring = $(this).prev().val();
+        srchstring = $('#srchString').val();
         srchstring = srchstring.toLowerCase();
         filelocation = 'AcctData/' +srchstring+ '.json';
         
