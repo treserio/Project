@@ -6,6 +6,7 @@ Right now the data scraper will run ~once a week for all DL guilds on a seperate
 
 Known bugs:
     * redraw of dataTables resets scroll position, and will need to be persistant
+    * Replace '%20' with '' in scraper
 
 Things to finish:
     * Add ability to save modifications, since updates will be weekly, possibly a way to assign mods to another character.
