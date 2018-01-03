@@ -13,6 +13,8 @@ for (var i = 0; i<5; i++) {
         'type': 'text',
         'placeholder':'Find Mods Equipped by:'
     });
+    //
+
     // Creating table element
     sqdtbls.push(document.createElement('table'));
     $(sqdtbls[i]).attr({

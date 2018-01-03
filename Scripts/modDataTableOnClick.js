@@ -95,7 +95,7 @@ function drawDataTbl (search) {
         id = $("input[name='modset']:checked").val();
         modArray = [];
         modArray.push(table.row(this).data());
-        SnglRedraw(modArray, id);
+        Redraw(modArray, id);
         recolorsngl(modArray[0].Equipped, id, modArray[0].Slot);
         $('#moddata').DataTable().draw();
     });
