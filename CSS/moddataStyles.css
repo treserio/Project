@@ -1,6 +1,6 @@
 .dtWrap {
     width: 935px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     float: left;
     display: none;
 }
@@ -9,29 +9,25 @@
     position: relative;
 }
 .colorTbl {
-    width: 935px;
     overflow: auto;
 }
 tfoot input {
     width: 100%;
 }
-
 table {
     table-layout: fixed;
 }
-
 .userInput {
     float: right;
     width: 230px;
 }
-
 .tblBtns {
     float: right;
 }
-
 /* Container for radio assignment buttons for colored tables */
 .assignBtnWrap {
     padding-top: 40px;
+    padding-right: 5px;
     float: left;
     display: none;
 }
@@ -94,8 +90,9 @@ table {
     background-color: rgb(22, 21, 21);
     color: whitesmoke;
     width: 150px;
+    clear:left;
 }
 /* autocomplete hover color */
 .ui-autocomplete .ui-menu-item-wrapper:hover {
     background-color: rgba(0, 128, 0, 0.562);
- }
+}
