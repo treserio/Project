@@ -129,16 +129,22 @@ $('[id^=membrName').on('autocompleteclose', function() {
             }
         }
         // Run function to redraw #assigned table with correct mods found in Array and apply to correct table by id
-        AutoCompRedraw(modArray, id);
+        autocompRedraw(modArray, id);
         // Run function to recolor dataTable rows based on assigned table id
         recolor(namesearch, id);
         // Update dataTable to reflect changes
-        $('#moddata').DataTable().draw();
+        DTRedraw();
     });
 });
+// DTRedraw function to persist scroll value on redraw
+DTRedraw = function () {
+    var scrollPos = $(".dataTables_scrollBody").scrollTop();
+    $('#moddata').DataTable().rows().invalidate().draw(false);
+    $(".dataTables_scrollBody").scrollTop(scrollPos);
+}
 
 // Fills the table based on the sqdTbls array, and changes are reflected when those array values change. This function will not remove any preexisting mods from the assigned table.
-Redraw = function ( modArray, id ) {
+redraw = function ( modArray, id ) {
     for (var i = 0; i < modArray.length; i++) {
         if (modArray[i].Slot == "Square") {
             sqdTbls[id].tBodies[0].rows[0].cells[0].innerHTML = modArray[i].Equipped;
@@ -540,7 +546,7 @@ Redraw = function ( modArray, id ) {
     }
 }
 // This redraw method will clear out any missing mods from the assigned colored tables so you can see what that character still needs.
-AutoCompRedraw = function ( modArray, id ) {
+autocompRedraw = function ( modArray, id ) {
     var square = 0;
     var arrow = 0;
     var diamond = 0;
@@ -548,29 +554,9 @@ AutoCompRedraw = function ( modArray, id ) {
     var circle = 0;
     var cross = 0;
 
-    // set values for each type of mod to know if it exists in the array
-    for (var key in modArray) {
-        if (modArray[key].Slot == 'Square') {
-            square = 1;
-        } else if (modArray[key].Slot == 'Arrow') {
-            arrow = 1;
-        } else if (modArray[key].Slot == 'Diamond') {
-            diamond = 1;
-        } else if (modArray[key].Slot == 'Triangle') {
-            triangle = 1;
-        } else if (modArray[key].Slot == 'Circle') {
-            circle = 1;
-        } else if (modArray[key].Slot == 'Cross') {
-            cross = 1;
-        }
-    }
-    // Fill in all available mods
-    Redraw ( modArray, id );
-
-    // Draw over any mods missing from the array
-    if (square === 0) {
-        sqdTbls[id].tBodies[0].rows[0].cells[0].innerHTML = modArray[0].Equipped;
-        sqdTbls[id].tBodies[0].rows[0].cells[1].innerHTML = 'Square';
+    if (modArray == 'nul') {
+        sqdTbls[id].tBodies[0].rows[0].cells[0].innerHTML = '';
+        sqdTbls[id].tBodies[0].rows[0].cells[1].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[0].cells[2].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[0].cells[3].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[0].cells[4].innerHTML = '';
@@ -585,10 +571,9 @@ AutoCompRedraw = function ( modArray, id ) {
         sqdTbls[id].tBodies[0].rows[0].cells[13].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[0].cells[14].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[0].cells[15].innerHTML = '';
-    }
-    if (arrow === 0) {
-        sqdTbls[id].tBodies[0].rows[1].cells[0].innerHTML = modArray[0].Equipped;
-        sqdTbls[id].tBodies[0].rows[1].cells[1].innerHTML = 'Arrow';
+
+        sqdTbls[id].tBodies[0].rows[1].cells[0].innerHTML = '';
+        sqdTbls[id].tBodies[0].rows[1].cells[1].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[1].cells[2].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[1].cells[3].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[1].cells[4].innerHTML = '';
@@ -603,10 +588,9 @@ AutoCompRedraw = function ( modArray, id ) {
         sqdTbls[id].tBodies[0].rows[1].cells[13].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[1].cells[14].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[1].cells[15].innerHTML = '';
-    }
-    if (diamond === 0) {
-        sqdTbls[id].tBodies[0].rows[2].cells[0].innerHTML = modArray[0].Equipped;
-        sqdTbls[id].tBodies[0].rows[2].cells[1].innerHTML = 'Diamond';
+
+        sqdTbls[id].tBodies[0].rows[2].cells[0].innerHTML = '';
+        sqdTbls[id].tBodies[0].rows[2].cells[1].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[2].cells[2].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[2].cells[3].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[2].cells[4].innerHTML = '';
@@ -621,10 +605,9 @@ AutoCompRedraw = function ( modArray, id ) {
         sqdTbls[id].tBodies[0].rows[2].cells[13].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[2].cells[14].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[2].cells[15].innerHTML = '';
-    }
-    if (triangle === 0) {
-        sqdTbls[id].tBodies[0].rows[3].cells[0].innerHTML = modArray[0].Equipped;
-        sqdTbls[id].tBodies[0].rows[3].cells[1].innerHTML = 'Triangle';
+
+        sqdTbls[id].tBodies[0].rows[3].cells[0].innerHTML = '';
+        sqdTbls[id].tBodies[0].rows[3].cells[1].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[3].cells[2].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[3].cells[3].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[3].cells[4].innerHTML = '';
@@ -639,10 +622,9 @@ AutoCompRedraw = function ( modArray, id ) {
         sqdTbls[id].tBodies[0].rows[3].cells[13].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[3].cells[14].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[3].cells[15].innerHTML = '';
-    }
-    if (circle === 0) {
-        sqdTbls[id].tBodies[0].rows[4].cells[0].innerHTML = modArray[0].Equipped;
-        sqdTbls[id].tBodies[0].rows[4].cells[1].innerHTML = 'Circle';
+
+        sqdTbls[id].tBodies[0].rows[4].cells[0].innerHTML = '';
+        sqdTbls[id].tBodies[0].rows[4].cells[1].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[4].cells[2].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[4].cells[3].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[4].cells[4].innerHTML = '';
@@ -657,10 +639,9 @@ AutoCompRedraw = function ( modArray, id ) {
         sqdTbls[id].tBodies[0].rows[4].cells[13].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[4].cells[14].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[4].cells[15].innerHTML = '';
-    }
-    if (cross === 0) {
-        sqdTbls[id].tBodies[0].rows[5].cells[0].innerHTML = modArray[0].Equipped;
-        sqdTbls[id].tBodies[0].rows[5].cells[1].innerHTML = 'Cross';
+
+        sqdTbls[id].tBodies[0].rows[5].cells[0].innerHTML = '';
+        sqdTbls[id].tBodies[0].rows[5].cells[1].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[5].cells[2].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[5].cells[3].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[5].cells[4].innerHTML = '';
@@ -675,10 +656,140 @@ AutoCompRedraw = function ( modArray, id ) {
         sqdTbls[id].tBodies[0].rows[5].cells[13].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[5].cells[14].innerHTML = '';
         sqdTbls[id].tBodies[0].rows[5].cells[15].innerHTML = '';
-    }        
+    } else {
+        // set values for each type of mod to know if it exists in the array
+        for (var key in modArray) {
+            if (modArray[key].Slot == 'Square') {
+                square = 1;
+            } else if (modArray[key].Slot == 'Arrow') {
+                arrow = 1;
+            } else if (modArray[key].Slot == 'Diamond') {
+                diamond = 1;
+            } else if (modArray[key].Slot == 'Triangle') {
+                triangle = 1;
+            } else if (modArray[key].Slot == 'Circle') {
+                circle = 1;
+            } else if (modArray[key].Slot == 'Cross') {
+                cross = 1;
+            }
+        }
+        // Fill in all available mods
+        redraw ( modArray, id );
+
+        // Draw over any mods missing from the array
+        if (square === 0) {
+            sqdTbls[id].tBodies[0].rows[0].cells[0].innerHTML = modArray[0].Equipped;
+            sqdTbls[id].tBodies[0].rows[0].cells[1].innerHTML = 'Square';
+            sqdTbls[id].tBodies[0].rows[0].cells[2].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[3].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[4].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[5].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[6].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[7].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[8].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[9].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[10].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[11].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[12].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[13].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[14].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[0].cells[15].innerHTML = '';
+        }
+        if (arrow === 0) {
+            sqdTbls[id].tBodies[0].rows[1].cells[0].innerHTML = modArray[0].Equipped;
+            sqdTbls[id].tBodies[0].rows[1].cells[1].innerHTML = 'Arrow';
+            sqdTbls[id].tBodies[0].rows[1].cells[2].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[3].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[4].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[5].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[6].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[7].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[8].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[9].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[10].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[11].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[12].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[13].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[14].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[1].cells[15].innerHTML = '';
+        }
+        if (diamond === 0) {
+            sqdTbls[id].tBodies[0].rows[2].cells[0].innerHTML = modArray[0].Equipped;
+            sqdTbls[id].tBodies[0].rows[2].cells[1].innerHTML = 'Diamond';
+            sqdTbls[id].tBodies[0].rows[2].cells[2].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[3].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[4].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[5].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[6].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[7].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[8].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[9].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[10].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[11].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[12].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[13].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[14].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[2].cells[15].innerHTML = '';
+        }
+        if (triangle === 0) {
+            sqdTbls[id].tBodies[0].rows[3].cells[0].innerHTML = modArray[0].Equipped;
+            sqdTbls[id].tBodies[0].rows[3].cells[1].innerHTML = 'Triangle';
+            sqdTbls[id].tBodies[0].rows[3].cells[2].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[3].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[4].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[5].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[6].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[7].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[8].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[9].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[10].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[11].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[12].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[13].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[14].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[3].cells[15].innerHTML = '';
+        }
+        if (circle === 0) {
+            sqdTbls[id].tBodies[0].rows[4].cells[0].innerHTML = modArray[0].Equipped;
+            sqdTbls[id].tBodies[0].rows[4].cells[1].innerHTML = 'Circle';
+            sqdTbls[id].tBodies[0].rows[4].cells[2].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[3].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[4].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[5].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[6].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[7].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[8].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[9].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[10].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[11].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[12].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[13].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[14].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[4].cells[15].innerHTML = '';
+        }
+        if (cross === 0) {
+            sqdTbls[id].tBodies[0].rows[5].cells[0].innerHTML = modArray[0].Equipped;
+            sqdTbls[id].tBodies[0].rows[5].cells[1].innerHTML = 'Cross';
+            sqdTbls[id].tBodies[0].rows[5].cells[2].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[3].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[4].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[5].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[6].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[7].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[8].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[9].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[10].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[11].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[12].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[13].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[14].innerHTML = '';
+            sqdTbls[id].tBodies[0].rows[5].cells[15].innerHTML = '';
+        }
+    }
 }
 // Change all colors of mods in dataTable based on hidden Assigned value, this one works off of autocomplete values and removes any coloring from mods that don't match the selected autocomplete value.
 recolor = function ( namesearch, id ) {
+    console.log('rclrFired' +namesearch+id);
     $('#moddata').DataTable().rows().every( function () {
         // check for which assigned table was used
         if (id == 0) {
@@ -725,7 +836,7 @@ recolor = function ( namesearch, id ) {
     });
 }
 // Change all colors of mods in dataTable based on hidden Assigned value, this one works off of single mod assignment and will only remove coloring from any previous mod matching the same slot.
-recolorsngl = function ( namesearch, id, asSlot ) {
+recolorSngl = function ( namesearch, id, asSlot ) {
     $('#moddata').DataTable().rows().every( function () {
         // check for which assigned table was used
         if (id == 0) {
@@ -781,4 +892,11 @@ $('[id^=hideShow').on('click', function() {
     } else {
         this.value = 'Hide';
     }
+});
+// Clear color tbls function
+$('[id^=clrBtn').on('click', function() {
+    var id = this.id.slice(-1);
+    autocompRedraw('nul', id);
+    recolor('', id);
+    DTRedraw();
 });
