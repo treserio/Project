@@ -37,8 +37,9 @@ for (var i = 0; i<5; i++) {
     // Creating table element
     sqdTbls.push(document.createElement('table'));
     $(sqdTbls[i]).attr({
-        'class': 'display assigned',
-        'width': '1250px'
+        'class': 'assigned',
+        'width': '1250px',
+        'border-collapse':'collapse'
     });
     // Create Column settings for tables
     sqdTbls[i].appendChild(document.createElement('colgroup'));
@@ -130,6 +131,9 @@ $('[id^=membrName').on('autocompleteclose', function() {
         }
         // Run function to redraw #assigned table with correct mods found in Array and apply to correct table by id
         autocompRedraw(modArray, id);
+        // Display hidden body
+        $('#squadMembr'+id+' .assigned tbody').css('display','table-row-group');
+        $('[id^=hideShow'+id).attr('value','Hide');
         // Run function to recolor dataTable rows based on assigned table id
         recolor(namesearch, id);
         // Update dataTable to reflect changes
@@ -789,7 +793,6 @@ autocompRedraw = function ( modArray, id ) {
 }
 // Change all colors of mods in dataTable based on hidden Assigned value, this one works off of autocomplete values and removes any coloring from mods that don't match the selected autocomplete value.
 recolor = function ( namesearch, id ) {
-    console.log('rclrFired' +namesearch+id);
     $('#moddata').DataTable().rows().every( function () {
         // check for which assigned table was used
         if (id == 0) {
@@ -886,7 +889,7 @@ recolorSngl = function ( namesearch, id, asSlot ) {
 // Function applied to all hideBtns for toggling the display of the associated colored table
 $('[id^=hideShow').on('click', function() {
     var id = this.id.slice(-1);
-    $('#modSet'+id).toggle('show');
+    $('#modSet'+id+' tbody').toggle('show');
     if (this.value=='Hide') {
         this.value = 'Show';
     } else {
@@ -899,4 +902,6 @@ $('[id^=clrBtn').on('click', function() {
     autocompRedraw('nul', id);
     recolor('', id);
     DTRedraw();
+    $('#squadMembr'+id+' .assigned tbody').css('display','none');
+    $('[id^=hideShow'+id).attr('value','Hide');
 });

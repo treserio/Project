@@ -7,6 +7,7 @@ function drawDataTbl (search) {
         scrollY: '300px',
         scrollX: '100%',
         paging: false,
+        //bInfo: false,
         ajax: {
             url: 'AcctData/' +search+ '.json',
         },
@@ -25,7 +26,7 @@ function drawDataTbl (search) {
             { data: 'Set', width: '40px' },
             { data: 'Primary' },
             { data: 'Spd',
-            defaultContent: "" },
+            defaultContent: "", },
             { data: 'Crit%',
             defaultContent: "" },
             { data: 'Off',
@@ -96,6 +97,8 @@ function drawDataTbl (search) {
         modArray = [];
         modArray.push(table.row(this).data());
         redraw(modArray, id);
+        $('#squadMembr'+id+' .assigned tbody').css('display','table-row-group');
+        $('[id^=hideShow'+id).attr('value','Hide');
         recolorSngl(modArray[0].Equipped, id, modArray[0].Slot);
         DTRedraw();
     });

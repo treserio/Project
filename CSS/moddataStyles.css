@@ -1,3 +1,6 @@
+body {
+    font-size: 90%;
+}
 .dtWrap {
     width: 935px;
     padding-bottom: 5px;
@@ -11,11 +14,28 @@
 .colorTbl {
     overflow: auto;
 }
+#moddata {
+    text-align: center;
+}
+#moddata_info {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;
+}
 tfoot input {
     width: 100%;
 }
-table {
+.assigned {
     table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+}
+.assigned td {
+    border-top: 1px solid #ddd;
+}
+.assigned tbody {
+    display: none;
 }
 .userInput {
     float: right;
