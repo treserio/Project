@@ -95,9 +95,13 @@ for (var i = 0; i<5; i++) {
     // Create tfoot to insert row and cells after calculating totals and setup totals
     sqdTbls[i].createTFoot();
     sqdTbls[i].tFoot.insertRow();
-    for (var m = 0; m < 12; m ++) {
-        sqdTbls[i].tFoot.row[0].insertCell();
-    }
+    sqdTbls[i].tFoot.rows[0].appendChild(document.createElement('th'));
+    sqdTbls[i].tFoot.rows[0].appendChild(document.createElement('th'));
+    sqdTbls[i].tFoot.rows[0].appendChild(document.createElement('th'));
+    sqdTbls[i].tFoot.rows[0].appendChild(document.createElement('th')).innerText = 'Totals';
+    for ( var footCell = 0; footCell <12; footCell ++ ) {
+        sqdTbls[i].tFoot.rows[0].appendChild(document.createElement('th')).innerHTML = 0;
+    }    
 
     // Create Header Div and fill with necessary items
     var tblHeader = document.createElement('div');
@@ -138,6 +142,7 @@ $('[id^=membrName').on('autocompleteclose', function() {
         }
         // Run function to redraw #assigned table with correct mods found in Array and apply to correct table by id
         autocompRedraw(modArray, id);
+        CalcTotals(id);
         // Display hidden body
         $('#squadMembr'+id+' .assigned tbody').css('display','table-row-group');
         $('[id^=hideShow'+id).attr('value','Hide');
@@ -153,7 +158,6 @@ DTRedraw = function () {
     $('#moddata').DataTable().rows().invalidate().draw(false);
     $(".dataTables_scrollBody").scrollTop(scrollPos);
 }
-
 // Fills the table based on the sqdTbls array, and changes are reflected when those array values change. This function will not remove any preexisting mods from the assigned table.
 redraw = function ( modArray, id ) {
     for (var i = 0; i < modArray.length; i++) {
@@ -892,7 +896,20 @@ recolorSngl = function ( namesearch, id, asSlot ) {
         }
     });
 }
-
+CalcTotals = function (id) {
+    for (var col=4; col<16; col++) {
+        var Tots = 0;
+        for (var row=0; row<6; row++) {
+            Tots += Number(sqdTbls[id].tBodies[0].rows[row].cells[col].textContent);
+        }
+        if ( col%2 === 1 || col == 14 ) {
+            if ( Tots !== 0) {
+            Tots = Tots.toFixed(2);
+            }
+        }
+        sqdTbls[id].tFoot.rows[0].cells[col].innerHTML = Tots;
+    }
+}
 // Function applied to all hideBtns for toggling the display of the associated colored table
 $('[id^=hideShow').on('click', function() {
     var id = this.id.slice(-1);
@@ -907,6 +924,7 @@ $('[id^=hideShow').on('click', function() {
 $('[id^=clrBtn').on('click', function() {
     var id = this.id.slice(-1);
     autocompRedraw('nul', id);
+    CalcTotals(id);
     recolor('', id);
     DTRedraw();
     $('#squadMembr'+id+' .assigned tbody').css('display','none');

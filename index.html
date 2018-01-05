@@ -8,7 +8,7 @@
 <script src='Scripts/dataTables/dataTables.1.10.16.min.js'></script>
 <script src='Scripts/jquery-ui-1.12.1/jquery-ui.js'></script>
 <script async src='Scripts/modDataTableOnClick.js'></script>
-<script async src='Scripts/tblBuilder3.js'></script>
+<script async src='Scripts/tblBuilder4.js'></script>
 <script async src='Scripts/dataCollection.js'></script>
 </head>
 <!-- only using values in the json for headers -->
@@ -18,15 +18,15 @@
     <form id='srchForm'>
     <input  id='srchString' type=text placeholder='swgoh.gg/u/<username>' autofocus><input type='submit' value='Submit' id='srchBtn'>
     </form>
-    <div style='padding-bottom:10px'><b>Instructions:</b> Enter your username as it appears on swgoh.gg and hit submit.</div>
+    <div style='padding-bottom:10px; padding-top:10px'><b>Instructions:</b> Enter your username as it appears on swgoh.gg and hit submit.</div>
     <div style='padding-bottom:10px'>To assign a mod to a table select a colored radio button and then click on the row for the mod you want to assign.</div>
     <div style='padding-bottom:10px'><b>Sorting:</b> Click a column header to sort by that value, click a second header for secondary sorting. e.g. Click <i>Spd</i> twice followed by <i>Slot</i> to find your fastest mods by slot.</div>
     <div>
         <b>Things to Come:</b>
-        <li>Compatibility with iOS devices, sorry Apple users</li>
-        <li>Totals row for colored tables</li>
+        <li>Compatibility with mobile iOS devices & Safari, sorry Apple users</li>
         <li>Ability to save changes</li>
         <li>Add a character max stats row, and add to totals calculation</li>
+        <br><b>Right now primary stats aren't included in totals, please let me know if you think this would be helpful. The main reason is that I don't know what the * value for the mod is, so I can only ever assume it's a 5* mod atm.</b>
     </div>
     
     <!--
