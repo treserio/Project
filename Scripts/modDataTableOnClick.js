@@ -59,13 +59,13 @@ function drawDataTbl (search) {
             } else if ( data.Assigned == "1st" ) {
                 $('td', row).css("background-color","lightblue");
             } else if ( data.Assigned == "2nd" ) {
-                $('td', row).css("background-color","lightgreen");
+                $('td', row).css("background-color","rgba(144, 238, 144, 0.788)");
             } else if ( data.Assigned == "3rd" ) {
-                $('td', row).css("background-color","orange");
+                $('td', row).css("background-color","rgba(255, 166, 0, 0.850)");
             } else if ( data.Assigned == "4th" ) {
-                $('td', row).css("background-color",'rgb(160, 81, 160)');
+                $('td', row).css("background-color",'rgba(189, 96, 189, 0.788)');
             } else if ( data.Assigned == "5th" ) {
-                $('td', row).css("background-color",'rgb(207, 207, 0)');
+                $('td', row).css("background-color",'rgba(245, 245, 113, 0.780)');
             }
         }
     });
