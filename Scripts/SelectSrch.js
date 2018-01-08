@@ -67,16 +67,33 @@ function drawDataTbl (search) {
             } else if ( data.Assigned == "5th" ) {
                 $('td', row).css("background-color",'rgba(245, 245, 113, 0.780)');
             }
+        },
+        //Setup - add a text input to each footer cell
+        initComplete: function()  {
+            this.api().columns( [1,2,3]).every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.footer()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+        
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+        
+                    column.data().unique().sort().each( function ( d, j ) {
+                        select.append( '<option value="'+d+'">'+d+'</option>' )
+                    } );
+            } );
         }
     });
 //select filter search from drop down, try to find again list? This would be for those with only ~6 options
 
-     //Setup - add a text input to each footer cell
-    $('.dataTables_scrollFootInner srch').each( function () {
-        var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-    });
-
+/*     
+$('.dataTables_scrollFootInner srch').each( function () {
     var table = $('#moddata').DataTable();
     
     // Apply the filter
@@ -89,8 +106,8 @@ function drawDataTbl (search) {
                 .draw();
         } );
     } );
-    
-    //Collecting row data on click, will also need a popup to determine where it goes.
+*/ 
+    //Collecting row data on click, redrawing assigned color table and coloring correct dataTable Rows.
     $('.dataTable').on('click', 'tbody tr', function() {
         //Need id to be assigned by clicking on an option and we're done.
         id = $("input[name='modset']:checked").val();
