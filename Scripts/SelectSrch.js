@@ -82,7 +82,7 @@ function drawDataTbl (search) {
     // Apply the filter
     table.columns().every( function () {
         var column = this;
-
+        console.log(column);
         $( 'input', this.footer() ).on( 'keyup change', function () {
             column
                 .search(this.value, true, false)
