@@ -145,7 +145,7 @@ for player in plyrAry:
             #clean up final comma
             modjson = modjson[:-1]
             modjson += "]}"
-            jsonf = open("../AcctData"+player[2:-1]+".json","w")
+            jsonf = open("../AcctData"+player[2:-1].replace('%20', '_')+".json","w")
             jsonf.write(modjson)
             jsonf.close()
             break
