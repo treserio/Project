@@ -70,9 +70,9 @@ function drawDataTbl (search) {
         },
         //Setup - add a text input to each footer cell
         initComplete: function()  {
-            this.api().columns( [1,2,3]).every( function () {
+            this.api().columns( [1,2]).every( function () {
                 var column = this;
-                var select = $('<select><option value=""></option></select>')
+                var select = $('<select><option value="" width=40px>Select</option></select>')
                     .appendTo( $(column.footer()).empty() )
                     .on( 'change', function () {
                         var val = $.fn.dataTable.util.escapeRegex(
@@ -92,21 +92,26 @@ function drawDataTbl (search) {
     });
 //select filter search from drop down, try to find again list? This would be for those with only ~6 options
 
-/*     
-$('.dataTables_scrollFootInner srch').each( function () {
-    var table = $('#moddata').DataTable();
     
+    //Setup - add a text input to each footer cell
+    $('.dataTables_scrollFootInner srch').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder='+title+'>' );
+    });
+
+    var table = $('#moddata').DataTable();
+
     // Apply the filter
     table.columns().every( function () {
         var column = this;
-        console.log(column);
         $( 'input', this.footer() ).on( 'keyup change', function () {
             column
                 .search(this.value, true, false)
                 .draw();
         } );
     } );
-*/ 
+
+
     //Collecting row data on click, redrawing assigned color table and coloring correct dataTable Rows.
     $('.dataTable').on('click', 'tbody tr', function() {
         //Need id to be assigned by clicking on an option and we're done.
