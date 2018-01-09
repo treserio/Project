@@ -70,12 +70,12 @@ function drawDataTbl (search) {
         },
         //Setup - add a text input to each footer cell
         initComplete: function()  {
-            this.api().columns( [1,2]).every( function () {
+            this.api().columns( [1,2] ).every( function () {
                 var column = this;
                 var select = $('<select><option value="" width=40px>Select</option></select>')
                     .appendTo( $(column.footer()).empty() )
                     .on( 'change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
+                        var val = $.fn.dataTable.util.escapeRegex (
                             $(this).val()
                         );
         
