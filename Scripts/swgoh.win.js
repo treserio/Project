@@ -982,7 +982,6 @@ function drawDataTbl (search) {
             url: 'AcctData/' +search+ '.json',
         },
         dom: 'ltip', //removes top search bar
-        // should enable a fixed column on the left, but isn't working command = fixedColums:
         // hiding the Assigned column
         columnDefs: [ {
             targets: [16],
@@ -1055,8 +1054,9 @@ function drawDataTbl (search) {
 
         $( 'input', this.footer() ).on( 'keyup change', function () {
             column
-                .search(this.value, true, false)
-                .draw();
+                .search(this.value, true, false);
+            // This draw will keep the dataTable rows from jumping to the top on click
+            DTRedraw();
         } );
     } );
     
