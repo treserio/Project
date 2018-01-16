@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 #optimally pulls the guild info from an input field on the page to insert into string
 gldurl = "https://swgoh.gg/g/765/dark-lfrds/"
 
+
 #fetching html from swgoh.gg
 gldfetch = requests.get(gldurl)
 #converts content with BeautifulSoup
