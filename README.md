@@ -3,8 +3,8 @@ Since there isn't a good way to collect data from SWGoH for mods I decided I'd m
 Known bugs:
 
 Things to finish:
-    * Add ability to save modifications, since updates will be weekly, possibly a way to assign mods to another character.
+   * Add ability to save modifications, since updates will be weekly, possibly a way to assign mods to another character.
 
-    * Incorporate max gear stats for each character, to add in another row for total calculation, based on assigned auto complete value
+   * Incorporate max gear stats for each character, to add in another row for total calculation, based on assigned auto complete value
 
-    * Add primary stats values to mods
+   * Add primary stats values to mods
