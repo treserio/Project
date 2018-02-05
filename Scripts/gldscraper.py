@@ -10,7 +10,11 @@ from bs4 import BeautifulSoup
 #statmod-stat-label = label
 
 #optimally pulls the guild info from an input field on the page to insert into string
+<<<<<<< HEAD
 gldurl = "https://swgoh.gg/g/3015/dark-lords/"
+=======
+gldurl = "https://swgoh.gg/g/338/dark-lords/"
+>>>>>>> c966a81f65c3ec18f65ce2038f773b339abb3f95
 
 
 #fetching html from swgoh.gg
