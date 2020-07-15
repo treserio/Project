@@ -1,0 +1,35 @@
+SLOTS: 1 to 6
+mods[x].slot
+
+1 = square
+2 = arrow
+3 = diamond
+4 = triangle
+5 = circle
+6 = cross
+
+SETS: 1 to 8
+mods[x].set
+
+1 = health
+2 = Off
+3 = Def
+4 = spd 
+5 = crt chnc
+6 = crt dam
+7 = pot
+8 = Ten on rangetrooper
+
+
+PRIMARIY
+mods[x].primary_stat.name = stat name
+mods[x].primary_stat.display_value = workable value
+
+SECONDARIES
+mods[x].secondary_stats[1-4].name = stat name
+mods[x].secondary_stats[1-4].display_value = workable value
+
+CHARACTER
+mods[x].character = string of name
+
+git@github.com:treserio/swgoh.win.js.git

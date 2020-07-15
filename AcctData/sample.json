@@ -1,0 +1,140 @@
+{
+    "count": 969,
+    "mods": [
+        {
+            "slot": 6,
+            "secondary_stats": [
+                {
+                    "roll": 3,
+                    "stat_id": 5,
+                    "name": "Speed",
+                    "value": 130000.0,
+                    "display_value": "13"
+                },
+                {
+                    "roll": 3,
+                    "stat_id": 49,
+                    "name": "Defense",
+                    "value": 336.0,
+                    "display_value": "3.36%"
+                },
+                {
+                    "roll": 1,
+                    "stat_id": 53,
+                    "name": "Critical Chance",
+                    "value": 132.8,
+                    "display_value": "1.33%"
+                },
+                {
+                    "roll": 1,
+                    "stat_id": 1,
+                    "name": "Health",
+                    "value": 2380000.0,
+                    "display_value": "238"
+                }
+            ],
+            "set": 7,
+            "level": 15,
+            "tier": 5,
+            "primary_stat": {
+                "stat_id": 56,
+                "name": "Protection",
+                "value": 2350.0,
+                "display_value": "23.5%"
+            },
+            "character": "ENFYSNEST",
+            "id": "XAzAzb6bQ0ugL2FwDU1kQg",
+            "rarity": 5
+        },
+        {
+            "slot": 3,
+            "secondary_stats": [
+                {
+                    "roll": 2,
+                    "stat_id": 56,
+                    "name": "Protection",
+                    "value": 330.1,
+                    "display_value": "3.3%"
+                },
+                {
+                    "roll": 3,
+                    "stat_id": 42,
+                    "name": "Defense",
+                    "value": 200000.0,
+                    "display_value": "20"
+                },
+                {
+                    "roll": 1,
+                    "stat_id": 5,
+                    "name": "Speed",
+                    "value": 50000.0,
+                    "display_value": "5"
+                },
+                {
+                    "roll": 2,
+                    "stat_id": 41,
+                    "name": "Offense",
+                    "value": 760000.0,
+                    "display_value": "76"
+                }
+            ],
+            "set": 5,
+            "level": 15,
+            "tier": 5,
+            "primary_stat": {
+                "stat_id": 49,
+                "name": "Defense",
+                "value": 1175.0,
+                "display_value": "11.75%"
+            },
+            "character": "CLONESERGEANTPHASEI",
+            "id": "yXLtJJRURyKO5onBm_8A1g",
+            "rarity": 5
+        },
+        {
+            "slot": 1,
+            "secondary_stats": [
+                {
+                    "roll": 3,
+                    "stat_id": 55,
+                    "name": "Health",
+                    "value": 235.1,
+                    "display_value": "2.35%"
+                },
+                {
+                    "roll": 1,
+                    "stat_id": 1,
+                    "name": "Health",
+                    "value": 3840000.0,
+                    "display_value": "384"
+                },
+                {
+                    "roll": 3,
+                    "stat_id": 49,
+                    "name": "Defense",
+                    "value": 353.7,
+                    "display_value": "3.54%"
+                },
+                {
+                    "roll": 1,
+                    "stat_id": 5,
+                    "name": "Speed",
+                    "value": 30000.0,
+                    "display_value": "3"
+                }
+            ],
+            "set": 1,
+            "level": 15,
+            "tier": 5,
+            "primary_stat": {
+                "stat_id": 48,
+                "name": "Offense",
+                "value": 588.0,
+                "display_value": "5.88%"
+            },
+            "character": "GRIEVOUS",
+            "id": "7dtxLsUATLiIfe7x62zBbQ",
+            "rarity": 5
+        }
+    ]
+}

@@ -121,6 +121,137 @@ for (var i = 0; i<5; i++) {
     // Apply it to the right squadMembr div
     document.getElementById('squadMembr'+i).appendChild(colorTbl);
 }
+
+// change this to pull json from swgoh.gg/api/players/{ally_code}/mods/
+// convert their json to my format use legend.txt in AcctData folder for instructions
+// check for existing file, if none exists pull from site, name after {ally_code}
+// add delete option to mod, maybe select first, then hit delete button, prompt if sure, and say can always redownload
+// add redownload option
+// create save function to store changes in json file
+convertJSON = function () {
+    $.getJSON("https://swgoh.gg/api/players/896282714/mods/",
+        $.ajax({
+            dataType: 'json',
+            url: "https://swgoh.gg/api/players/896282714/mods/",
+            headers: {
+                "Access-Control-Allow-Origin":"*"
+            },
+            success: function(resp) {
+                console.log(resp.mods);
+                // create array to assign to json object
+                var convertedMods = [];
+                $.each(resp.mods, function(modCntr) {
+                    // create the mod object
+                    var mod = {};                
+
+                    mod.Equipped = resp.mods[modCntr].character;
+                    // get slot
+                    switch (resp.mods[modCntr].slot) {
+                        case 1:
+                            mod["Slot"] = "Square";
+                            break;
+                        case 2:
+                            mod["Slot"] = "Arrow";
+                            break;
+                        case 3:
+                            mod["Slot"] = "Diamond";
+                            break;
+                        case 4:
+                            mod["Slot"] = "Triangle";
+                            break;
+                        case 5:
+                            mod["Slot"] = "Circle";
+                            break;
+                        case 6:
+                            mod["Slot"] = "Cross";
+                            break;
+                    };
+                    // convert the set resp.mods[modCntr].set 1-8
+                    switch (resp.mods[modCntr].set) {
+                        case 1:
+                            mod["Set"] = "Health";
+                            break;
+                        case 2:
+                            mod["Set"] = "Offense";
+                            break;
+                        case 3:
+                            mod["Set"] = "Defense";
+                            break;
+                        case 4:
+                            mod["Set"] = "Speed";
+                            break;
+                        case 5:
+                            mod["Set"] = "Critical Chance";
+                            break;
+                        case 6:
+                            mod["Set"] = "Critical Damage";
+                            break;
+                        case 7:
+                            mod["Set"] = "Potency";
+                            break;
+                        case 8:
+                            mod["Set"] = "Tenacity";
+                            break;                                                    
+                    };
+                    // get primary stat
+                    mod.Primary = resp.mods[modCntr].primary_stat.name;
+                    // get secondary stats & values
+                    $.each(resp.mods[modCntr].secondary_stats, function(secondaryCntr) {
+                        switch (resp.mods[modCntr].secondary_stats[secondaryCntr].name) {
+                            case "Health":
+                                if (resp.mods[modCntr].secondary_stats[secondaryCntr].display_value.includes("%")) {
+                                    mod["HP%"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                } else {
+                                    mod["HP"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                };
+                                break;
+                            case "Protection":
+                                if (resp.mods[modCntr].secondary_stats[secondaryCntr].display_value.includes("%")) {
+                                    mod["Prot%"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                } else {
+                                    mod["Prot"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                };
+                                break;                                
+                            case "Offense":
+                                if (resp.mods[modCntr].secondary_stats[secondaryCntr].display_value.includes("%")) {
+                                    mod["Off%"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                } else {
+                                    mod["Off"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                };
+                                break;
+                            case "Defense":
+                                if (resp.mods[modCntr].secondary_stats[secondaryCntr].display_value.includes("%")) {
+                                    mod["Def%"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                } else {
+                                    mod["Def"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                };
+                                break;
+                            case "Speed":
+                                mod["Spd"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                break;
+                            case "Critical Chance":
+                                mod["Crit%"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                break;
+                            case "Potency":
+                                mod["Pot%"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                break;
+                            case "Tenacity":
+                                mod["Ten%"] = resp.mods[modCntr].secondary_stats[secondaryCntr].display_value;
+                                break;
+                        };
+                    });
+                    // add assignment property
+                    mod.Assigned = "";
+                    // push into mod array
+                    convertedMods.push(mod);
+                });
+                var convertedModsJSONString = JSON.stringify(convertedMods);
+                console.log(convertedModsJSONString);
+            }
+        })
+    );
+}
+
 $('#srchForm').submit(function(event){
     event.preventDefault();
     // Grab the search text
@@ -157,6 +288,7 @@ $('#srchForm').submit(function(event){
             alert('Please contact Sert#7357 on discord\nin order to have your mod data collected');
         })
     }
+    convertJSON();
 });
 //function for grabbing correct mod data from JSON file with autocomplete field input.
 $('[id^=membrName').on('autocompleteclose', function() {
