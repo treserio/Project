@@ -1,15 +1,44 @@
+const http = require('http');
+const url = require('url');
 const fs = require('fs');
-const https = require('https');
 
-var plyrString = '896282714'
-var fileString = __dirname +'\\AcctData\\'+ plyrString +'.json'
+http.createServer(function (req, res) {
+  const queryObject = url.parse(req.url,true).query;
+  console.log(queryObject);
 
-getJSON = function(fileString) {
+  // check if the playerID is blank
+  if (Object.keys(queryObject).length !== 0) {
+    if (queryObject.playerID !== "") {
+      // go read the json and return to the ajax call?
+      getJSON(queryObject.playerID);
+      // simply fetch 100% always no checks
+    }
+  }
+
+  if (req.url === '/') {
+    fs.readFile('donk.html', (err, html) => {
+      if (err) {
+        console.log('error');
+      }
+      res.writeHeader(200, {'Content-Type': 'text/html'});
+      res.write(html);
+      res.end();
+    })
+  }
+}).listen(8080);
+
+getJSON = function(plyrID) {
+  const https = require('https');
+  fileString = __dirname +'\\AcctData\\'+ plyrID +'.json'
   // check if the file exists, atm on error just display msg, later it will need to perform the request for the file from api.
   fs.access(fileString, (err) => {
     if (err) {
       console.log("File Doesn't Exist");
-      https.get('https://swgoh.gg/api/players/'+ plyrString +'/mods/', (data) => {
+
+      // ****
+      // Add a check to make sure the url returns data, if not ask the user to confirm they have an account on swgoh.gg
+      // ****
+      https.get('https://swgoh.gg/api/players/'+ plyrID +'/mods/', (data) => {
         console.log('Fetching Data');
         console.log(data.statusCode);
 
@@ -22,11 +51,12 @@ getJSON = function(fileString) {
 
         data.on('end', () => {
           // write out converted json info
-          fs.writeFile(__dirname +'\\AcctData\\'+ plyrString +'.json', convertJSON(JSON.parse(body)), (err) => {
+          fs.writeFile(__dirname +'\\AcctData\\'+ plyrID +'.json', convertJSON(JSON.parse(body)), (err) => {
             if (err) {
               console.log('Write File Error');
             } else {
               console.log('File has been saved');
+              // return the read contents as a json object?
             }
           });
         });
@@ -40,6 +70,7 @@ getJSON = function(fileString) {
         } else {
           console.log('File Retrieved');
           console.log (data.slice(0,200));
+          // return the read contents as a json object?
         }
       });
     }
