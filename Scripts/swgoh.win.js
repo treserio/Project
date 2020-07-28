@@ -260,9 +260,11 @@ $('#srchForm').submit(function(event){
     filelocation = 'AcctData/' +srchstring+ '.json';
     
     // check if resulting url is good? no good method with CORS that'll work. Possibly in an NPM package, yay I have a sticker for that.
-    if (srchstring == "") { 
-        alert('Please enter a swgoh.gg id');
+    var testStr = RegExp(/^[0-9]{9}$/);
         
+    // test if the search string matches the ally code format of 9 digits
+    if (!testStr.test(srchstring)) {
+        alert('Please enter your 9 digit "Ally code"\n\nIt can be found at the bottom of your player screen in game.');  
     } else {
         $.getJSON('AcctData/' +srchstring+ '.json', function(jsonfile) {
             // Display the hidden dataTable
@@ -285,10 +287,22 @@ $('#srchForm').submit(function(event){
             });
         //if .getJSON fails run the python script to create the file, probably should move autocomplete out of this function.
         }).fail(function(data) {
-            alert('Please contact Sert#7357 on discord\nin order to have your mod data collected');
+
+            // here is where we hit the node.js url
+            alert('No data detected:\nPlease wait while your data is collected from swgoh.gg\'s api.');
+            $.ajax({
+                url: 'localhost:3000/api?player='+ srchstring,
+                type: "GET",
+                success: function(res) {
+                    console.log(res);
+                },
+                error:function(err) {
+                    console.log(err);
+                }
+            })
         })
     }
-    convertJSON();
+
 });
 //function for grabbing correct mod data from JSON file with autocomplete field input.
 $('[id^=membrName').on('autocompleteclose', function() {
