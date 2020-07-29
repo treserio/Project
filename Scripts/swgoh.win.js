@@ -291,7 +291,7 @@ $('#srchForm').submit(function(event){
             // here is where we hit the node.js url
             alert('No data detected:\nPlease wait while your data is collected from swgoh.gg\'s api.');
             $.ajax({
-                url: 'http://swgoh.win:8080/api?player='+ srchstring,
+                url: 'http://host.swgoh.win:8080/api?player='+ srchstring,
                 type: "GET",
                 success: function(res) {
                     console.log(res);
