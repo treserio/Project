@@ -5,7 +5,7 @@ module.exports = {
         const fs = require('fs');
         const path = require('path');
 
-        fileString = __dirname +'\\AcctData\\'+ plyrID +'.json'
+        fileString = __dirname +'/AcctData/'+ plyrID +'.json'
         // check if the file exists, atm on error just display msg, later it will need to perform the request for the file from api.
         fs.access(fileString, (err) => {
         if (err) {
@@ -26,9 +26,9 @@ module.exports = {
             });
     
             data.on('end', () => {
-                console.log(path.join(__dirname, '..\\AcctData\\') + plyrID +'.json');
+                console.log(path.join(__dirname, '../AcctData/') + plyrID +'.json');
                 // write out converted json info
-                fs.writeFile(path.join(__dirname, '..\\AcctData\\') + plyrID +'.json', this.convertJSON(JSON.parse(body)), (err) => {
+                fs.writeFile(path.join(__dirname, '../AcctData/') + plyrID +'.json', this.convertJSON(JSON.parse(body)), (err) => {
                 if (err) {
                     console.log('Write File Error');
                 } else {
