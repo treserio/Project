@@ -288,7 +288,7 @@ $('#srchForm').submit(function(event){
         }).fail(function(data) {
 
             // here is where we hit the node.js url
-            alert('No data detected:\nPlease wait while your data is collected from swgoh.gg\'s api.');
+            alert('No data detected:\n\nPlease wait a moment and try again.');
             $.ajax({
                 url: 'http://swgoh.win:3000/api?player='+ srchstring,
                 type: "GET",
@@ -1217,7 +1217,7 @@ function drawDataTbl (search) {
      //Setup - add a text input to each footer cell
     $('.dataTables_scrollFootInner srch').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        $(this).html( '<input type="text" placeholder="'+title+'" />' );
     });
 
     var table = $('#moddata').DataTable();

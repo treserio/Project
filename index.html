@@ -13,17 +13,23 @@
 <body>
 <div class='userInput'>
     <form id='srchForm'>
-        <input  id='searchStr' name='player' type=text size=14 placeholder='Enter Ally Code' autofocus><input type='submit' value='Submit' id='srchBtn'>
+        <input  id='searchStr' name='player' type=text size=19 placeholder='Enter Ally Code' autofocus><input type='submit' value='Submit' id='srchBtn'>
     </form>
-    <div style='padding-bottom:10px; padding-top:10px'><b>Instructions:</b><br>
-        Enter your 9 digit "Ally code"<br>
-        It can be found at the bottom of your player screen in game.</div>
-    <div style='padding-bottom:10px'>To assign a mod to a table select a colored radio button and then click on the row for the mod you want to assign.</div>
-    <div style='padding-bottom:10px'><b>Filtering:</b><br>Multi-Filter is available by using the pipe symbol "|", hold Shift & \ for |, between each term. <b>e.g.</b> In <i>Slot</i> search type <b>Arrow|Diamond</b> to display both terms in the list.</div>
+    <div style='padding-bottom:10px'>
+        Your "Ally Code" can be found at the bottom of your player screen in game.
+    </div>
+    <div style='padding-bottom:10px'>If this is your first time using the site your data will have to be collected. Once collected use the <b>Update Data</b> option below to pull new info.</div>
+    <div style='padding-bottom:10px'><b>Filtering:</b><br>Multi-Filter is available using the pipe symbol "|", <i>Shift</i>+"\" for |, between each term.<br>
+        <b>e.g.</b> In <i>Slot</i> type <b>Arrow|Diamond</b> to filter the list by both terms.
+    </div>
     <div style='padding-bottom:10px'><b>Sorting:</b><br>Click a column header to sort by that value, click a second header for secondary sorting. <b>e.g.</b> Click <i>Spd</i> twice followed by <i>Slot</i> to find your fastest mods by slot.</div>
+    <div style='padding-bottom:10px'><b>Assigning Mods:</b><br><i><b>Filtering before assigning will improve responsiveness.</i></b><br>
+        To assign a mod to a <i>Squad Member</i> select a colored radio button and then click on the row for the mod you want to assign.
+    </div>
+    <div style='padding-bottom:10px'>To find all mods equipped by a character type their name in the <i>Squad Member</i> search box. Then select the correct drop down option.</div>
     <form id='updateForm'>
         <b>Update Data:</b><br>
-        <input  id='updateStr' name='player' type=text size=14 placeholder='Enter Ally Code' autofocus><input type='submit' value='Submit' id='srchBtn'>
+        <input  id='updateStr' name='player' type=text size=19 placeholder='Enter Ally Code' autofocus><input type='submit' value='Submit' id='srchBtn'>
     </form>
    
 </div>
