@@ -6,25 +6,24 @@ module.exports = {
         const path = require('path');
 
         fileString = __dirname +'/AcctData/'+ plyrID +'.json'
-        // check if the file exists, atm on error just display msg, later it will need to perform the request for the file from api.
-        fs.access(fileString, (err) => {
-        if (err) {
-            console.log("File Doesn't Exist");
-    
-            // ****
-            // Add a check to make sure the url returns data, if not ask the user to confirm they have an account on swgoh.gg
-            // ****
-            https.get('https://swgoh.gg/api/players/'+ plyrID +'/mods/', (data) => {
+        
+        // removed check if file exists, no need since it's handled before this is ever called
+
+        // ****
+        // Add a check to make sure the url returns data, if not ask the user to confirm they have an account on swgoh.gg
+        // ****
+        https.get('https://swgoh.gg/api/players/'+ plyrID +'/mods/', (data) => {
+
             console.log('Fetching Data');
             console.log(data.statusCode);
-    
+
             // response result, concatonated from the data buffer
             var body = '';
-    
+
             data.on('data', (bufr) => {
                 body += bufr;
             });
-    
+
             data.on('end', () => {
                 console.log(path.join(__dirname, '../AcctData/') + plyrID +'.json');
                 // write out converted json info
@@ -37,20 +36,6 @@ module.exports = {
                 }
                 });
             });
-            });
-        } else {
-            // grab the json from the server
-            fs.readFile(fileString, 'utf8', (err, data) => {
-            if (err) {
-                // go get the json from https://swgoh.gg/api/players/896282714/mods/
-                console.log('Read File Error', err);
-            } else {
-                console.log('File Retrieved');
-                console.log (data.slice(0,200));
-                // return the read contents as a json object?
-            }
-            });
-        }
         });
     },
     

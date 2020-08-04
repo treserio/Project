@@ -255,8 +255,7 @@ convertJSON = function () {
 $('#srchForm').submit(function(event){
     event.preventDefault();
     // Grab the search text
-    srchstring = $('#srchString').val();
-    srchstring = srchstring.toLowerCase();
+    srchstring = $('#searchStr').val();
     filelocation = 'AcctData/' +srchstring+ '.json';
     
     // check if resulting url is good? no good method with CORS that'll work. Possibly in an NPM package, yay I have a sticker for that.
@@ -302,8 +301,37 @@ $('#srchForm').submit(function(event){
             })
         })
     }
-
 });
+
+// force update
+$('#updateForm').submit(function(event){
+    event.preventDefault();
+    // Grab the search text
+    srchstring = $('#updateStr').val();
+    
+    // check if resulting url is good? no good method with CORS that'll work. Possibly in an NPM package, yay I have a sticker for that.
+    var testStr = RegExp(/^[0-9]{9}$/);
+        
+    // test if the search string matches the ally code format of 9 digits
+    if (!testStr.test(srchstring)) {
+        alert('Please enter your 9 digit "Ally code"\n\nIt can be found at the bottom of your player screen in game.');  
+    } else {
+        // here is where we hit the node.js url
+        alert('No data detected:\nPlease wait while your data is collected from swgoh.gg\'s api.');
+        $.ajax({
+            url: 'http://swgoh.win:3000/api?player='+ srchstring,
+            type: "POST",
+            success: function(res) {
+                console.log(res);
+                alert("Update Complete");
+            },
+            error:function(err) {
+                console.log(err);
+            }
+        })
+    }
+});
+
 //function for grabbing correct mod data from JSON file with autocomplete field input.
 $('[id^=membrName').on('autocompleteclose', function() {
     var namesearch = this.value;
