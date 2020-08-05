@@ -317,7 +317,7 @@ $('#updateForm').submit(function(event){
         alert('Please enter your 9 digit "Ally code"\n\nIt can be found at the bottom of your player screen in game.');  
     } else {
         // here is where we hit the node.js url
-        alert('No data detected:\nPlease wait while your data is collected from swgoh.gg\'s api.');
+        alert('Updating Data from swgoh.gg');
         $.ajax({
             url: 'http://swgoh.win:3000/api?player='+ srchstring,
             type: "POST",
