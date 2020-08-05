@@ -96,48 +96,92 @@ module.exports = {
         };
         // get primary stat
         mod.Primary = primVal.primary_stat.name;
+        // add primary stat values to mod info
+        switch (primVal.primary_stat.name) {
+        case "Health":
+            if (primVal.primary_stat.display_value.includes("%")) {
+            mod["HP%"] = parseFloat(primVal.primary_stat.display_value);
+            } else {
+            mod["HP"] = parseFloat(primVal.primary_stat.display_value);
+            };
+            break;
+        case "Protection":
+            if (primVal.primary_stat.display_value.includes("%")) {
+            mod["Prot%"] = parseFloat(primVal.primary_stat.display_value);
+            } else {
+            mod["Prot"] = parseFloat(primVal.primary_stat.display_value);
+            };
+            break;
+        case "Offense":
+            if (primVal.primary_stat.display_value.includes("%")) {
+            mod["Off%"] = parseFloat(primVal.primary_stat.display_value);
+            } else {
+            mod["Off"] = parseFloat(primVal.primary_stat.display_value);
+            };
+            break;
+        case "Defense":
+            if (primVal.primary_stat.display_value.includes("%")) {
+            mod["Def%"] = parseFloat(primVal.primary_stat.display_value);
+            } else {
+            mod["Def"] = parseFloat(primVal.primary_stat.display_value);
+            };
+            break;
+        case "Speed":
+            mod["Spd"] = parseFloat(primVal.primary_stat.display_value);
+            break;
+        case "Critical Chance":
+            mod["Crit%"] = parseFloat(primVal.primary_stat.display_value);
+            break;
+        case "Potency":
+            mod["Pot%"] = parseFloat(primVal.primary_stat.display_value);
+            break;
+        case "Tenacity":
+            mod["Ten%"] = parseFloat(primVal.primary_stat.display_value);
+            break;
+        };
+
         // get secondary stats & values
         primVal.secondary_stats.forEach( (secVal) => {
             switch (secVal.name) {
             case "Health":
                 if (secVal.display_value.includes("%")) {
-                mod["HP%"] = parseFloat(secVal.display_value);
+                mod["HP%"] += parseFloat(secVal.display_value);
                 } else {
-                mod["HP"] = parseFloat(secVal.display_value);
+                mod["HP"] += parseFloat(secVal.display_value);
                 };
                 break;
             case "Protection":
                 if (secVal.display_value.includes("%")) {
-                mod["Prot%"] = parseFloat(secVal.display_value);
+                mod["Prot%"] += parseFloat(secVal.display_value);
                 } else {
-                mod["Prot"] = parseFloat(secVal.display_value);
+                mod["Prot"] += parseFloat(secVal.display_value);
                 };
                 break;                                
             case "Offense":
                 if (secVal.display_value.includes("%")) {
-                mod["Off%"] = parseFloat(secVal.display_value);
+                mod["Off%"] += parseFloat(secVal.display_value);
                 } else {
-                mod["Off"] = parseFloat(secVal.display_value);
+                mod["Off"] += parseFloat(secVal.display_value);
                 };
                 break;
             case "Defense":
                 if (secVal.display_value.includes("%")) {
-                mod["Def%"] = parseFloat(secVal.display_value);
+                mod["Def%"] += parseFloat(secVal.display_value);
                 } else {
-                mod["Def"] = parseFloat(secVal.display_value);
+                mod["Def"] += parseFloat(secVal.display_value);
                 };
                 break;
             case "Speed":
-                mod["Spd"] = parseFloat(secVal.display_value);
+                mod["Spd"] += parseFloat(secVal.display_value);
                 break;
             case "Critical Chance":
-                mod["Crit%"] = parseFloat(secVal.display_value);
+                mod["Crit%"] += parseFloat(secVal.display_value);
                 break;
             case "Potency":
-                mod["Pot%"] = parseFloat(secVal.display_value);
+                mod["Pot%"] += parseFloat(secVal.display_value);
                 break;
             case "Tenacity":
-                mod["Ten%"] = parseFloat(secVal.display_value);
+                mod["Ten%"] += parseFloat(secVal.display_value);
                 break;
             };
             });
