@@ -44,7 +44,7 @@ for (var i = 0; i<5; i++) {
     // Create Column settings for tables
     sqdTbls[i].appendChild(document.createElement('colgroup'));
     sqdTbls[i].lastChild.appendChild(document.createElement('col')).setAttribute('id', 'Equipped');
-    sqdTbls[i].lastChild.lastChild.setAttribute('width', '90px');
+    sqdTbls[i].lastChild.lastChild.setAttribute('width', '225px');
     sqdTbls[i].lastChild.appendChild(document.createElement('col')).setAttribute('id', 'Slot');
     sqdTbls[i].lastChild.appendChild(document.createElement('col')).setAttribute('id', 'Set');
     sqdTbls[i].lastChild.appendChild(document.createElement('col')).setAttribute('id', 'Primary');

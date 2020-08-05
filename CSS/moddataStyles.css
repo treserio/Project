@@ -3,13 +3,13 @@ body {
     background-color: rgb(235, 235, 235);
 }
 .dtWrap {
-    width: 935px;
+    width: 970px;
     padding-bottom: 5px;
     float: left;
     display: none;
 }
 .colorTblWrap {
-    width: 935px;
+    width: 970px;
     position: relative;
 }
 .colorTbl {
