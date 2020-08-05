@@ -100,30 +100,30 @@ module.exports = {
         switch (primVal.primary_stat.name) {
         case "Health":
             if (primVal.primary_stat.display_value.includes("%")) {
-            mod["HP%"] = parseFloat(primVal.primary_stat.display_value);
+                mod["HP%"] = parseFloat(primVal.primary_stat.display_value);
             } else {
-            mod["HP"] = parseFloat(primVal.primary_stat.display_value);
+                mod["HP"] = parseFloat(primVal.primary_stat.display_value);
             };
             break;
         case "Protection":
             if (primVal.primary_stat.display_value.includes("%")) {
-            mod["Prot%"] = parseFloat(primVal.primary_stat.display_value);
+                mod["Prot%"] = parseFloat(primVal.primary_stat.display_value);
             } else {
-            mod["Prot"] = parseFloat(primVal.primary_stat.display_value);
+                mod["Prot"] = parseFloat(primVal.primary_stat.display_value);
             };
             break;
         case "Offense":
             if (primVal.primary_stat.display_value.includes("%")) {
-            mod["Off%"] = parseFloat(primVal.primary_stat.display_value);
+                mod["Off%"] = parseFloat(primVal.primary_stat.display_value);
             } else {
-            mod["Off"] = parseFloat(primVal.primary_stat.display_value);
+                mod["Off"] = parseFloat(primVal.primary_stat.display_value);
             };
             break;
         case "Defense":
             if (primVal.primary_stat.display_value.includes("%")) {
-            mod["Def%"] = parseFloat(primVal.primary_stat.display_value);
+                mod["Def%"] = parseFloat(primVal.primary_stat.display_value);
             } else {
-            mod["Def"] = parseFloat(primVal.primary_stat.display_value);
+                mod["Def"] = parseFloat(primVal.primary_stat.display_value);
             };
             break;
         case "Speed":
@@ -145,43 +145,92 @@ module.exports = {
             switch (secVal.name) {
             case "Health":
                 if (secVal.display_value.includes("%")) {
-                mod["HP%"] += parseFloat(secVal.display_value);
+                    // check if mod has property += failed to add if it didn't exist
+                    if (mod.hasOwnProperty("HP%")) {
+                        mod["HP%"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["HP%"] = parseFloat(secVal.display_value);
+                    }
                 } else {
-                mod["HP"] += parseFloat(secVal.display_value);
+                    if (mod.hasOwnProperty("HP")) {
+                        mod["HP"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["HP"] = parseFloat(secVal.display_value);
+                    }
                 };
                 break;
             case "Protection":
                 if (secVal.display_value.includes("%")) {
-                mod["Prot%"] += parseFloat(secVal.display_value);
+                    if (mod.hasOwnProperty("Prot%")) {
+                        mod["Prot%"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["Prot%"] = parseFloat(secVal.display_value);
+                    }                    
                 } else {
-                mod["Prot"] += parseFloat(secVal.display_value);
+                    if (mod.hasOwnProperty("Prot")) {
+                        mod["Prot"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["Prot"] = parseFloat(secVal.display_value);
+                    } 
                 };
                 break;                                
             case "Offense":
                 if (secVal.display_value.includes("%")) {
-                mod["Off%"] += parseFloat(secVal.display_value);
+                    if (mod.hasOwnProperty("Off%")) {
+                        mod["Off%"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["Off%"] = parseFloat(secVal.display_value);
+                    }
                 } else {
-                mod["Off"] += parseFloat(secVal.display_value);
+                    if (mod.hasOwnProperty("Off")) {
+                        mod["Off"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["Off"] = parseFloat(secVal.display_value);
+                    } 
                 };
                 break;
             case "Defense":
                 if (secVal.display_value.includes("%")) {
-                mod["Def%"] += parseFloat(secVal.display_value);
+                    if (mod.hasOwnProperty("Def%")) {
+                        mod["Def%"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["Def%"] = parseFloat(secVal.display_value);
+                    }
                 } else {
-                mod["Def"] += parseFloat(secVal.display_value);
+                    if (mod.hasOwnProperty("Def")) {
+                        mod["Def"] += parseFloat(secVal.display_value);
+                    } else {
+                        mod["Def"] = parseFloat(secVal.display_value);
+                    }
                 };
                 break;
             case "Speed":
-                mod["Spd"] += parseFloat(secVal.display_value);
+                if (mod.hasOwnProperty("Spd")) {
+                    mod["Spd"] += parseFloat(secVal.display_value);
+                } else {
+                    mod["Spd"] = parseFloat(secVal.display_value);
+                }                
                 break;
             case "Critical Chance":
-                mod["Crit%"] += parseFloat(secVal.display_value);
+                if (mod.hasOwnProperty("Crit%")) {
+                    mod["Crit%"] += parseFloat(secVal.display_value);
+                } else {
+                    mod["Crit%"] = parseFloat(secVal.display_value);
+                }                
                 break;
             case "Potency":
-                mod["Pot%"] += parseFloat(secVal.display_value);
+                if (mod.hasOwnProperty("Pot%")) {
+                    mod["Pot%"] += parseFloat(secVal.display_value);
+                } else {
+                    mod["Pot%"] = parseFloat(secVal.display_value);
+                }
                 break;
             case "Tenacity":
-                mod["Ten%"] += parseFloat(secVal.display_value);
+                if (mod.hasOwnProperty("Ten%")) {
+                    mod["Ten%"] += parseFloat(secVal.display_value);
+                } else {
+                    mod["Ten%"] = parseFloat(secVal.display_value);
+                }
                 break;
             };
             });
