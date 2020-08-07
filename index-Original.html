@@ -3,11 +3,11 @@
 <meta charset='utf-8'/>
 <head>
 <link rel='stylesheet' href='Scripts/dataTables/dataTables.1.10.16.min.css'>
-<link rel='stylesheet' href='CSS/moddataStyles.min.css'>
+<link rel='stylesheet' href='CSS/moddataStyles.css'>
 <script src='Scripts/jquery-ui-1.12.1/jquery-1.12.4.js'></script>
 <script src='Scripts/dataTables/dataTables.1.10.16.min.js'></script>
 <script src='Scripts/jquery-ui-1.12.1/jquery-ui.min.js'></script>
-<script async src='Scripts/swgoh.win.min.js'></script>
+<script async src='Scripts/swgoh.win.js'></script>
 </head>
 
 <body>
@@ -35,6 +35,26 @@
 </div>
 <div style='float:left'>
     <div id='dataTable' class='dtWrap'>
+        Filters: 
+        <button id="clrFilters" class="lrgFilterUp" name="Squ">Clear</button>
+        &emsp; Slots:
+        <button class="filterUp" label="Slot" name="Squ"><img class=filterImg src="Images/slotSq.png"></button>
+        <button class="filterUp" label="Slot" name="Arr"><img class=filterImg src="Images/slotArr.png"></button>
+        <button class="filterUp" label="Slot" name="Dia"><img class=filterImg src="Images/slotDia.png"></button>
+        <button class="filterUp" label="Slot" name="Tri"><img class=filterImg src="Images/slotTri.png"></button>
+        <button class="filterUp" label="Slot" name="Cir"><img class=filterImg src="Images/slotCir.png"></button>
+        <button class="filterUp" label="Slot" name="Cro"><img class=filterImg src="Images/slotCro.png"></button>
+        <button id="allBut" class="lrgFilterUp" label="Slot" name="Squ|Dia|Tri|Cir|Cro">All but <img class=filterImg src="Images/slotArr.png"></button>
+        &emsp;&emsp;Sets: 
+        <button class="filterUp" label="Set" name="Hea"><img class=filterImg src="Images/setHp.png"></button>
+        <button class="filterUp" label="Set" name="Def"><img class=filterImg src="Images/setDef.png"></button>
+        <button class="filterUp" label="Set" name="Dam"><img class=filterImg src="Images/setCritDm.png"></button>
+        <button class="filterUp" label="Set" name="Cha"><img class=filterImg src="Images/setCritCh.png"></button>
+        <button class="filterUp" label="Set" name="Tena"><img class=filterImg src="Images/setTen.png"></button>
+        <button class="filterUp" label="Set" name="Off"><img class=filterImg src="Images/setOff.png"></button>
+        <button class="filterUp" label="Set" name="Pot"><img class=filterImg src="Images/setPot.png"></button>
+        <button class="filterUp" label="Set" name="Spe"><img class=filterImg src="Images/setSpd.png"></button>
+        <button id="2pcSets" class="lrgFilterUp" label="Set" name="Hea|Def|Cha|Tena|Pot"><img style="height:15px">2pc Sets</button>
         <!-- only using values in the json for headers -->
         <table id='moddata' class='display'>
             <thead>
@@ -61,8 +81,8 @@
             <tfoot>
                 <tr>
                     <th><srch>Equipped</srch></th>
-                    <th><srch>Slot</srch></th>
-                    <th><srch>Set</srch></th>
+                    <th><srch id='slotSrch'>Slot</srch></th>
+                    <th><srch id='setSrch'>Set</srch></th>
                     <th><srch>Primary</srch></th>
                     <th></th>
                     <th></th>

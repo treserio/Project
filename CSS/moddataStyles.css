@@ -117,3 +117,43 @@ tfoot input {
 .ui-autocomplete .ui-menu-item-wrapper:hover {
     background-color: rgba(0, 128, 0, 0.562);
 }
+.filterImg {
+    width: 15px;
+    height: 15px;
+}
+
+.filterUp {
+    background-color: #d8e6f3;
+    width: 22px;
+    height: 22px;
+    padding: 1px;
+}
+
+.filterUp:active {
+    background-color: #1e416a;
+}
+
+.filterDwn {
+    background-color: #1e416a;
+    width: 22px;
+    height: 22px;
+    padding: 1px;
+}
+
+.filterDwn:active {
+    background-color: #d8e6f3;
+}
+
+.lrgFilterUp {
+    background-color: #d8e6f3;
+    width: 67px;
+    height: 22px;
+    padding: 1px;
+}
+
+.lrgFilterDwn {
+    background-color: #1e416a;
+    width: 67px;
+    height: 22px;
+    padding: 1px;
+}

@@ -1141,8 +1141,78 @@ $('[id^=clrBtn').on('click', function() {
     $('#squadMembr'+id+' .assigned tbody').css('display','none');
     $('[id^=hideShow'+id).attr('value','Hide');
 });
-
-// This fills an existing table with data supplied through the screen scraping of www.swgoh.gg into a json file, the swgoh.gg account name should match the one used for this site.
+// maybe able to include dwns with another check if it contains up or dwn
+// filter buttons, including lrgFilters
+$('.filterUp, .lrgFilterUp, .filterDwn, .lrgFilterDwn').on('click', function() {
+    // select statement based on label, slot = 1, set = 2
+    switch($(this).attr('label')) {
+        case 'Slot':
+            var fltrCol = 1;
+            break;
+        case 'Set':
+            var fltrCol = 2;
+            break;
+    }
+    // if the current search is blank, or it's one of the large filters just add the name value
+    if ($('#moddata').DataTable().columns(fltrCol).search()[0] === "" || $(this).attr('class')=='lrgFilter') {
+        // search(searchString, regex exp <-- must be true, smart search, case insensitive <-- leave 1)
+        $('#moddata').DataTable().columns(fltrCol).search($(this).attr('name'), 1, 0, 1);
+        DTRedraw();
+    } else if($(this).attr('class').includes('Up')) {
+        var newVar = $('#moddata').DataTable().columns(fltrCol).search()[0] +"|"+ $(this).attr('name');
+        $('#moddata').DataTable().columns(fltrCol).search(newVar, 1, 0, 1);
+        DTRedraw();
+    } else {
+        var newVar = $('#moddata').DataTable().columns(fltrCol).search()[0].replace($(this).attr('name'),"");
+        splitVar = newVar.split("|").filter(e => e !== "");
+        newVar = splitVar.join("|");
+        $('#moddata').DataTable().columns(fltrCol).search(newVar, 1, 0, 1);
+        console.log($('#moddata').DataTable().columns(fltrCol).search());
+        DTRedraw();
+    }
+    // now set the css for a pressed button
+    switch($(this).attr('class')) {
+        case 'filterUp':
+            $(this).toggleClass('filterUp');
+            $(this).toggleClass('filterDwn');
+            break;
+        case 'lrgFilterUp':
+            $(this).toggleClass('lrgFilterUp');
+            $(this).toggleClass('lrgFilterDwn');
+            switch(fltrCol) {
+                case 1:
+                    $('[label=Slot][name!=Arr][id!=allBut]').addClass('filterDwn').removeClass('filterUp');
+                    break;
+                case 2:
+                    $('[label=Set][name!=Dam][name!=Off][name!=Spe][id!=2pcSets]').addClass('filterDwn').removeClass('filterUp');
+                    break;
+            }
+            break;
+        case 'filterDwn':
+            $(this).toggleClass('filterUp');
+            $(this).toggleClass('filterDwn');
+            break;            
+        case 'lrgFilterDwn':
+            $(this).toggleClass('lrgFilterUp');
+            $(this).toggleClass('lrgFilterDwn');
+            switch(fltrCol) {
+                case 1:
+                    $('[label=Slot][name!=Arr][id!=allBut]').addClass('filterUp').removeClass('filterDwn');
+                    break;
+                case 2:
+                    $('[label=Set][name!=Dam][name!=Off][name!=Spe][id!=2pcSets]').addClass('filterUp').removeClass('filterDwn');
+                    break;            
+            }
+            break;
+    }
+});
+// clear filters button
+$('#clrFilters').on('click', function () {
+    $('.filterDwn').removeClass('filterDwn').addClass('filterUp');
+    $('.lrgFilterDwn').removeClass('lrgFilterDwn').addClass('lrgFilterUp');
+    $('#moddata').DataTable().columns().search("").draw();
+});
+// This fills an existing table with user data.
 function drawDataTbl (search) {
     $('#moddata').DataTable( {
         iDisplayLength: 10,
@@ -1212,8 +1282,7 @@ function drawDataTbl (search) {
             }
         }
     });
-//select filter search from drop down, try to find again list? This would be for those with only ~6 options
-
+    //select filter search from drop down, try to find again list? This would be for those with only ~6 options
      //Setup - add a text input to each footer cell
     $('.dataTables_scrollFootInner srch').each( function () {
         var title = $(this).text();
