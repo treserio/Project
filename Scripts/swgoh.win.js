@@ -137,7 +137,7 @@ convertJSON = function () {
                 "Access-Control-Allow-Origin":"*"
             },
             success: function(resp) {
-                console.log(resp.mods);
+                //console.log(resp.mods);
                 // create array to assign to json object
                 var convertedMods = [];
                 $.each(resp.mods, function(modCntr) {
@@ -293,10 +293,10 @@ $('#srchForm').submit(function(event){
                 url: 'http://swgoh.win:3000/api?player='+ srchstring,
                 type: "GET",
                 success: function(res) {
-                    console.log(res);
+                    //console.log(res);
                 },
                 error:function(err) {
-                    console.log(err);
+                    //console.log(err);
                 }
             })
         })
@@ -322,11 +322,11 @@ $('#updateForm').submit(function(event){
             url: 'http://swgoh.win:3000/api?player='+ srchstring,
             type: "POST",
             success: function(res) {
-                console.log(res);
+                //console.log(res);
                 alert("Update Complete");
             },
             error:function(err) {
-                console.log(err);
+                //console.log(err);
             }
         })
     }
@@ -1167,7 +1167,6 @@ $('.filterUp, .lrgFilterUp, .filterDwn, .lrgFilterDwn').on('click', function() {
         splitVar = newVar.split("|").filter(e => e !== "");
         newVar = splitVar.join("|");
         $('#moddata').DataTable().columns(fltrCol).search(newVar, 1, 0, 1);
-        console.log($('#moddata').DataTable().columns(fltrCol).search());
         DTRedraw();
     }
     // now set the css for a pressed button
