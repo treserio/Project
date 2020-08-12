@@ -158,14 +158,15 @@ $('#srchForm').submit(function(event){
         }).fail(function(data) {
 
             // here is where we hit the node.js url
-            alert('No data detected:\n\nPlease wait a moment and try again.');
+            alert('No data detected:\n\nUpdating Data from swgoh.gg. Please wait a moment and try again.');
             $.ajax({
                 url: 'http://swgoh.win:3000/api?player='+ srchstring,
                 type: "POST",
                 success: function(res) {
                     //console.log(res);
+                    alert(" Complete");
                 },
-                error:function(err) {
+                error: function(err) {
                     //console.log(err);
                 }
             })
@@ -195,7 +196,7 @@ $('#updateForm').submit(function(event){
                 //console.log(res);
                 alert("Update Complete");
             },
-            error:function(err) {
+            error: function(err) {
                 //console.log(err);
             }
         })
