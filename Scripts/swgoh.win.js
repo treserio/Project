@@ -1154,55 +1154,59 @@ $('.filterUp, .lrgFilterUp, .filterDwn, .lrgFilterDwn').on('click', function() {
             break;
     }
     // if the current search is blank, or it's one of the large filters just add the name value
-    if ($('#moddata').DataTable().columns(fltrCol).search()[0] === "" || $(this).attr('class')=='lrgFilter') {
+    if ($('#moddata').DataTable().columns(fltrCol).search()[0] === "" || $(this).attr('class') === 'lrgFilterUp') {
         // search(searchString, regex exp <-- must be true, smart search, case insensitive <-- leave 1)
         $('#moddata').DataTable().columns(fltrCol).search($(this).attr('name'), 1, 0, 1);
         DTRedraw();
-    } else if($(this).attr('class').includes('Up')) {
-        var newVar = $('#moddata').DataTable().columns(fltrCol).search()[0] +"|"+ $(this).attr('name');
+    } else if ($(this).attr('class').includes('Up')) {
+        newVar = $('#moddata').DataTable().columns(fltrCol).search()[0] +"|"+ $(this).attr('name');
         $('#moddata').DataTable().columns(fltrCol).search(newVar, 1, 0, 1);
         DTRedraw();
     } else {
-        var newVar = $('#moddata').DataTable().columns(fltrCol).search()[0].replace($(this).attr('name'),"");
-        splitVar = newVar.split("|").filter(e => e !== "");
-        newVar = splitVar.join("|");
-        $('#moddata').DataTable().columns(fltrCol).search(newVar, 1, 0, 1);
+        // add check for lrg filter, needs it's own method if it is
+        if ($(this).attr('class').includes('lrg')) {
+            var fltrArray = $(this).attr('name').split('|');
+            newVar = $('#moddata').DataTable().columns(fltrCol).search()[0];
+            // remove all fltrs in fltrArray from search term
+            fltrArray.forEach( fltr => {
+                newVar = newVar.replace(fltr, "");
+            });
+            // split to array of strings, filter out all that != "", rejoin into string and use to set value for search
+            newVar = newVar.split('|').filter(val => val !== "").join('|');
+            $('#moddata').DataTable().columns(fltrCol).search(newVar, 1, 0, 1);
+        } else {
+            // remove 'name' from string, split to array of strings, filter out all that != "", rejoin into string and use to set value for search
+            newVar = $('#moddata').DataTable().columns(fltrCol).search()[0].replace($(this).attr('name'),"").split('|').filter(e => e !== "").join('|');
+            $('#moddata').DataTable().columns(fltrCol).search(newVar, 1, 0, 1);
+        }
         DTRedraw();
     }
     // now set the css for a pressed button
-    switch($(this).attr('class')) {
-        case 'filterUp':
-            $(this).toggleClass('filterUp');
-            $(this).toggleClass('filterDwn');
-            break;
-        case 'lrgFilterUp':
-            $(this).toggleClass('lrgFilterUp');
-            $(this).toggleClass('lrgFilterDwn');
-            switch(fltrCol) {
-                case 1:
-                    $('[label=Slot][name!=Arr][id!=allBut]').addClass('filterDwn').removeClass('filterUp');
-                    break;
-                case 2:
-                    $('[label=Set][name!=Dam][name!=Off][name!=Spe][id!=2pcSets]').addClass('filterDwn').removeClass('filterUp');
-                    break;
+    // if multi filter take appropriate action based on fltrCol, else toggle filterUp/Dwn css, multiple if/then = less code
+    if ($(this).attr('class').includes('lrg')) {
+        if ($(this).attr('class').includes('Up')) {
+            if (fltrCol === 1) {
+                $('[label=Slot][name!=Arr][id!=allBut]').addClass('filterDwn').removeClass('filterUp');
+                $('[label=Slot][name=Arr]').addClass('filterUp').removeClass('filterDwn');
+            } else if (fltrCol === 2) {
+                $('[label=Set][name!=Dam][name!=Off][name!=Spe][id!=2pcSets]').addClass('filterDwn').removeClass('filterUp');
+                $('[label=Set][name=Dam]').addClass('filterUp').removeClass('filterDwn');
+                $('[label=Set][name=Off]').addClass('filterUp').removeClass('filterDwn');
+                $('[label=Set][name=Spe]').addClass('filterUp').removeClass('filterDwn');
             }
-            break;
-        case 'filterDwn':
-            $(this).toggleClass('filterUp');
-            $(this).toggleClass('filterDwn');
-            break;            
-        case 'lrgFilterDwn':
-            $(this).toggleClass('lrgFilterUp');
-            $(this).toggleClass('lrgFilterDwn');
-            switch(fltrCol) {
-                case 1:
-                    $('[label=Slot][name!=Arr][id!=allBut]').addClass('filterUp').removeClass('filterDwn');
-                    break;
-                case 2:
-                    $('[label=Set][name!=Dam][name!=Off][name!=Spe][id!=2pcSets]').addClass('filterUp').removeClass('filterDwn');
-                    break;            
+        } else if ($(this).attr('class').includes('Dwn')) {
+            if (fltrCol === 1) {
+                $('[label=Slot][name!=Arr][id!=allBut]').addClass('filterUp').removeClass('filterDwn');
+            } else if (fltrCol === 2) {
+                $('[label=Set][name!=Dam][name!=Off][name!=Spe][id!=2pcSets]').addClass('filterUp').removeClass('filterDwn');
             }
-            break;
+        }
+        // toggle after checks
+        $(this).toggleClass('lrgFilterUp');
+        $(this).toggleClass('lrgFilterDwn');
+    } else {
+        $(this).toggleClass('filterUp');
+        $(this).toggleClass('filterDwn');
     }
 });
 // clear filters button
