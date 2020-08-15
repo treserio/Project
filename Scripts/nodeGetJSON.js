@@ -33,9 +33,12 @@ module.exports = {
                 } else {
                     console.log('File has been saved');
                     // return the read contents as a json object?
+                    // "Status Code: " + data.statusCode
                 }
                 });
             });
+        }).on('error', (err) => {
+            console.error(err);
         });
     },
     
